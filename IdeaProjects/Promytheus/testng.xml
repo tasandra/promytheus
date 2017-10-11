@@ -1,0 +1,14 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Page Object test example">
+    <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com"/>
+    <parameter name="browser" value="chrome"/>
+    <test name="sample test">
+        <classes>
+            <!--class name="tests.LoginTest"/>
+            <class name="tests.TalentsTest"/-->
+            <class name="tests.CategoryTest"/>
+        </classes>
+    </test>
+</suite>

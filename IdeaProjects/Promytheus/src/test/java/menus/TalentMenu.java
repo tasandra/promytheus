@@ -1,51 +1,61 @@
 package menus;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TalentMenu  {
     private WebDriver driver;
+    private WebDriverWait wait;
+    private  JavascriptExecutor executor;
 
     @FindBy(how = How.XPATH, using = "//span[contains(.,'Category')]")
-    WebElement category;
+    private WebElement category;
 
     @FindBy(how = How.XPATH, using = "//span[contains(.,'Personal')]")
-    WebElement personal;
+    private WebElement personal;
 
     @FindBy(how = How.XPATH,using = "//span[contains(.,'Talent Traits')]")
-    WebElement talentTraits;
+    private WebElement talentTraits;
 
     @FindBy(how = How.XPATH, using = "//span[contains(.,'Personality Traits')]")
-    WebElement personalityTraits;
+    private WebElement personalityTraits;
 
     @FindBy(how = How.XPATH,using = "//span[contains(.,'Story')]")
-    WebElement story;
+    private WebElement story;
 
     @FindBy(how = How.XPATH,using = "//span[contains(.,'Evidence')]")
-    WebElement evidence;
+    private WebElement evidence;
 
     @FindBy(how = How.XPATH,using = "//li[contains(.,'Training')]")
-    WebElement training;
+    private WebElement training;
 
     @FindBy(how = How.XPATH,using = "//span[contains(.,'Rating')]")
-    WebElement reting;
+    private WebElement reting;
 
     @FindBy(how = How.XPATH,using = "//span[contains(.,'Social Background')]")
-    WebElement socialBackround;
+    private WebElement socialBackround;
 
     @FindBy(how = How.XPATH, using = "//button[contains(.,'Previous')]")
-    WebElement previous;
+    private WebElement previous;
 
     @FindBy(how = How.XPATH, using = "//button[contains(.,'Next')]")
-    WebElement next;
+    private WebElement next;
+
+    @FindBy(how = How.XPATH, using = "//button[contains(.,'Finish')]")
+    private WebElement finish;
 
 
     public TalentMenu(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        wait = new WebDriverWait(driver, 5);
+        executor = (JavascriptExecutor)driver;
     }
 
     public void clickCategory(){
@@ -53,7 +63,9 @@ public class TalentMenu  {
     }
 
     public void clickPersonal(){
-        personal.click();
+//        wait.until(ExpectedConditions.visibilityOf(personal)).click();
+
+        executor.executeScript("arguments[0].click()", personal);
     }
 
     public void clickTalentTraits(){
@@ -81,7 +93,8 @@ public class TalentMenu  {
     }
 
     public void clickSocialBackground(){
-        socialBackround.click();
+//        socialBackround.click();
+        executor.executeScript("arguments[0].click()", socialBackround);
     }
 
     public void clickPrevious(){
@@ -90,5 +103,10 @@ public class TalentMenu  {
 
     public void clickNext(){
         next.click();
+    }
+
+    public void clickFinish(){
+//        finish.click();
+        executor.executeScript("arguments[0].click()", finish);
     }
 }

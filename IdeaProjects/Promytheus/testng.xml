@@ -3,12 +3,13 @@
 
 <suite name="Page Object test example">
     <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com"/>
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="firefox"/>
     <test name="sample test">
         <classes>
-            <!--class name="tests.LoginTest"/>
-            <class name="tests.TalentsTest"/-->
-            <class name="tests.CategoryTest"/>
+            <!--class name="tests.InvalidLoginTest"/>
+            <class name="tests.TalentsTest"/>
+            <class name="tests.CategoryPageTest"/-->
+            <class name="tests.PersonalPageTest"/>
         </classes>
     </test>
 </suite>

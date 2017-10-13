@@ -63,8 +63,7 @@ public class TalentMenu  {
     }
 
     public void clickPersonal(){
-//        wait.until(ExpectedConditions.visibilityOf(personal)).click();
-
+        wait.until(ExpectedConditions.visibilityOf(personal));
         executor.executeScript("arguments[0].click()", personal);
     }
 
@@ -102,7 +101,8 @@ public class TalentMenu  {
     }
 
     public void clickNext(){
-        next.click();
+//        next.click();
+        executor.executeScript("arguments[0].click()", next);
     }
 
     public void clickFinish(){

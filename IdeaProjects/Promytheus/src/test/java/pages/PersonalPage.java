@@ -14,6 +14,7 @@ import java.awt.event.KeyEvent;
 public class PersonalPage {
     private WebDriver driver;
     private WebDriverWait wait;
+    private JavascriptExecutor executor;
 
     @FindBy(how = How.CSS, using = "li.ng-scope:nth-child(2)")
     private WebElement activeTab;
@@ -36,15 +37,55 @@ public class PersonalPage {
     @FindBy(how = How.NAME, using = "placeBirth")
     private WebElement placeBirth;
 
-    @FindBy(how = How.CSS, using = ".ui-select-container")
+    @FindBy(how = How.XPATH, using = "//span[contains(.,'Enter country name... USA  ')]")
     private WebElement clickCountry;
+
+    @FindBy(how = How.ID,using = "address")
+    private WebElement address1;
+
+    @FindBy(how =  How.NAME, using = "address2")
+    private WebElement address2;
+
+    @FindBy(how = How.NAME , using = "city")
+    private WebElement city;
+
+    @FindBy(how = How.NAME, using = "addressState")
+    private WebElement addressState;
+
+    @FindBy(how = How.NAME, using = "zip")
+    private WebElement zip;
+
+    @FindBy(how = How.CSS, using = "div.form-group:nth-child(9) > div:nth-child(2) > label:nth-child(1) > span:nth-child(2)")
+    private WebElement radioRural;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='RURAL']")
+    private WebElement ruralClass;
+
+    @FindBy(how = How.CSS, using = "div.form-group:nth-child(9) > div:nth-child(2) > label:nth-child(2) > span:nth-child(2)")
+    private WebElement radioUrban;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='URBAN']")
+    private WebElement urbanClass;
+
+    @FindBy(how = How.CSS, using = "div.form-group:nth-child(10) > div:nth-child(2) > label:nth-child(1) > span:nth-child(2)")
+    private WebElement radioPrivileged;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='PRIVILEGED']")
+    private WebElement privilegedClass;
+
+    @FindBy(how = How.CSS, using = "div.form-group:nth-child(10) > div:nth-child(2) > label:nth-child(2) > span:nth-child(2)")
+    private WebElement radioUnderprivileged;
+
+    @FindBy(how = How.XPATH, using = "//input[@value='UNDERPRIVILEGED']")
+    private WebElement underprivilegedClass;
+
 
     public PersonalPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, 20);
+        executor = (JavascriptExecutor)driver;
     }
-
 
     // get active tab attribute
     public String getActiveTab(){
@@ -63,14 +104,14 @@ public class PersonalPage {
     }
 
     // insert last name
-    public void insertLasttName(String last){
+    public void insertLastName(String last){
         lastName.sendKeys(last);
     }
 
     public void insertNames(String first, String middle, String last){
         insertFirstName(first);
         insertMiddleName(middle);
-        insertLasttName(last);
+        insertLastName(last);
     }
 
     public void uploadImage(String imagePath) throws AWTException, InterruptedException{
@@ -80,7 +121,7 @@ public class PersonalPage {
         StringSelection ss = new StringSelection(imagePath);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 
-//imitate mouse events like ENTER, CTRL+C, CTRL+V
+    //imitate mouse events like ENTER, CTRL+C, CTRL+V
         Robot robot = new Robot();
         robot.delay(15000);
         robot.keyPress(KeyEvent.VK_ENTER);
@@ -96,19 +137,60 @@ public class PersonalPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@class='profile-picture mb ml']")));
     }
 
-    public void inserDatePlaceBirth(String dateB , String placeB){
+    // insert date and place of birthday
+    public void insertDatePlaceBirth(String dateB , String placeB){
         dateBirth.sendKeys(dateB);
         placeBirth.sendKeys(placeB);
     }
 
+    // select country
     public void selectCountry(String country){
-//        clickCountry.click();
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click()", clickCountry);
 
-//        executor.executeScript("document.querySelector('#signUpCountry').click()");
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
+        wait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//span[contains(.,'" + country + "')]"))).click();
     }
+
+    // enter address
+    public void enterAddress(String add1, String add2, String city1, String state, String postal){
+        address1.sendKeys(add1);
+        address2.sendKeys(add2);
+        city.sendKeys(city1);
+        addressState.sendKeys(state);
+        zip.sendKeys(postal);
+    }
+
+    // select radio button Rural and get class attribute
+    public String selectRural(){
+        wait.until(ExpectedConditions.visibilityOf(radioRural));
+        executor.executeScript("arguments[0].click()", radioRural);
+
+        return ruralClass.getAttribute("class");
+    }
+
+    // select radio button Urban and get class attribute
+    public String selectUrban(){
+        wait.until(ExpectedConditions.visibilityOf(radioUrban));
+        executor.executeScript("arguments[0].click()", radioUrban);
+
+        return radioRural.getAttribute("class");
+    }
+
+    // select radio button Privileged and get class attribute
+    public String selectPrivileged(){
+        wait.until(ExpectedConditions.visibilityOf(radioPrivileged));
+        executor.executeScript("arguments[0].click()", radioPrivileged);
+
+        return radioPrivileged.getAttribute("class");
+    }
+
+    // select radio button Underprivileged and get class attribute
+    public String selectUnderprivileged(){
+        wait.until(ExpectedConditions.visibilityOf(radioUnderprivileged));
+        executor.executeScript("arguments[0].click()", radioUnderprivileged);
+
+        return radioUnderprivileged.getAttribute("class");
+
+    }
+
 }

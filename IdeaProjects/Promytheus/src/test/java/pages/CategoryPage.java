@@ -26,7 +26,10 @@ public class CategoryPage {
     @FindBy(how = How.CSS, using = "li.ng-scope:nth-child(1)")
     private WebElement active;
 
-    @FindBy(how = How.XPATH, using = "//span[@class='ui-select-match-text pull-left']")
+    @FindBy(how = How.XPATH, using = "//span[@class='text-danger ng-binding']")
+    private WebElement error;
+
+    @FindBy(how = How.XPATH, using = "//span[contains(.,'Enter category name...   ')]")
     private WebElement category;
 
 
@@ -55,6 +58,12 @@ public class CategoryPage {
         return  active.getAttribute("class");
     }
 
+    // get error message
+    public String getError(){
+        return wait.until(ExpectedConditions.visibilityOf(error)).getText();
+    }
+
+    // click and select category
     public void selectCategory(String select) {
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click()", category);

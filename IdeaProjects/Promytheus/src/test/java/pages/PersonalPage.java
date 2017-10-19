@@ -16,17 +16,23 @@ public class PersonalPage {
     private WebDriverWait wait;
     private JavascriptExecutor executor;
 
-    @FindBy(how = How.CSS, using = "li.ng-scope:nth-child(2)")
-    private WebElement activeTab;
-
     @FindBy(how = How.NAME, using = "firstName")
     private WebElement firstName;
+
+    @FindBy(how =  How.CSS, using = "div.has-error:nth-child(2) > span:nth-child(2)")
+    private WebElement firstNameError;
 
     @FindBy(how = How.NAME, using = "middleName")
     private WebElement middleName;
 
+    @FindBy(how =  How.CSS, using = "div.has-error:nth-child(3) > span:nth-child(2)")
+    private WebElement middleNameError;
+
     @FindBy(how = How.NAME, using = "lastName")
     private WebElement lastName;
+
+    @FindBy(how = How.CSS, using = "div.col-lg-4:nth-child(4) > span:nth-child(2)")
+    private WebElement lastNameError;
 
     @FindBy(how = How.NAME, using ="profilePicture")
     private WebElement image;
@@ -37,8 +43,14 @@ public class PersonalPage {
     @FindBy(how = How.NAME, using = "placeBirth")
     private WebElement placeBirth;
 
+    @FindBy(how = How.CSS, using = ".col-lg-8 > span:nth-child(2)")
+    private WebElement placeBirthError;
+
     @FindBy(how = How.XPATH, using = "//span[contains(.,'Enter country name... USA  ')]")
     private WebElement clickCountry;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='ui-select-match-text pull-left']")
+    private WebElement getCountry;
 
     @FindBy(how = How.ID,using = "address")
     private WebElement address1;
@@ -79,39 +91,95 @@ public class PersonalPage {
     @FindBy(how = How.XPATH, using = "//input[@value='UNDERPRIVILEGED']")
     private WebElement underprivilegedClass;
 
+    @FindBy(how = How.NAME, using = "email")
+    private WebElement email;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='text-danger mr-sm']")
+    private WebElement emailError;
+
+    @FindBy(how = How.NAME, using = "phone")
+    private WebElement phone;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='text-danger']")
+    private WebElement error;
+
+    @FindBy(how = How.CSS, using = "div.form-group:nth-child(13) > div:nth-child(2) > span:nth-child(2)")
+    private WebElement heightError;
+
+    @FindBy(how = How.CSS, using = "div.form-group:nth-child(14) > div:nth-child(2) > span:nth-child(2)")
+    private WebElement weightError;
+
+    @FindBy(how = How.XPATH, using = "//a[@class='social-account-more ng-binding']")
+    private WebElement addSocialAccount;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='ui-select-placeholder text-muted ng-binding']")
+    private WebElement selectSocialAccount;
+
+    @FindBy(how = How.XPATH, using = "//span[@class='ng-binding ng-scope']")
+    private WebElement getSocial;
+
+    @FindBy(how = How.NAME, using = "height")
+    private WebElement height;
+
+    @FindBy(how = How.NAME, using = "weight")
+    private WebElement weight;
+
 
     public PersonalPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 20);
+        wait = new WebDriverWait(driver, 10);
         executor = (JavascriptExecutor)driver;
     }
 
-    // get active tab attribute
-    public String getActiveTab(){
-        wait.until(ExpectedConditions.attributeToBe(activeTab, "class", "ng-scope active"));
-        return  activeTab.getAttribute("class");
+    // insert first name
+    private void insertFirstName(String first){
+        wait.until(ExpectedConditions.visibilityOf(firstName)).clear();
+        firstName.sendKeys(first);
     }
 
-    // insert first name
-    public void insertFirstName(String first){
-        wait.until(ExpectedConditions.visibilityOf(firstName)).sendKeys(first);
+    public String getFirstName(){
+        return firstName.getText();
     }
 
     // insert middle name
-    public void insertMiddleName(String middle){
+    private void insertMiddleName(String middle){
+
+        middleName.clear();
         middleName.sendKeys(middle);
     }
 
+    public String getMiddleName(){
+        return middleName.getText();
+    }
+
     // insert last name
-    public void insertLastName(String last){
+    private void insertLastName(String last){
+
+        lastName.clear();
         lastName.sendKeys(last);
+    }
+
+    public String getLastName(){
+        return lastName.getText();
     }
 
     public void insertNames(String first, String middle, String last){
         insertFirstName(first);
         insertMiddleName(middle);
         insertLastName(last);
+    }
+    // get errors
+    public String getFirstNameError(){
+        return firstNameError.getText();
+    }
+
+    public String getMiddleNameError(){
+        return middleNameError.getText();
+    }
+
+    public String getLastNameError(){
+        return lastNameError.getText();
     }
 
     public void uploadImage(String imagePath) throws AWTException, InterruptedException{
@@ -134,13 +202,36 @@ public class PersonalPage {
         robot.delay(1500);
         robot.keyRelease(KeyEvent.VK_ENTER);
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@class='profile-picture mb ml']")));
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@class='profile-picture mb ml']")));
+    }
+
+    // handle incorrect image file type pup up
+    public String getPopUpHeader(){
+
+        String header = driver.findElement(By.tagName("h2")).getText();
+        driver.findElement(By.xpath("//button[@class='confirm']")).click();
+
+        return header;
     }
 
     // insert date and place of birthday
     public void insertDatePlaceBirth(String dateB , String placeB){
+        dateBirth.clear();
         dateBirth.sendKeys(dateB);
+        placeBirth.clear();
         placeBirth.sendKeys(placeB);
+    }
+
+    public String getDateOfB(){
+        return dateBirth.getText();
+    }
+
+    public String getPlaceOfB(){
+        return placeBirth.getText();
+    }
+
+    public String getPlaceBirthError(){
+        return placeBirthError.getText();
     }
 
     // select country
@@ -149,6 +240,10 @@ public class PersonalPage {
 
         wait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("//span[contains(.,'" + country + "')]"))).click();
+    }
+
+    public String getCountryValue(){
+        return getCountry.getText();
     }
 
     // enter address
@@ -160,9 +255,29 @@ public class PersonalPage {
         zip.sendKeys(postal);
     }
 
+    public String getAddress1(){
+        return address1.getText();
+    }
+
+    public String getAddress2(){
+        return address2.getText();
+    }
+
+    public String getCity(){
+        return city.getText();
+    }
+
+    public String getState(){
+        return addressState.getText();
+    }
+
+    public String getZip(){
+        return zip.getText();
+    }
+
     // select radio button Rural and get class attribute
     public String selectRural(){
-        wait.until(ExpectedConditions.visibilityOf(radioRural));
+        wait.until(ExpectedConditions.elementToBeClickable(radioRural));
         executor.executeScript("arguments[0].click()", radioRural);
 
         return ruralClass.getAttribute("class");
@@ -170,27 +285,106 @@ public class PersonalPage {
 
     // select radio button Urban and get class attribute
     public String selectUrban(){
-        wait.until(ExpectedConditions.visibilityOf(radioUrban));
+        wait.until(ExpectedConditions.elementToBeClickable(radioUrban));
         executor.executeScript("arguments[0].click()", radioUrban);
 
-        return radioRural.getAttribute("class");
+        return urbanClass.getAttribute("class");
     }
 
     // select radio button Privileged and get class attribute
     public String selectPrivileged(){
-        wait.until(ExpectedConditions.visibilityOf(radioPrivileged));
+        wait.until(ExpectedConditions.elementToBeClickable(radioPrivileged));
         executor.executeScript("arguments[0].click()", radioPrivileged);
 
-        return radioPrivileged.getAttribute("class");
+        return privilegedClass.getAttribute("class");
     }
 
     // select radio button Underprivileged and get class attribute
     public String selectUnderprivileged(){
-        wait.until(ExpectedConditions.visibilityOf(radioUnderprivileged));
+        wait.until(ExpectedConditions.elementToBeClickable(radioUnderprivileged));
         executor.executeScript("arguments[0].click()", radioUnderprivileged);
 
-        return radioUnderprivileged.getAttribute("class");
+        return underprivilegedClass.getAttribute("class");
+    }
 
+    // enter email
+    public void enterEmail(String useEmail){
+        email.clear();
+        email.sendKeys(useEmail);
+    }
+
+    public String getEmail(){
+        return email.getText();
+    }
+
+    // get email error
+    public String getEmailError(){
+        return emailError.getText();
+    }
+
+    // enter phone number
+    public void enterPhone(String userPhone){
+        phone.clear();
+        phone.sendKeys(userPhone);
+    }
+
+    public String getPhone(){
+        return phone.getText();
+    }
+
+    // get phone error
+    public String getError(){
+        return error.getText();
+    }
+
+    // add social account
+    public void clickAddSocial(){
+        addSocialAccount.click();
+        wait.until(ExpectedConditions.visibilityOf(selectSocialAccount));
+    }
+
+    // select social account
+    public void selectSocial(String social){
+//        executor.executeScript("arguments[0].click()", selectSocialAccount);
+        selectSocialAccount.click();
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.xpath("//span[contains(.,'" + social + "')]"))).click();
+    }
+
+    public String getSocialValue(){
+        return getSocial.getText();
+    }
+
+    // insert height
+    public void insertHeight(String userHeight){
+        height.clear();
+//        height.sendKeys(Keys.BACK_SPACE);
+        height.sendKeys(userHeight);
+    }
+
+    public String getHight(){
+        return height.getText();
+    }
+
+    // insert weight
+    public void insertWeight(String userWeight){
+        weight.clear();
+        weight.sendKeys(userWeight);
+    }
+
+    public String getWeight(){
+        return weight.getText();
+    }
+
+    // get height error
+    public String getHeightError(){
+        return heightError.getText();
+    }
+
+    // get weight error
+    public String getWeightError(){
+        return weightError.getText();
     }
 
 }

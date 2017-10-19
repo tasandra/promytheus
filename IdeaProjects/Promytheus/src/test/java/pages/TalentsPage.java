@@ -38,8 +38,8 @@ public class TalentsPage {
     @FindBy(how = How.LINK_TEXT, using = "New")
     private WebElement newButton;
 
-    @FindBy(how = How.XPATH, using = "//em[@class='icon-pencil']")
-    private WebElement edit;
+    @FindBy(how = How.XPATH, using = "//table/tbody/tr/td[9]/a")
+    private List<WebElement> edit;
 
     @FindBy(how = How.XPATH, using = "//div[@class = 'btn-group']/button[1]")
     private WebElement enable;
@@ -48,7 +48,7 @@ public class TalentsPage {
     private WebElement disable;
 
     @FindBy(how = How.XPATH, using = "//div[@class = 'btn-group']/button[3]")
-    WebElement archive;
+    private WebElement archive;
 
     @FindBy(how = How.XPATH, using =  "//table/tbody/tr[1]/td[1]/div/label")
     private WebElement checkbox1;
@@ -98,6 +98,7 @@ public class TalentsPage {
     public List<WebElement> clickCheckboxes(){
         return checkboxes;
     }
+
 // click on first checkbox
     public void clickCheckbox(){
         JavascriptExecutor executor = (JavascriptExecutor)driver;
@@ -138,8 +139,8 @@ public class TalentsPage {
     }
 
 // click edit button
-    public void clickEdit(){
-        wait.until(ExpectedConditions.visibilityOf(edit)).click();
+    public List<WebElement> clickEdit(){
+        return edit;
     }
 
 }

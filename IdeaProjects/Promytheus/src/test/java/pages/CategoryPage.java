@@ -11,6 +11,9 @@ public class CategoryPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
+    @FindBy(how = How.LINK_TEXT, using = "Talents")
+    private WebElement talents;
+
     @FindBy(how = How.XPATH, using = "//li[@class='active ng-binding']")
     private WebElement headerNew;
 
@@ -31,12 +34,19 @@ public class CategoryPage {
 
     @FindBy(how = How.XPATH, using = "//span[contains(.,'Enter category name...   ')]")
     private WebElement category;
+    private JavascriptExecutor executor;
 
 
     public CategoryPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, 5);
+        executor = (JavascriptExecutor)driver;
+    }
+
+    public void clickTalents(){
+        wait.until(ExpectedConditions.elementToBeClickable(talents));
+        executor.executeScript("arguments[0].click()", talents);
     }
 
     public String getHeaderNew() {
@@ -65,7 +75,6 @@ public class CategoryPage {
 
     // click and select category
     public void selectCategory(String select) {
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click()", category);
 
         wait.until(ExpectedConditions.presenceOfElementLocated(

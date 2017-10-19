@@ -1,6 +1,7 @@
 package tests;
 
 import menus.TalentMenu;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.CategoryPage;
@@ -9,6 +10,7 @@ import pages.PersonalPage;
 import pages.TalentsPage;
 
 import java.awt.*;
+import java.util.List;
 
 import static org.testng.Assert.*;
 
@@ -30,29 +32,37 @@ public class PersonalPageTest extends ValidLoginTest {
     // go to personal page
     @Test (priority = 1)
     public void goPersonal(){
-        talents.clickEdit();
+//        talents.clickEdit();
+        List<WebElement> edit = talents.clickEdit();
+        edit.get(0).click();
         String active1 = menu.getActiveTabCategory();
         assertEquals("ng-scope active", active1);
 
         String header = category.getHeader();
         assertTrue(header.contains("Talent Strength"));
 
-//        menu.clickPersonal();
         menu.clickNext();
-//        String active2 = menu.getActiveTabPersonal();
-
-//        assertEquals("ng-scope active", active2);
     }
 
     // insert personal information
     @Test (priority = 9,dataProvider="SearchProvider",dataProviderClass= DataproviderClass.class)
-    public void insertInformation(String firstName, String middleName, String lastName, String dOfB, String placeOfB,
+    public void insertInformation(String id,String firstName, String middleName, String lastName, String dOfB, String placeOfB,
                             String country, String address1, String  address2, String city, String state, String zip,
                             String email, String phone, String social, String height, String weight
                             )
             throws InterruptedException, AWTException{
 
         String[] personalInfo = new String[16];
+
+        List<WebElement> edit = talents.clickEdit();
+        edit.get(Integer.parseInt(id)).click();
+        String active1 = menu.getActiveTabCategory();
+        assertEquals("ng-scope active", active1);
+
+        String header = category.getHeader();
+        assertTrue(header.contains("Talent Strength"));
+
+        menu.clickNext();
 
         personal.insertNames(firstName, middleName, lastName);
 
@@ -116,6 +126,10 @@ public class PersonalPageTest extends ValidLoginTest {
             System.out.println(personalInfo[i]);
         }
 
+        menu.clickNext();
+        String active = menu.getActiveTabTalentTraits();
+        assertEquals("active ng-binding ng-scope", active);
+        category.clickTalents();
 
     }
 
@@ -197,15 +211,7 @@ public class PersonalPageTest extends ValidLoginTest {
         String error = personal.getWeightError();
 
         assertEquals("This value should be lower than or equal to 999.99.", error);
-    }
+        category.clickTalents();
 
-    // save user input
-    @Test (priority = 10)
-    public void saveInput(){
-//        menu.clickTalentTraits();
-        menu.clickNext();
-        String active = menu.getActiveTabTalentTraits();
-        assertEquals("active ng-binding ng-scope", active);
     }
-
 }

@@ -4,18 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 
 import java.util.List;
 
-public class TalentsPage {
-
-    private WebDriver driver;
-    private WebDriverWait wait;
+public class TalentsPage extends BasePage {
 
     @FindBy(how = How.CSS, using = ".content-wrapper > h3")
     private WebElement header;
@@ -34,6 +29,9 @@ public class TalentsPage {
 
     @FindBy(how = How.XPATH, using = "//table/tbody/tr/td[1]/div/label")
     private List<WebElement> checkboxes;
+
+    @FindBy(how = How.XPATH, using = "//table/tbody/tr/td[1]/div/label")
+    private List<WebElement> checkboxClass;
 
     @FindBy(how = How.LINK_TEXT, using = "New")
     private WebElement newButton;
@@ -64,9 +62,7 @@ public class TalentsPage {
 
 // constructor
     public TalentsPage(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 5);
+       super(driver);
     }
 
     // page resources
@@ -87,6 +83,7 @@ public class TalentsPage {
 
 // get all names displayed on page
     public List<WebElement> getNames(){
+        wait.until(ExpectedConditions.visibilityOfAllElements(names));
         return names;
     }
     // get first name
@@ -96,11 +93,19 @@ public class TalentsPage {
 
 // get all checkboxes
     public List<WebElement> clickCheckboxes(){
+        wait.until(ExpectedConditions.visibilityOfAllElements(checkboxes));
         return checkboxes;
+    }
+
+    // get checkBoxes class values
+    public List<WebElement> getCheckboxClass(){
+       wait.until(ExpectedConditions.visibilityOfAllElements(checkboxClass));
+       return checkboxClass;
     }
 
 // click on first checkbox
     public void clickCheckbox(){
+        wait.until(ExpectedConditions.elementToBeClickable(checkbox1));
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click()", checkbox1);
     }
@@ -112,6 +117,7 @@ public class TalentsPage {
 
 // click enable button
     public void clickEnable(){
+        wait.until(ExpectedConditions.elementToBeClickable(enable));
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click()", enable);
     }
@@ -135,7 +141,7 @@ public class TalentsPage {
 
 // click new button
     public void clickNew() {
-        wait.until(ExpectedConditions.visibilityOf(newButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(newButton)).click();
     }
 
 // click edit button

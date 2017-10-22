@@ -4,15 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+public class LoginPage extends BasePage{
 
     @FindBy(how = How.CSS,using = ".logo")
+    private
     WebElement logo;
 
     @FindBy(how = How.NAME, using = "email")
@@ -35,9 +32,7 @@ public class LoginPage {
 
     // constructor
     public LoginPage(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 5);
+       super(driver);
     }
 
     // page resource
@@ -46,18 +41,19 @@ public class LoginPage {
        return wait.until(ExpectedConditions.visibilityOf(logo));
     }
 
-    public void enterUsername(String user){
+    private void enterUsername(String user){
         email.clear();
         email.sendKeys(user);
     }
 
-    public void enterPassword(String pass){
+    private void enterPassword(String pass){
         password.clear();
         password.sendKeys(pass);
     }
 
-    public void clickLoginButton(){
-        login.click();
+    private void clickLoginButton(){
+        executor.executeScript("arguments[0].click()", login);
+//        login.click();
     }
 
     public void submitLogin(String user, String pass){

@@ -1,19 +1,13 @@
 package menus;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.BasePage;
 
-public class TalentMenu  {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private  JavascriptExecutor executor;
+public class TalentMenu extends BasePage {
 
     @FindBy(how = How.XPATH, using = "//span[contains(.,'Category')]")
     private WebElement category;
@@ -37,10 +31,10 @@ public class TalentMenu  {
     private WebElement training;
 
     @FindBy(how = How.XPATH,using = "//span[contains(.,'Rating')]")
-    private WebElement reting;
+    private WebElement rating;
 
     @FindBy(how = How.XPATH,using = "//span[contains(.,'Social Background')]")
-    private WebElement socialBackround;
+    private WebElement socialBackground;
 
     @FindBy(how = How.XPATH, using = "//button[contains(.,'Previous')]")
     private WebElement previous;
@@ -80,10 +74,7 @@ public class TalentMenu  {
 
 
     public TalentMenu(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 15);
-        executor = (JavascriptExecutor)driver;
+       super(driver);
     }
 
     public void clickCategory(){
@@ -119,14 +110,14 @@ public class TalentMenu  {
     }
 
     public void clickRating(){
-        reting.click();
+        rating.click();
     }
 
     public void clickSocialBackground(){
-        wait.until(ExpectedConditions.elementToBeClickable(socialBackround));
-//        executor.executeScript("arguments[0].click()", socialBackround);
+        wait.until(ExpectedConditions.elementToBeClickable(socialBackground));
+//        executor.executeScript("arguments[0].click()", socialBackground);
 
-        socialBackround.click();
+        socialBackground.click();
     }
 
     public void clickPrevious(){

@@ -6,10 +6,10 @@
     <parameter name="browser" value="chrome"/>
     <test name="sample test">
         <classes>
-            <class name="tests.InvalidLoginTest"/>
+            <!--class name="tests.InvalidLoginTest"/-->
             <class name="tests.TalentsPageTest"/>
-            <class name="tests.CategoryPageTest"/>
-            <class name="tests.PersonalPageTest"/>
+            <!--class name="tests.CategoryPageTest"/>
+            <class name="tests.PersonalPageTest"/-->
         </classes>
     </test>
 </suite>

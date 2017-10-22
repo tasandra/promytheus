@@ -4,32 +4,32 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.BasePage;
 
-public class HomeMenu {
-    private WebDriver driver;
-    private WebDriverWait wait;
+public class HomeMenu extends BasePage{
 
     @FindBy(how = How.CSS,using = ".brand-logo > img")
+    private
     WebElement home;
 
-    @FindBy(how = How.CSS, using = ".icon-user")
+    @FindBy(how = How.XPATH, using = "//header/nav/div[2]/ul[2]/li[2]")
+    private
     WebElement userIcon;
 
     @FindBy(how = How.LINK_TEXT, using = "My Profile")
+    private
     WebElement profile;
 
-    @FindBy(how = How.LINK_TEXT, using = "Sign Out")
+    @FindBy(how = How.XPATH, using = "//p[contains(.,'Sign Out')]")
+    private
     WebElement signOut;
 
     // constructor
     public HomeMenu(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 5);
+       super(driver);
     }
+
 // get home button logo
     public WebElement getHomeMenuLogo() {
         return wait.until(ExpectedConditions.visibilityOf(home));
@@ -50,7 +50,8 @@ public class HomeMenu {
 // click on logout button
     public void logout(){
         clickUserIcon();
-        wait.until(ExpectedConditions.visibilityOf(signOut)).click();
+        executor.executeScript("arguments[0].click()", signOut);
+//        wait.until(ExpectedConditions.visibilityOf(signOut)).click();
     }
 
 

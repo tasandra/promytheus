@@ -3,18 +3,13 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
-public class PersonalPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
-    private JavascriptExecutor executor;
+public class PersonalPage extends BasePage{
 
     @FindBy(how = How.NAME, using = "firstName")
     private WebElement firstName;
@@ -126,10 +121,7 @@ public class PersonalPage {
 
 
     public PersonalPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 10);
-        executor = (JavascriptExecutor)driver;
+       super(driver);
     }
 
     // insert first name
@@ -139,7 +131,7 @@ public class PersonalPage {
     }
 
     public String getFirstName(){
-        return firstName.getText();
+        return firstName.getAttribute("value");
     }
 
     // insert middle name
@@ -150,7 +142,7 @@ public class PersonalPage {
     }
 
     public String getMiddleName(){
-        return middleName.getText();
+        return middleName.getAttribute("value");
     }
 
     // insert last name
@@ -161,7 +153,7 @@ public class PersonalPage {
     }
 
     public String getLastName(){
-        return lastName.getText();
+        return lastName.getAttribute("value");
     }
 
     public void insertNames(String first, String middle, String last){
@@ -182,7 +174,7 @@ public class PersonalPage {
         return lastNameError.getText();
     }
 
-    public void uploadImage(String imagePath) throws AWTException, InterruptedException{
+    public void uploadImage(String imagePath) throws AWTException {
         image.click();
 
         //put path to your image in a clipboard
@@ -223,11 +215,11 @@ public class PersonalPage {
     }
 
     public String getDateOfB(){
-        return dateBirth.getText();
+        return dateBirth.getAttribute("value");
     }
 
     public String getPlaceOfB(){
-        return placeBirth.getText();
+        return placeBirth.getAttribute("value");
     }
 
     public String getPlaceBirthError(){
@@ -243,7 +235,7 @@ public class PersonalPage {
     }
 
     public String getCountryValue(){
-        return getCountry.getText();
+        return getCountry.getAttribute("value");
     }
 
     // enter address
@@ -256,23 +248,23 @@ public class PersonalPage {
     }
 
     public String getAddress1(){
-        return address1.getText();
+        return address1.getAttribute("value");
     }
 
     public String getAddress2(){
-        return address2.getText();
+        return address2.getAttribute("value");
     }
 
     public String getCity(){
-        return city.getText();
+        return city.getAttribute("value");
     }
 
     public String getState(){
-        return addressState.getText();
+        return addressState.getAttribute("value");
     }
 
     public String getZip(){
-        return zip.getText();
+        return zip.getAttribute("value");
     }
 
     // select radio button Rural and get class attribute
@@ -314,7 +306,7 @@ public class PersonalPage {
     }
 
     public String getEmail(){
-        return email.getText();
+        return email.getAttribute("value");
     }
 
     // get email error
@@ -329,7 +321,7 @@ public class PersonalPage {
     }
 
     public String getPhone(){
-        return phone.getText();
+        return phone.getAttribute("value");
     }
 
     // get phone error
@@ -363,8 +355,8 @@ public class PersonalPage {
         height.sendKeys(userHeight);
     }
 
-    public String getHight(){
-        return height.getText();
+    public String getHeight(){
+        return height.getAttribute("value");
     }
 
     // insert weight
@@ -374,7 +366,7 @@ public class PersonalPage {
     }
 
     public String getWeight(){
-        return weight.getText();
+        return weight.getAttribute("value");
     }
 
     // get height error

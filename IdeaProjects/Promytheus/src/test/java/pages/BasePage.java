@@ -10,11 +10,12 @@ public class BasePage {
     protected final WebDriverWait wait;
     protected final JavascriptExecutor executor;
 
+//constructor
     protected BasePage(WebDriver driver){
 
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 15);
         executor = (JavascriptExecutor)driver;
     }
 

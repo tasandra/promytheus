@@ -40,7 +40,9 @@ public class HomeMenu extends BasePage{
     }
 // click on user ici=on
     public void clickUserIcon(){
-        userIcon.click();
+        wait.until(ExpectedConditions.elementToBeClickable(userIcon));
+        executor.executeScript("arguments[0].click()", userIcon);
+//        userIcon.click();
     }
 // click on my profile
     public void myProfile(){
@@ -50,6 +52,7 @@ public class HomeMenu extends BasePage{
 // click on logout button
     public void logout(){
         clickUserIcon();
+        wait.until(ExpectedConditions.elementToBeClickable(signOut));
         executor.executeScript("arguments[0].click()", signOut);
 //        wait.until(ExpectedConditions.visibilityOf(signOut)).click();
     }

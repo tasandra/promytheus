@@ -30,7 +30,6 @@ public class CategoryPage extends BasePage{
 
     @FindBy(how = How.XPATH, using = "//span[contains(.,'Enter category name...   ')]")
     private WebElement category;
-    private JavascriptExecutor executor;
 
 
     public CategoryPage(WebDriver driver) {

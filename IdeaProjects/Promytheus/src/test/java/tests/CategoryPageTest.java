@@ -42,13 +42,14 @@ public class CategoryPageTest extends ValidLoginTest {
         String error = categoryPage.getError();
         assertEquals("Please select a talent category first.", error);
     }
+
     @DataProvider(name="SearchProvider")
     public Object[][] getDataFromDataprovider(){
         return new Object[][]
                 {
-                        { "KAZAKHSTAN" },
-                        { "UNITED_KINGDOM" },
-                        { "RUSSIA" }
+                        { "Architecture" },
+                        { "Psychic/Intuitive/Predictive" },
+                        { "Software Programming" }
                 };
 
     }

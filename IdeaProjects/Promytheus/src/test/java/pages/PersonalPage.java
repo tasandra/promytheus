@@ -44,7 +44,7 @@ public class PersonalPage extends BasePage{
     @FindBy(how = How.XPATH, using = "//span[contains(.,'Enter country name... USA  ')]")
     private WebElement clickCountry;
 
-    @FindBy(how = How.XPATH, using = "//span[@class='ui-select-match-text pull-left']")
+    @FindBy(how = How.XPATH, using = "//*[@id='signUpCountry']/span/span[2]")
     private WebElement getCountry;
 
     @FindBy(how = How.ID,using = "address")
@@ -175,7 +175,8 @@ public class PersonalPage extends BasePage{
     }
 
     public void uploadImage(String imagePath) throws AWTException {
-        image.click();
+        executor.executeScript("arguments[0].click()", image);
+//        image.click();
 
         //put path to your image in a clipboard
         StringSelection ss = new StringSelection(imagePath);
@@ -235,7 +236,7 @@ public class PersonalPage extends BasePage{
     }
 
     public String getCountryValue(){
-        return getCountry.getAttribute("value");
+        return getCountry.getText();
     }
 
     // enter address

@@ -1,10 +1,13 @@
 package tests;
 
 import menus.HomeMenu;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+import sun.rmi.runtime.Log;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -24,8 +27,8 @@ public class InvalidLoginTest extends BaseTest {
     public void emptyEmail() {
         loginPage.submitLogin("", "");
         String error = loginPage.getError();
-
-        assertEquals("This value is required.", error);
+// assert correct error is displayed
+        assertEquals("This value is required.", error, "Incorrect error message");
     }
 
     @Test(priority = 2)
@@ -33,8 +36,8 @@ public class InvalidLoginTest extends BaseTest {
     public void emptyFields() {
         loginPage.submitLogin("", "password");
         String error = loginPage.getError();
-
-        assertEquals("This value is required.", error);
+// assert correct error is displayed
+        assertEquals("This value is required.", error, "Incorrect error message");
     }
 
     @Test(priority = 3)
@@ -42,8 +45,8 @@ public class InvalidLoginTest extends BaseTest {
     public void emptyPassword() {
         loginPage.submitLogin("kusiwa@cmail.club", "");
         String error = loginPage.getEmptyPassError();
-
-        assertEquals("This value is required.", error);
+// assert correct error is displayed
+        assertEquals("This value is required.", error, "Incorrect error message");
     }
 
     @Test(priority = 4)
@@ -51,8 +54,8 @@ public class InvalidLoginTest extends BaseTest {
     public void invalidEmail() {
         loginPage.submitLogin("kusiwa@", "password");
         String error = loginPage.getInvalidError();
-
-        assertEquals("Invalid Email or Password.", error);
+// assert correct error is displayed
+            assertEquals("Invalid Email or Password.", error, "Incorrect error message");
     }
 
     @Test(priority = 5)
@@ -60,8 +63,8 @@ public class InvalidLoginTest extends BaseTest {
     public void invalidPassword() {
         loginPage.submitLogin("kusiwa@cmail.club", "pass");
         String error = loginPage.getInvalidError();
-
-        assertEquals("Invalid Email or Password.", error);
+// assert correct error is displayed
+        assertEquals("Invalid Email or Password.", error,"Incorrect error message");
     }
 
     @Test(priority = 6)
@@ -71,14 +74,21 @@ public class InvalidLoginTest extends BaseTest {
         loginPage.submitLogin("kusiwa@cmail.club", "password");
 
         WebElement logo = home.getHomeMenuLogo();
-        assertEquals(true, logo.isDisplayed());
+        assertTrue(logo.isDisplayed(), "Logo on Talents page not displayed");
     }
 
     @Test(priority = 7)
     public void logout(){
         home.clickUserIcon();
-        home.logout();
-        assertTrue(loginPage.getLogo().isDisplayed());
+        try {
+            home.logoutClick();
+        }
+        catch(Exception e){
+            home.logoutJs();
+            System.out.println(" log out with javascript execution");
+        }
+
+        assertTrue(loginPage.getLogo().isDisplayed(),"User wasn't able to logout and logo not displayed");
     }
 
 }

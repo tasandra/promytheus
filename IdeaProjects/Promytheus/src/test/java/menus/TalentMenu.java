@@ -148,10 +148,17 @@ public class TalentMenu extends BasePage {
         return  activeTabPersonal.getAttribute("class");
     }
 
-    // get active tab talent traits
+
+    // get active tap talent traits
     public String getActiveTabTalentTraits(){
-//        wait.until(ExpectedConditions.attributeToBe(activeTabTalentTraits, "class", "active ng-binding ng-scope"));
+        wait.until(ExpectedConditions.attributeToBe(activeTabTalentTraits, "class", "ng-scope active"));
         return  activeTabTalentTraits.getAttribute("class");
+    }
+
+    // get active tap Personality Traits
+    public String getActiveTabPersonalityTraits(){
+        wait.until(ExpectedConditions.attributeToBe(activeTabPersonalityTraits, "class", "ng-scope active"));
+        return  activeTabPersonalityTraits.getAttribute("class");
     }
 
     // get active tab attribute social background

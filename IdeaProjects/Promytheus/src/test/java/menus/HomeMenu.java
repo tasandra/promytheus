@@ -10,20 +10,17 @@ import pages.BasePage;
 public class HomeMenu extends BasePage{
 
     @FindBy(how = How.CSS,using = ".brand-logo > img")
-    private
-    WebElement home;
+    private WebElement home;
 
     @FindBy(how = How.XPATH, using = "//header/nav/div[2]/ul[2]/li[2]")
-    private
-    WebElement userIcon;
+    private WebElement userIcon;
 
     @FindBy(how = How.LINK_TEXT, using = "My Profile")
-    private
-    WebElement profile;
+    private WebElement profile;
 
-    @FindBy(how = How.XPATH, using = "//p[contains(.,'Sign Out')]")
-    private
-    WebElement signOut;
+//    @FindBy(how = How.XPATH, using = "//p[contains(.,'Sign Out')]")
+    @FindBy(how = How.XPATH,using = "//header/nav/div[2]/ul[2]/li[2]/ul/li/div/a[2]/div/div[2]/p")
+    private WebElement signOut;
 
     // constructor
     public HomeMenu(WebDriver driver){
@@ -41,8 +38,8 @@ public class HomeMenu extends BasePage{
 // click on user ici=on
     public void clickUserIcon(){
         wait.until(ExpectedConditions.elementToBeClickable(userIcon));
-        executor.executeScript("arguments[0].click()", userIcon);
-//        userIcon.click();
+//        executor.executeScript("arguments[0].click()", userIcon);
+        userIcon.click();
     }
 // click on my profile
     public void myProfile(){
@@ -50,12 +47,19 @@ public class HomeMenu extends BasePage{
         wait.until(ExpectedConditions.visibilityOf(profile)).click();
     }
 // click on logout button
-    public void logout(){
+    public void logoutClick(){
+        clickUserIcon();
+        wait.until(ExpectedConditions.elementToBeClickable(signOut)).click();
+//        executor.executeScript("arguments[0].click()", signOut);
+    }
+
+    // click on logout button
+    public void logoutJs(){
         clickUserIcon();
         wait.until(ExpectedConditions.elementToBeClickable(signOut));
-        executor.executeScript("arguments[0].click()", signOut);
-//        wait.until(ExpectedConditions.visibilityOf(signOut)).click();
+       executor.executeScript("arguments[0].click()", signOut);
     }
+
 
 
 }

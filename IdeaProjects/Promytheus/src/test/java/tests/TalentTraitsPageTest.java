@@ -34,21 +34,27 @@ public class TalentTraitsPageTest extends ValidLoginTest {
 // go to talent traits page
     @Test (priority = 1)
     public void goTalentTraits(){
+        // click edit and assert user redirect to the category page
         List<WebElement> edit = talents.clickEdit();
         edit.get(0).click();
-        String active = menu.getActiveTabCategory();
-        assertEquals("ng-scope active", active);
+        String active1 = menu.getActiveTabCategory();
+        assertEquals("ng-scope active", active1);
 
         String header = category.getHeader();
-        assertTrue(header.contains("Talent Strength"), " Wrong page");
+        assertTrue(header.contains("Talent Strength"));
 
+        // click on talent traits and assert user redirect to the talents traits page
         menu.clickTalentTraits();
+        String active2 = menu.getActiveTabTalentTraits();
+        assertEquals("ng-scope active", active2);
     }
 
 // assert errors - all fields empty
     @Test (priority = 2)
     public void getEmptyErrors(){
+        // leave all fields empty and click next
         menu.clickNext();
+        // get all error messages
         List<WebElement> errors = talentTraits.getTraitsErrors();
         Iterator<WebElement> iterator = errors.iterator();
         while(iterator.hasNext()) {
@@ -60,9 +66,10 @@ public class TalentTraitsPageTest extends ValidLoginTest {
     // assert errors - scale more than 10
     @Test (priority = 3)
     public void insert11(){
+        // refresh browser and insert scales more than 10 in each fields
         driver.navigate().refresh();
         talentTraits.insetScales("11");
-
+        // assert error messages
         List<WebElement> errors = talentTraits.getTraitsErrors();
         Iterator<WebElement> itr = errors.iterator();
         while(itr.hasNext()) {
@@ -74,9 +81,10 @@ public class TalentTraitsPageTest extends ValidLoginTest {
     // assert errors - scale more less than 1
     @Test (priority = 4)
     public void insert0(){
+        // refresh browser and insert scales less than 1 in each fields
         driver.navigate().refresh();
         talentTraits.insetScales("0");
-
+        // assert error messages
         List<WebElement> errors = talentTraits.getTraitsErrors();
         Iterator<WebElement> itr = errors.iterator();
         while(itr.hasNext()) {
@@ -88,6 +96,7 @@ public class TalentTraitsPageTest extends ValidLoginTest {
     // insert valid scales
     @Test (priority = 5)
     public void insertScales(){
+        // refresh browser and insert scales in range  1 - 10 for each fields
         driver.navigate().refresh();
         int[] numbers = new int[20];
 
@@ -96,6 +105,8 @@ public class TalentTraitsPageTest extends ValidLoginTest {
             numbers[i] = (int)(Math.random() * 10 + 1);
         }
 //        System.out.print(Arrays.toString(numbers));
+
+        // insert random numbers to scales
         List<WebElement> rows = talentTraits.getTraitsRowsInput();
         Iterator<WebElement> itr = rows.iterator();
         int i = 0;
@@ -103,10 +114,21 @@ public class TalentTraitsPageTest extends ValidLoginTest {
             itr.next().sendKeys(Integer.toString(numbers[i]));
             i++;
         }
+        // click next to save scales and assert user redirect to next page
         menu.clickNext();
+        String active3 = menu.getActiveTabPersonalityTraits();
+        assertEquals("ng-scope active", active3);
 
+        // log out and log in
         home.clickUserIcon();
-        home.logout();
+        try {
+            home.logoutClick();
+        }
+        catch(Exception e){
+            home.logoutJs();
+            System.out.println(" log out with javascript execution");
+        }
+
         validLogin();
     }
 

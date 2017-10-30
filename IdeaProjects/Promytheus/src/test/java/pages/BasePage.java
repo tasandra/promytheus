@@ -18,6 +18,4 @@ public class BasePage {
         wait = new WebDriverWait(driver, 15);
         executor = (JavascriptExecutor)driver;
     }
-
-
 }

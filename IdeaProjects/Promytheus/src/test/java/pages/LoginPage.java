@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage{
 
-    @FindBy(how = How.CSS,using = ".logo")
+    @FindBy(how = How.XPATH,using = "//auth-zone/div/img")
     private
     WebElement logo;
 
@@ -52,9 +52,17 @@ public class LoginPage extends BasePage{
     }
 
     private void clickLoginButton(){
-        executor.executeScript("arguments[0].click()", login);
-//        login.click();
+        wait.until(ExpectedConditions.elementToBeClickable(login));
+//        executor.executeScript("arguments[0].click()", login);
+        login.click();
     }
+
+    private void clickLoginButtonJs(){
+        wait.until(ExpectedConditions.elementToBeClickable(login));
+        executor.executeScript("arguments[0].click()", login);
+    }
+
+
 
     public void submitLogin(String user, String pass){
         enterUsername(user);

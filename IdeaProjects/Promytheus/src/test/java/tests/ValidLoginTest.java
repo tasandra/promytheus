@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class ValidLoginTest extends BaseTest {
     private LoginPage loginPage;
@@ -25,7 +26,7 @@ public class ValidLoginTest extends BaseTest {
         loginPage.submitLogin("kusiwa@cmail.club", "password");
 
         WebElement logo = menu.getHomeMenuLogo();
-        assertEquals(true, logo.isDisplayed());
+        assertTrue(logo.isDisplayed(), "User is not able to login - logo not displayed");
     }
 
 }

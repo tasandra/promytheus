@@ -68,7 +68,7 @@ public class TalentsPage extends BasePage {
     // page resources
 // get header
     public String getHeader(){
-        return header.getText();
+       return wait.until(ExpectedConditions.visibilityOf(header)).getText();
     }
 
 // select 10,25,50,100 rows displayed on page

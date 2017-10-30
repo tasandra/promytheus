@@ -32,6 +32,9 @@ public class PersonalPage extends BasePage{
     @FindBy(how = How.NAME, using ="profilePicture")
     private WebElement image;
 
+    @FindBy(how = How.XPATH, using = "//img[@class='profile-picture mb ml']")
+    private WebElement uploadedImage;
+
     @FindBy(how = How.NAME, using = "dateBirth")
     private WebElement dateBirth;
 
@@ -194,8 +197,11 @@ public class PersonalPage extends BasePage{
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.delay(1500);
         robot.keyRelease(KeyEvent.VK_ENTER);
+    }
 
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@class='profile-picture mb ml']")));
+    // get image already uploaded to personal page
+    public WebElement getUploaderImage(){
+        return wait.until(ExpectedConditions.visibilityOf(uploadedImage));
     }
 
     // handle incorrect image file type pup up

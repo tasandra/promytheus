@@ -56,7 +56,7 @@ public class CategoryPage extends BasePage{
 
     // get active tab attribute
     public String getActiveTab(){
-        wait.until(ExpectedConditions.attributeToBe(active, "class", "ng-scope active"));
+        wait.until(ExpectedConditions.visibilityOf(active));
         return  active.getAttribute("class");
     }
 

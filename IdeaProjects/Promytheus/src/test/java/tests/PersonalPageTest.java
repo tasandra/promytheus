@@ -6,13 +6,13 @@ import menus.TalentMenu;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.*;
 
-import java.awt.*;
-import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
+import org.testng.asserts.SoftAssert;
 
 import static org.testng.Assert.*;
 
@@ -23,6 +23,8 @@ public class PersonalPageTest extends ValidLoginTest {
     private TalentMenu menu;
     private CategoryPage category;
     private HomeMenu home;
+    private SoftAssert softAssert;
+
 
     @BeforeClass
     public void beforeClass() {
@@ -32,7 +34,7 @@ public class PersonalPageTest extends ValidLoginTest {
         menu = new TalentMenu(driver);
         home = new HomeMenu(driver);
         category = new CategoryPage(driver);
-
+        softAssert = new SoftAssert();
     }
 
         // go to personal page
@@ -55,6 +57,7 @@ public class PersonalPageTest extends ValidLoginTest {
             catch (NoSuchElementException e){
                 System.out.println(e);
             }
+
             String header = category.getHeader();
             assertTrue(header.contains("Talent Strength"));
 
@@ -96,7 +99,7 @@ public class PersonalPageTest extends ValidLoginTest {
         public void getIncorrectFileType() throws InterruptedException, AWTException {
             personal.uploadImage("C:\\Users\\Alexandra\\Downloads\\SampleVideo_1280x720_10mb.mp4");
 
-            String alertHeader = personal.getPopUpHeader();
+            String alertHeader = personal.getPopUpHeaderAndClick();
 
             assertEquals("Incorrect file type!", alertHeader);
         }
@@ -214,7 +217,7 @@ public class PersonalPageTest extends ValidLoginTest {
         }
 */
     // assert saved info after logout and login again
-    @Test(priority = 10, dataProvider = "SearchProvider", dataProviderClass = DataproviderClass.class)
+    @Test(priority = 10, dataProvider = "userData")
     public void assertInfo(String id, String firstName, String middleName, String lastName, String dOfB, String placeOfB,
                            String country, String address1, String address2, String city, String state, String zip,
                            String email, String phone, String social, String height, String weight) {
@@ -277,5 +280,14 @@ public class PersonalPageTest extends ValidLoginTest {
 // assert image was uploaded
         WebElement image = personal.getUploaderImage();
         assertTrue(image.isDisplayed(), "Image not displayed");
+    }
+
+
+    @DataProvider(name="userData")
+    public Object[][] userFormData() throws Exception
+    {
+        ExcelApi excel = new ExcelApi("promy.xlsx");
+        Object[][] data = excel.testData("personal");
+        return data;
     }
 }

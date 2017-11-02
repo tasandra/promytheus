@@ -27,8 +27,7 @@ public class BaseTest {
     @Parameters({"browser", "url"})
     @BeforeClass
     public void baseBeforeClass(String browser, String url)  throws MalformedURLException {
-//        driver = new ChromeDriver();
-//        driver.get(pageUrl);
+//  run firefox
         if(browser.equalsIgnoreCase("firefox")) {
 
             driver = new FirefoxDriver();
@@ -36,7 +35,7 @@ public class BaseTest {
 
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-
+// run chrome
         }else if (browser.equalsIgnoreCase("chrome")) {
 
             driver = new ChromeDriver();
@@ -44,6 +43,7 @@ public class BaseTest {
 
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+// run appium
         }else if(browser.equalsIgnoreCase("appium")){
 
             // Create object of  DesiredCapabilities class and specify android platform

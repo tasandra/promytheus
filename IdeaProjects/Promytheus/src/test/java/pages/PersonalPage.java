@@ -32,6 +32,12 @@ public class PersonalPage extends BasePage{
     @FindBy(how = How.NAME, using ="profilePicture")
     private WebElement image;
 
+    @FindBy(how = How.TAG_NAME, using = "h2")
+    private WebElement popupHeader;
+
+    @FindBy(how = How.XPATH, using = "//button[@class='confirm']")
+    private WebElement popupOK;
+
     @FindBy(how = How.XPATH, using = "//img[@class='profile-picture mb ml']")
     private WebElement uploadedImage;
 
@@ -205,10 +211,10 @@ public class PersonalPage extends BasePage{
     }
 
     // handle incorrect image file type pup up
-    public String getPopUpHeader(){
+    public String getPopUpHeaderAndClick(){
 
-        String header = driver.findElement(By.tagName("h2")).getText();
-        driver.findElement(By.xpath("//button[@class='confirm']")).click();
+        String header = popupHeader.getText();
+        popupOK.click();
 
         return header;
     }

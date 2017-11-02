@@ -138,7 +138,7 @@ public class TalentMenu extends BasePage {
 
     // get active tab attribute category
     public String getActiveTabCategory(){
-        wait.until(ExpectedConditions.attributeToBe(activeTabCategory, "class", "ng-scope active"));
+        wait.until(ExpectedConditions.visibilityOf(activeTabCategory));
         return  activeTabCategory.getAttribute("class");
     }
 

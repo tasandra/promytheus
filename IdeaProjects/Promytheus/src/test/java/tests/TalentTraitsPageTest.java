@@ -52,7 +52,7 @@ public class TalentTraitsPageTest extends ValidLoginTest {
 // assert errors - all fields empty
     @Test (priority = 2)
     public void getEmptyErrors(){
-        // leave all fields empty and click next
+        // all fields empty and click next
         menu.clickNext();
         // get all error messages
         List<WebElement> errors = talentTraits.getTraitsErrors();

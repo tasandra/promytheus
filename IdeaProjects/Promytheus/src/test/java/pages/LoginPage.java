@@ -30,6 +30,9 @@ public class LoginPage extends BasePage{
     @FindBy(how = How.CSS, using = ".alert")
     private WebElement invalidError;
 
+    @FindBy(how = How.TAG_NAME, using = "Register NowRegister Now")
+    private WebElement register;
+
     // constructor
     public LoginPage(WebDriver driver){
        super(driver);
@@ -62,12 +65,14 @@ public class LoginPage extends BasePage{
         executor.executeScript("arguments[0].click()", login);
     }
 
-
-
     public void submitLogin(String user, String pass){
         enterUsername(user);
         enterPassword(pass);
         clickLoginButton();
+    }
+
+    public void clickRegister(){
+        wait.until(ExpectedConditions.elementToBeClickable(register)).click();
     }
 // get first error
     public String getError(){

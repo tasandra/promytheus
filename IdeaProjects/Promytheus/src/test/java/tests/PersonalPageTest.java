@@ -1,6 +1,6 @@
 package tests;
 
-import data.DataproviderClass;
+import data.ExcelReadApi;
 import menus.HomeMenu;
 import menus.TalentMenu;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -284,9 +284,8 @@ public class PersonalPageTest extends ValidLoginTest {
 
 
     @DataProvider(name="userData")
-    public Object[][] userFormData() throws Exception
-    {
-        ExcelApi excel = new ExcelApi("promy.xlsx");
+    public Object[][] userFormData() throws Exception {
+        ExcelReadApi excel = new ExcelReadApi("promy.xlsx");
         Object[][] data = excel.testData("personal");
         return data;
     }

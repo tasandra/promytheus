@@ -1,15 +1,12 @@
 package tests;
 
 import menus.HomeMenu;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pages.ExcelApi;
+import data.ExcelReadApi;
 import pages.LoginPage;
-import sun.rmi.runtime.Log;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -65,7 +62,7 @@ public class InvalidLoginTest extends BaseTest {
     @DataProvider(name="userData")
     public Object[][] userFormData() throws Exception
     {
-        ExcelApi excel = new ExcelApi("promy.xlsx");
+        ExcelReadApi excel = new ExcelReadApi("promy.xlsx");
         Object[][] data = excel.testData("login");
         return data;
     }

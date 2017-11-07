@@ -1,12 +1,16 @@
 package tests;
 
-import data.ExcelReadApi;
 import data.ExcelWriteApi;
 import data.NadaPage;
+import menus.HomeMenu;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import pages.LoginPage;
+import pages.MyProfilePage;
+import pages.RegisterPage;
+import pages.TalentsPage;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -14,18 +18,33 @@ import java.util.Set;
 import static org.testng.Assert.*;
 
 public class RegisterPageTest extends BaseTest{
+    private RegisterPage registerPage;
+    private LoginPage loginPage;
+    private HomeMenu home;
+    private TalentsPage talentsPage;
+    private MyProfilePage profilePage;
     private String firstName;
     private String lastName;
     private String email;
     private String phone;
     private String password;
     private NadaPage emailSite;
+    private String country;
+    private String address;
+    private String city;
+    private String state;
+    private String zip;
     private  String window1;
     private  String window2;
 
     @BeforeClass
     public void generateUser()  throws Exception{
         emailSite = new NadaPage(driver);
+        registerPage = new RegisterPage(driver);
+        loginPage = new LoginPage(driver);
+        talentsPage = new TalentsPage(driver);
+        home = new HomeMenu(driver);
+        profilePage = new MyProfilePage(driver);
         firstName = RandomStringUtils.random(10, true, false);
         lastName = RandomStringUtils.random(10, true, false);
         String phone1 = RandomStringUtils.random(3, false, true);
@@ -33,9 +52,14 @@ public class RegisterPageTest extends BaseTest{
         String phone3 = RandomStringUtils.random(4, false, true);
         phone = "(" + phone1 + ") " + phone2 + "-" + phone3;
         password = RandomStringUtils.random(10, true, true);
+        country = "Bangladesh";
+        address = RandomStringUtils.random(10,true,true);
+        city = RandomStringUtils.random(10,true,false);
+        state = RandomStringUtils.random(10, true, false);
+        zip = RandomStringUtils.random(5,false, true);
 
-       String url = "https://getnada.com/";
-       ((JavascriptExecutor) driver).executeScript("window.open(arguments[0])", url);
+       String emailUrl = "https://getnada.com/";
+       ((JavascriptExecutor) driver).executeScript("window.open(arguments[0])", emailUrl);
 
         Set<String> windows = driver.getWindowHandles();
         Iterator<String> itr = windows.iterator();
@@ -53,12 +77,90 @@ public class RegisterPageTest extends BaseTest{
         ExcelWriteApi write = new ExcelWriteApi("promy.xlsx");
         int rows = write.getRowCount("users");
         //System.out.print(rows);
-        write.setCellData("users",0,rows ,email);
-        write.setCellData("users",1,rows ,password);
+        write.setCellData("users",0,rows,email);
+        write.setCellData("users",1,rows,password);
 
         driver.switchTo().window(window1);
     }
+// go to register page
+    @Test(priority = 1)
+    public void gotoRegister(){
+        loginPage.clickRegister();
+        String header = registerPage.getHeader();
+        assertEquals("SIGNUP TO GET INSTANT ACCESS", header, "user is not redirect to register page");
+    }
 
+//  register new user
+    @Test(priority = 2)
+    public void registerNewUser(){
+        // insert data
+        registerPage.setFirstName(firstName);
+        registerPage.setLastName(lastName);
+        registerPage.setEmailAddress(email);
+        registerPage.setPhone(phone);
+        registerPage.setPassword(password);
+        registerPage.setConfirmPassword(password);
+        registerPage.setCountry(country);
+        registerPage.setAddress(address);
+        registerPage.setCity(city);
+        registerPage.setState(state);
+        registerPage.setZip(zip);
+        // click create account
+        registerPage.clickCreateAccount();
+        // assert user redirect to talents page
+        loginPage.submitLogin(email,password);
+        // assert pop up message
+        String popupHeader = talentsPage.getPopupHeader();
+        assertEquals("Who would you like to report?", popupHeader);
+        talentsPage.clickPopupRadioYourSelf();
+        talentsPage.clickPopupOK();
+        String talentsHeader = talentsPage.getHeader();
+        assertEquals("Talents", talentsHeader, "user is not redirect to talents page");
+    }
 
+    // check email
+    @Test(priority = 3)
+    public void checkEmailWelcomeMessage(){
+        // switch to email window
+        driver.switchTo().window(window2);
+        String message = emailSite.getWelcomeMessage();
+        assertTrue(message.contains("Welcome"), "user not received welcome message");
+    }
 
+    // assert my profile page
+    @Test(priority = 4)
+    public void assertMyProfile(){
+        // switch window to applicaton
+        driver.switchTo().window(window1);
+
+        // click on my profile
+        try {
+            home.clickUserIcon();
+            home.myProfileClick();
+        }
+        catch(Exception e){
+            home.clickUserIcon();
+            home.myProfileJs();
+            System.out.println(" click on my profile with javascript execution");
+        }
+        // create two array with input data and data from my profile page
+        String[] data = { firstName,lastName,email,phone,country,address,city,state,zip};
+        String[] myProfileInfo = new String[9];
+        myProfileInfo[0] = profilePage.getFirstName();
+        myProfileInfo[1] = profilePage.getLastName();
+        myProfileInfo[2] = profilePage.getEmail();
+        myProfileInfo[3] = profilePage.getPhone();
+        myProfileInfo[4] = profilePage.getCountry();
+        myProfileInfo[5] = profilePage.getAddress();
+        myProfileInfo[6] = profilePage.getCity();
+        myProfileInfo[7] = profilePage.getState();
+        myProfileInfo[8] = profilePage.getZip();
+
+        // assert two arrays are equal
+        for (int i = 0; i < myProfileInfo.length; i++) {
+//            System.out.println(personalInfo[i] + " = " + data[i]);
+            assertTrue(myProfileInfo[i].equals(data[i]), myProfileInfo[i] + " not equals " + data[i]);
+        }
+
+    }
 }

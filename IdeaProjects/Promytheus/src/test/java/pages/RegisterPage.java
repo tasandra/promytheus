@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class RegisterPage extends BasePage{
 
+    @FindBy(how = How.TAG_NAME, using = "strong")
+    private WebElement header;
+
     @FindBy(how = How.NAME, using = "firstName")
     private WebElement firstName;
 
@@ -47,6 +50,10 @@ public class RegisterPage extends BasePage{
 
     public RegisterPage(WebDriver driver){
         super(driver);
+    }
+
+    public String  getHeader() {
+        return wait.until(ExpectedConditions.visibilityOf(header)).getText();
     }
 
     public void setFirstName(String fName) {

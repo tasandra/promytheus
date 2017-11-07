@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Promytheus]">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html"/>
+  <test name="login and talents(failed)">
+    <classes>
+      <class name="tests.RegisterPageTest">
+        <methods>
+          <include name="registerNewUser"/>
+          <include name="gotoRegister"/>
+          <include name="checkEmailWelcomeMessage"/>
+          <include name="baseBeforeClass"/>
+          <include name="generateUser"/>
+        </methods>
+      </class> <!-- tests.RegisterPageTest -->
+    </classes>
+  </test> <!-- login and talents(failed) -->
+</suite> <!-- Failed suite [Promytheus] -->

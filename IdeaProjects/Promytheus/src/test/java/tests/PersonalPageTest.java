@@ -228,7 +228,6 @@ public class PersonalPageTest extends ValidLoginTest {
         String[] personalInfo = new String[16];
 
         // logout and login
-        home.clickUserIcon();
         try {
             home.logoutClick();
         }

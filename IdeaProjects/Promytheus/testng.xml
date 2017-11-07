@@ -4,21 +4,22 @@
 <suite name="Promytheus">
     <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html"/>
     <parameter name="browser" value="chrome"/>
-    <!--test name = "login and talents">
+    <test name = "login and talents">
         <classes>
-            <class name="tests.InvalidLoginTest"/>
-            <class name="tests.TalentsPageTest"/>
+            <class name="tests.RegisterPageTest"/>
+            <!--class name="tests.InvalidLoginTest"/>
+            <class name="tests.TalentsPageTest"/-->
         </classes>
     </test>
-    <test name = "new user">
+    <!--test name = "new user">
         <classes>
             <class name="tests.CategoryPageTest"/>
         </classes>
-    </test-->
+    </test>
     <test name="ru">
         <classes>
-            <!--class name="tests.PersonalPageTest"/-->
+            <class name="tests.PersonalPageTest"/>
             <class name="tests.TalentTraitsPageTest"/>
         </classes>
-    </test>
+    </test-->
 </suite>

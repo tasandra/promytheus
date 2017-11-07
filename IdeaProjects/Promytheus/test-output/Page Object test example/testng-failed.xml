@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Page Object test example]">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html"/>
+  <test name="ru(failed)">
+    <classes>
+      <class name="tests.PersonalPageTest">
+        <methods>
+          <include name="assertInfo" invocation-numbers="0"/>
+          <include name="beforeClass"/>
+          <include name="loginBeforeClass"/>
+          <include name="baseBeforeClass"/>
+          <include name="baseAfterClass"/>
+        </methods>
+      </class> <!-- tests.PersonalPageTest -->
+    </classes>
+  </test> <!-- ru(failed) -->
+</suite> <!-- Failed suite [Page Object test example] -->

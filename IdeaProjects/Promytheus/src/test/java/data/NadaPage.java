@@ -26,6 +26,9 @@ public class NadaPage {
     @FindBy(how = How.CSS, using = ".active > a:nth-child(1) > span:nth-child(2) > span:nth-child(1)")
     private WebElement email;
 
+    @FindBy(how = How.XPATH, using = "//*[@id='body']//span[2]")
+    private WebElement welcome;
+
 
     public NadaPage(WebDriver driver) {
         this.driver = driver;
@@ -45,7 +48,12 @@ public class NadaPage {
     public void clickCopyEmail() {
         wait.until(ExpectedConditions.elementToBeClickable(copyEmail)).click();
     }
+
     public String getEmail() {
         return wait.until(ExpectedConditions.visibilityOf(email)).getText();
+    }
+
+    public String getWelcomeMessage() {
+        return wait.until(ExpectedConditions.visibilityOf(welcome)).getText();
     }
 }

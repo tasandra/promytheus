@@ -60,6 +60,15 @@ public class TalentsPage extends BasePage {
     @FindBy(how = How.XPATH,using = "//button[contains(.,'Search')]")
     private WebElement searchButton;
 
+    @FindBy(how = How.TAG_NAME, using = "h2")
+    private WebElement popupHeader;
+
+    @FindBy(how = How.XPATH, using = "//label[2]/span")
+    private WebElement popupRadioYourSelf;
+
+    @FindBy(how = How.XPATH, using = "//div[7]/div/button")
+    private WebElement popupOK;
+
 // constructor
     public TalentsPage(WebDriver driver){
        super(driver);
@@ -147,6 +156,21 @@ public class TalentsPage extends BasePage {
 // click edit button
     public List<WebElement> clickEdit(){
         return edit;
+    }
+
+// get pop up header
+    public String getPopupHeader() {
+     return wait.until(ExpectedConditions.visibilityOf(popupHeader)).getText();
+    }
+
+// pop up click YouSelf
+    public void clickPopupRadioYourSelf() {
+         wait.until(ExpectedConditions.visibilityOf(popupRadioYourSelf)).click();
+}
+
+// click popup OK
+    public void clickPopupOK() {
+        wait.until(ExpectedConditions.visibilityOf(popupOK)).click();
     }
 
 }

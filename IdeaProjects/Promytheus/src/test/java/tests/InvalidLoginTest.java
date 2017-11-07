@@ -1,6 +1,7 @@
 package tests;
 
 import menus.HomeMenu;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -22,20 +23,29 @@ public class InvalidLoginTest extends BaseTest {
     }
 
     @Test(priority = 1, dataProvider = "userData")
-    public void getErrors(String email, String pass){
+    // check error massages
+    public void getErrors(String email, String pass) {
         loginPage.submitLogin(email, pass);
         try {
             String error = loginPage.getError();
             // assert correct error is displayed
-            assertEquals("This value is required.", error, "Incorrect error message");
-        }catch (Exception e){
+            assertEquals("This value is required.", error,"c");
+        } catch (Exception e) {
             String error = loginPage.getInvalidError();
             // assert correct error is displayed
             assertEquals("Invalid Email or Password.", error, "Incorrect error message");
         }
     }
 
+    // check empty password error
     @Test(priority = 2)
+    public void emptyPass(){
+        loginPage.submitLogin("kusiwa@cmail.club", "");
+        String error = loginPage.getEmptyPassError();
+        assertEquals("This value is required.", error, "This value is required.");
+    }
+
+    @Test(priority = 3)
     // log in with valid credentials
     public void validLogin() {
 
@@ -45,7 +55,7 @@ public class InvalidLoginTest extends BaseTest {
         assertTrue(logo.isDisplayed(), "Logo on Talents page not displayed");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 4)
     public void logout(){
         home.clickUserIcon();
         try {

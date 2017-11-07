@@ -9,8 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class LoginPage extends BasePage{
 
     @FindBy(how = How.XPATH,using = "//auth-zone/div/img")
-    private
-    WebElement logo;
+    private WebElement logo;
 
     @FindBy(how = How.NAME, using = "email")
     private WebElement email;
@@ -30,7 +29,7 @@ public class LoginPage extends BasePage{
     @FindBy(how = How.CSS, using = ".alert")
     private WebElement invalidError;
 
-    @FindBy(how = How.TAG_NAME, using = "Register NowRegister Now")
+    @FindBy(how = How.LINK_TEXT, using = "Register Now")
     private WebElement register;
 
     // constructor

@@ -7,11 +7,11 @@
     <test name = "login and talents">
         <classes>
             <class name="tests.RegisterPageTest"/>
-            <!--class name="tests.InvalidLoginTest"/>
-            <class name="tests.TalentsPageTest"/-->
+            <class name="tests.InvalidLoginTest"/>
+            <class name="tests.TalentsPageTest"/>
         </classes>
     </test>
-    <!--test name = "new user">
+    <test name = "new user">
         <classes>
             <class name="tests.CategoryPageTest"/>
         </classes>
@@ -21,5 +21,5 @@
             <class name="tests.PersonalPageTest"/>
             <class name="tests.TalentTraitsPageTest"/>
         </classes>
-    </test-->
+    </test>
 </suite>

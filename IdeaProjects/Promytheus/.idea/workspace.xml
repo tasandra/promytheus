@@ -5,20 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="581cc700-ecff-47da-b750-2b18ef4acf1a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pages/MyProfilePage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/promy.xlsx" afterPath="$PROJECT_DIR$/promy.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Promytheus.iml" afterPath="$PROJECT_DIR$/Promytheus.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/data/NadaPage.java" afterPath="$PROJECT_DIR$/src/test/java/data/NadaPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/menus/HomeMenu.java" afterPath="$PROJECT_DIR$/src/test/java/menus/HomeMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/RegisterPage.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/RegisterPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/tests/BaseTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/tests/RegisterPageTest.class" afterPath="$PROJECT_DIR$/target/test-classes/tests/RegisterPageTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" afterPath="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pages/TalentsPage.java" afterPath="$PROJECT_DIR$/src/test/java/pages/TalentsPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/InvalidLoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/InvalidLoginTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/PersonalPageTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/PersonalPageTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/RegisterPageTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/RegisterPageTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/Promytheus/login and talents.html" afterPath="$PROJECT_DIR$/test-output/Promytheus/login and talents.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/Promytheus/login and talents.xml" afterPath="$PROJECT_DIR$/test-output/Promytheus/login and talents.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/Promytheus/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/Promytheus/testng-failed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/emailable-report.html" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/index.html" afterPath="$PROJECT_DIR$/test-output/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-tests.RegisterPageTest.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-tests.RegisterPageTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/Promytheus/classes.html" afterPath="$PROJECT_DIR$/test-output/old/Promytheus/classes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/Promytheus/methods-alphabetical.html" afterPath="$PROJECT_DIR$/test-output/old/Promytheus/methods-alphabetical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/Promytheus/methods.html" afterPath="$PROJECT_DIR$/test-output/old/Promytheus/methods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/Promytheus/toc.html" afterPath="$PROJECT_DIR$/test-output/old/Promytheus/toc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/index.html" afterPath="$PROJECT_DIR$/test-output/old/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-results.xml" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testng.xml" afterPath="$PROJECT_DIR$/testng.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -44,23 +51,23 @@
       <file leaf-file-name="testng.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="391">
+              <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+              <folding>
+                <marker date="1510099549913" expanded="true" signature="359:445" ph="..." />
+                <marker date="1510099549913" expanded="true" signature="483:781" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NadaPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/data/NadaPage.java">
+      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="28" column="52" lean-forward="false" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+            <state relative-caret-position="136">
+              <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
               <folding>
-                <element signature="e#1430#1431#0" expanded="true" />
-                <element signature="e#1459#1460#0" expanded="true" />
-                <element signature="e#1737#1738#0" expanded="true" />
-                <element signature="e#1822#1823#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,20 +76,39 @@
       <file leaf-file-name="RegisterPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pages/RegisterPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="55">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
-                <element signature="e#1604#1605#0" expanded="true" />
+                <element signature="e#1771#1772#0" expanded="true" />
+                <element signature="e#2388#2389#0" expanded="true" />
+                <element signature="e#2476#2477#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterPageTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test-output/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <folding>
+                <marker date="1510100269465" expanded="true" signature="103920:103951" ph="..." />
+                <marker date="1510100269465" expanded="true" signature="103920:104003" ph="..." />
+                <marker date="1510100269465" expanded="true" signature="103920:104068" ph="..." />
+                <marker date="1510100269465" expanded="true" signature="103920:104096" ph="..." />
+                <marker date="1510100269465" expanded="true" signature="103920:104132" ph="..." />
+                <marker date="1510100269465" expanded="true" signature="103920:104152" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterPageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/RegisterPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,44 +116,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/menus/HomeMenu.java">
+      <file leaf-file-name="TalentTraitsPageTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/TalentTraitsPageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="47" column="30" lean-forward="false" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-              <folding>
-                <element signature="e#1346#1347#0" expanded="true" />
-                <element signature="e#1430#1431#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyProfilePage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pages/MyProfilePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="65" column="77" lean-forward="false" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
+            <state relative-caret-position="255">
+              <caret line="97" column="31" lean-forward="false" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TalentsPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pages/TalentsPage.java">
+      <file leaf-file-name="TalentTraitsPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pages/TalentTraitsPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="162" column="79" lean-forward="false" selection-start-line="162" selection-start-column="79" selection-end-line="162" selection-end-column="79" />
-              <folding>
-                <element signature="e#2840#2841#0" expanded="true" />
-                <element signature="e#2873#2874#0" expanded="true" />
-                <element signature="e#4979#4980#0" expanded="true" />
-                <element signature="e#5065#5066#0" expanded="true" />
-                <element signature="e#5134#5135#0" expanded="true" />
-                <element signature="e#5218#5219#0" expanded="true" />
-                <element signature="e#5270#5271#0" expanded="true" />
-                <element signature="e#5346#5347#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonalPageTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/PersonalPageTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2362">
+              <caret line="216" column="9" lean-forward="false" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -189,17 +203,18 @@
         <option value="$PROJECT_DIR$/src/test/java/data/ExcelWriteApi.java" />
         <option value="$PROJECT_DIR$/src/test/java/data/HomeworkDay2.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/InvalidLoginTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" />
-        <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/TalentsPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/BasePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/data/NadaPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/PersonalPageTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/MyProfilePage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/RegisterPageTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/menus/HomeMenu.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/RegisterPageTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" />
+        <option value="$PROJECT_DIR$/testng.xml" />
+        <option value="$PROJECT_DIR$/test-output/index.html" />
       </list>
     </option>
   </component>
@@ -221,7 +236,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -243,6 +258,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -268,14 +285,17 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Promytheus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Promytheus" type="462c0819:PsiDirectoryNode" />
+              <item name="test-output" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -609,34 +629,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.06 at 12h 20m 13s.xml">
+    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.07 at 11h 49m 30s.xml">
       <configuration name="C:/Users/Alexandra/IdeaProjects/Promytheus/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.06 at 12h 34m 40s.xml">
+    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.07 at 11h 55m 25s.xml">
       <configuration name="C:/Users/Alexandra/IdeaProjects/Promytheus/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.06 at 12h 51m 36s.xml">
+    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.07 at 11h 57m 03s.xml">
       <configuration name="C:/Users/Alexandra/IdeaProjects/Promytheus/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.06 at 12h 53m 58s.xml">
+    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.07 at 12h 00m 09s.xml">
       <configuration name="C:/Users/Alexandra/IdeaProjects/Promytheus/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.06 at 12h 55m 08s.xml">
+    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.07 at 12h 02m 53s.xml">
       <configuration name="C:/Users/Alexandra/IdeaProjects/Promytheus/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.06 at 13h 00m 52s.xml">
+    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.07 at 12h 13m 23s.xml">
       <configuration name="C:/Users/Alexandra/IdeaProjects/Promytheus/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.06 at 16h 09m 32s.xml">
+    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.07 at 12h 16m 16s.xml">
       <configuration name="C:/Users/Alexandra/IdeaProjects/Promytheus/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.06 at 16h 13m 48s.xml">
+    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.07 at 12h 31m 14s.xml">
       <configuration name="C:/Users/Alexandra/IdeaProjects/Promytheus/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.06 at 16h 19m 57s.xml">
+    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.07 at 16h 07m 55s.xml">
       <configuration name="C:/Users/Alexandra/IdeaProjects/Promytheus/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.06 at 16h 25m 07s.xml">
+    <history-entry file="C__Users_Alexandra_IdeaProjects_Promytheus_testng_xml - 2017.11.07 at 16h 17m 52s.xml">
       <configuration name="C:/Users/Alexandra/IdeaProjects/Promytheus/testng.xml" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -650,8 +670,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3420622" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -661,18 +680,18 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33552632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32401314" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6200658" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18835099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19440243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24942529" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4473684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4473684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -916,26 +935,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test-output/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pages/ReadExcelFile.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/TalentTraitsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -960,7 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="19" column="76" lean-forward="true" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -993,19 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/data/ExcelReadApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,33 +1027,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/TalentsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="162" column="79" lean-forward="false" selection-start-line="162" selection-start-column="79" selection-end-line="162" selection-end-column="79" />
-          <folding>
-            <element signature="e#2840#2841#0" expanded="true" />
-            <element signature="e#2873#2874#0" expanded="true" />
-            <element signature="e#4979#4980#0" expanded="true" />
-            <element signature="e#5065#5066#0" expanded="true" />
-            <element signature="e#5134#5135#0" expanded="true" />
-            <element signature="e#5218#5219#0" expanded="true" />
-            <element signature="e#5270#5271#0" expanded="true" />
-            <element signature="e#5346#5347#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/data/NadaPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
+        <state relative-caret-position="357">
           <caret line="28" column="52" lean-forward="false" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-          <folding>
-            <element signature="e#1430#1431#0" expanded="true" />
-            <element signature="e#1459#1460#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
-            <element signature="e#1822#1823#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1076,83 +1042,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="121" column="28" lean-forward="true" selection-start-line="121" selection-start-column="28" selection-end-line="121" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pages/PersonalPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="259" column="29" lean-forward="true" selection-start-line="259" selection-start-column="29" selection-end-line="259" selection-end-column="29" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/data/ExcelReadApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pages/MyProfilePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="850">
           <caret line="65" column="77" lean-forward="false" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
-          <folding />
+          <folding>
+            <element signature="e#1893#1894#0" expanded="false" />
+            <element signature="e#1978#1979#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/TalentsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding>
+            <element signature="e#2556#2557#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/TalentTraitsPageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+        <state relative-caret-position="255">
+          <caret line="97" column="31" lean-forward="false" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/PersonalPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="265" column="46" lean-forward="true" selection-start-line="265" selection-start-column="46" selection-end-line="265" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/RegisterPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#1604#1605#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/menus/HomeMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="526">
           <caret line="47" column="30" lean-forward="false" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
           <folding>
-            <element signature="e#1346#1347#0" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="false" />
+            <element signature="e#1430#1431#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/TalentTraitsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="391">
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding>
+            <marker date="1510099549913" expanded="true" signature="359:445" ph="..." />
+            <marker date="1510099549913" expanded="true" signature="483:781" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/PersonalPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2362">
+          <caret line="216" column="9" lean-forward="false" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/RegisterPageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/RegisterPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="e#2388#2389#0" expanded="true" />
+            <element signature="e#2476#2477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-output/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding>
+            <marker date="1510100269465" expanded="true" signature="103920:103951" ph="..." />
+            <marker date="1510100269465" expanded="true" signature="103920:104003" ph="..." />
+            <marker date="1510100269465" expanded="true" signature="103920:104068" ph="..." />
+            <marker date="1510100269465" expanded="true" signature="103920:104096" ph="..." />
+            <marker date="1510100269465" expanded="true" signature="103920:104132" ph="..." />
+            <marker date="1510100269465" expanded="true" signature="103920:104152" ph="..." />
           </folding>
         </state>
       </provider>

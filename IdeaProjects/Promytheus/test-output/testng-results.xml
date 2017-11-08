@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" ignored="0" total="5" passed="2">
+<testng-results skipped="0" failed="6" ignored="1" total="60" passed="53">
   <reporter-output>
   </reporter-output>
-  <suite name="Promytheus" duration-ms="151140" started-at="2017-11-07T00:22:33Z" finished-at="2017-11-07T00:25:05Z">
+  <suite name="Promytheus" duration-ms="568104" started-at="2017-11-08T00:08:14Z" finished-at="2017-11-08T00:17:42Z">
     <groups>
     </groups>
-    <test name="login and talents" duration-ms="151140" started-at="2017-11-07T00:22:33Z" finished-at="2017-11-07T00:25:05Z">
+    <test name="login and talents" duration-ms="327997" started-at="2017-11-08T00:08:14Z" finished-at="2017-11-08T00:13:42Z">
       <class name="tests.RegisterPageTest">
-        <test-method status="PASS" signature="baseBeforeClass(java.lang.String, java.lang.String)[pri:0, instance:tests.RegisterPageTest@1b0375b3]" name="baseBeforeClass" is-config="true" duration-ms="37427" started-at="2017-11-06T16:22:33Z" finished-at="2017-11-06T16:23:11Z">
+        <test-method status="PASS" signature="baseBeforeClass(java.lang.String, java.lang.String)[pri:0, instance:tests.RegisterPageTest@4c203ea1]" name="baseBeforeClass" is-config="true" duration-ms="37697" started-at="2017-11-07T16:08:14Z" finished-at="2017-11-07T16:08:52Z">
           <params>
             <param index="0">
               <value>
@@ -23,27 +23,66 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- baseBeforeClass -->
-        <test-method status="PASS" signature="generateUser()[pri:0, instance:tests.RegisterPageTest@1b0375b3]" name="generateUser" is-config="true" duration-ms="31558" started-at="2017-11-06T16:23:11Z" finished-at="2017-11-06T16:23:42Z">
+        <test-method status="PASS" signature="generateUser()[pri:0, instance:tests.RegisterPageTest@4c203ea1]" name="generateUser" is-config="true" duration-ms="43765" started-at="2017-11-07T16:08:52Z" finished-at="2017-11-07T16:09:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateUser -->
-        <test-method status="PASS" signature="checkLogo()[pri:0, instance:tests.RegisterPageTest@1b0375b3]" name="checkLogo" duration-ms="146" started-at="2017-11-06T16:23:43Z" finished-at="2017-11-06T16:23:43Z">
+        <test-method status="PASS" signature="checkLogo()[pri:0, instance:tests.RegisterPageTest@4c203ea1]" name="checkLogo" duration-ms="150" started-at="2017-11-07T16:09:36Z" finished-at="2017-11-07T16:09:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLogo -->
-        <test-method status="FAIL" signature="gotoRegister()[pri:1, instance:tests.RegisterPageTest@1b0375b3]" name="gotoRegister" duration-ms="2113" started-at="2017-11-06T16:23:43Z" finished-at="2017-11-06T16:23:45Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="gotoRegister()[pri:1, instance:tests.RegisterPageTest@4c203ea1]" name="gotoRegister" duration-ms="10078" started-at="2017-11-07T16:10:54Z" finished-at="2017-11-07T16:11:05Z">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[user is not redirect to register page expected [SIGN IN TO CONTINUE] but found [SIGNUP TO GET INSTANT ACCESS]]]>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=62.0.3202.89)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'SHUSHIK', ip: '192.168.1.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ALEXAN~1\AppData\Local\Temp\scoped_dir9772_12138}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.89, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 52aa786e7ff8d2fdc291083567b823fb]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: user is not redirect to register page expected [SIGN IN TO CONTINUE] but found [SIGNUP TO GET INSTANT ACCESS]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at tests.RegisterPageTest.gotoRegister(RegisterPageTest.java:90)
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=62.0.3202.89)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'SHUSHIK', ip: '192.168.1.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ALEXAN~1\AppData\Local\Temp\scoped_dir9772_12138}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.89, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 52aa786e7ff8d2fdc291083567b823fb
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:320)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy11.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:301)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:284)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at pages.RegisterPage.getHeader(RegisterPage.java:59)
+	at tests.RegisterPageTest.gotoRegister(RegisterPageTest.java:89)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -70,25 +109,340 @@
 	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- gotoRegister -->
-        <test-method status="FAIL" signature="registerNewUser()[pri:2, instance:tests.RegisterPageTest@1b0375b3]" name="registerNewUser" duration-ms="15425" started-at="2017-11-06T16:23:46Z" finished-at="2017-11-06T16:24:01Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="1856" started-at="2017-11-07T16:11:55Z" data-provider="invalidEmails" finished-at="2017-11-07T16:11:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[plainaddress]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="562" started-at="2017-11-07T16:11:57Z" data-provider="invalidEmails" finished-at="2017-11-07T16:11:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[#@%^%#$@#$@#.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="655" started-at="2017-11-07T16:11:58Z" data-provider="invalidEmails" finished-at="2017-11-07T16:11:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[@domain.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="782" started-at="2017-11-07T16:11:58Z" data-provider="invalidEmails" finished-at="2017-11-07T16:11:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Joe Smith <email@domain.com>]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="695" started-at="2017-11-07T16:11:59Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[email.domain.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="537" started-at="2017-11-07T16:12:00Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[email@domain@domain.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="480" started-at="2017-11-07T16:12:00Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[.email@domain.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="525" started-at="2017-11-07T16:12:01Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[email.@domain.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="673" started-at="2017-11-07T16:12:01Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[email..email@domain.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="FAIL" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="14022" started-at="2017-11-07T16:12:02Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[あいうえお@domain.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[user is not redirect to talents page expected [Talent Strength
-TalentsNew] but found [Talents]]]>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (52aa786e7ff8d2fdc291083567b823fb)] -> xpath: //*[@id='registerForm']/div[2]/div[1]/div[1]/div[4]/div/span[3]] (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'SHUSHIK', ip: '192.168.1.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ALEXAN~1\AppData\Local\Temp\scoped_dir9772_12138}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.89, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 52aa786e7ff8d2fdc291083567b823fb]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: user is not redirect to talents page expected [Talent Strength
-TalentsNew] but found [Talents]
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (52aa786e7ff8d2fdc291083567b823fb)] -> xpath: //*[@id='registerForm']/div[2]/div[1]/div[1]/div[4]/div/span[3]] (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'SHUSHIK', ip: '192.168.1.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ALEXAN~1\AppData\Local\Temp\scoped_dir9772_12138}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.89, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 52aa786e7ff8d2fdc291083567b823fb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at pages.RegisterPage.getEmailError(RegisterPage.java:80)
+	at tests.RegisterPageTest.checkEmailError(RegisterPageTest.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="815" started-at="2017-11-07T16:12:16Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[email@domain.com (Joe Smith)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="457" started-at="2017-11-07T16:12:17Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[email@domain]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="FAIL" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="10688" started-at="2017-11-07T16:12:17Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[email@-domain.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (52aa786e7ff8d2fdc291083567b823fb)] -> xpath: //*[@id='registerForm']/div[2]/div[1]/div[1]/div[4]/div/span[3]] (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'SHUSHIK', ip: '192.168.1.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ALEXAN~1\AppData\Local\Temp\scoped_dir9772_12138}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.89, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 52aa786e7ff8d2fdc291083567b823fb]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (52aa786e7ff8d2fdc291083567b823fb)] -> xpath: //*[@id='registerForm']/div[2]/div[1]/div[1]/div[4]/div/span[3]] (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'SHUSHIK', ip: '192.168.1.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ALEXAN~1\AppData\Local\Temp\scoped_dir9772_12138}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.89, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 52aa786e7ff8d2fdc291083567b823fb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at pages.RegisterPage.getEmailError(RegisterPage.java:80)
+	at tests.RegisterPageTest.checkEmailError(RegisterPageTest.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="FAIL" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="10571" started-at="2017-11-07T16:12:28Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[email@domain.web]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (52aa786e7ff8d2fdc291083567b823fb)] -> xpath: //*[@id='registerForm']/div[2]/div[1]/div[1]/div[4]/div/span[3]] (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'SHUSHIK', ip: '192.168.1.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ALEXAN~1\AppData\Local\Temp\scoped_dir9772_12138}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.89, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 52aa786e7ff8d2fdc291083567b823fb]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (52aa786e7ff8d2fdc291083567b823fb)] -> xpath: //*[@id='registerForm']/div[2]/div[1]/div[1]/div[4]/div/span[3]] (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'SHUSHIK', ip: '192.168.1.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ALEXAN~1\AppData\Local\Temp\scoped_dir9772_12138}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.89, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 52aa786e7ff8d2fdc291083567b823fb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at pages.RegisterPage.getEmailError(RegisterPage.java:80)
+	at tests.RegisterPageTest.checkEmailError(RegisterPageTest.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="864" started-at="2017-11-07T16:12:38Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[email@111.222.333.44444]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="PASS" signature="checkEmailError(java.lang.String)[pri:2, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailError" duration-ms="547" started-at="2017-11-07T16:12:39Z" data-provider="invalidEmails" finished-at="2017-11-07T16:12:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[email@domain..com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailError -->
+        <test-method status="FAIL" signature="registerNewUser()[pri:3, instance:tests.RegisterPageTest@4c203ea1]" name="registerNewUser" duration-ms="13248" started-at="2017-11-07T16:12:42Z" finished-at="2017-11-07T16:12:55Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[user is not redirect to talents page expected [] but found [Talents]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: user is not redirect to talents page expected [] but found [Talents]
 	at org.testng.Assert.fail(Assert.java:93)
 	at org.testng.Assert.failNotEquals(Assert.java:512)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
 	at org.testng.Assert.assertEquals(Assert.java:115)
 	at org.testng.Assert.assertEquals(Assert.java:189)
-	at tests.RegisterPageTest.registerNewUser(RegisterPageTest.java:118)
+	at tests.RegisterPageTest.registerNewUser(RegisterPageTest.java:126)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,17 +473,364 @@ TalentsNew] but found [Talents]
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerNewUser -->
-        <test-method status="FAIL" signature="checkEmailWelcomeMessage()[pri:3, instance:tests.RegisterPageTest@1b0375b3]" name="checkEmailWelcomeMessage" duration-ms="60576" started-at="2017-11-06T16:24:01Z" finished-at="2017-11-06T16:25:02Z">
+        <test-method status="PASS" signature="checkEmailWelcomeMessage()[pri:4, instance:tests.RegisterPageTest@4c203ea1]" name="checkEmailWelcomeMessage" duration-ms="5001" started-at="2017-11-07T16:12:58Z" finished-at="2017-11-07T16:13:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailWelcomeMessage -->
+        <test-method status="PASS" signature="assertMyProfile()[pri:5, instance:tests.RegisterPageTest@4c203ea1]" name="assertMyProfile" duration-ms="3322" started-at="2017-11-07T16:13:29Z" finished-at="2017-11-07T16:13:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertMyProfile -->
+        <test-method status="PASS" signature="baseAfterClass()[pri:0, instance:tests.RegisterPageTest@4c203ea1]" name="baseAfterClass" is-config="true" duration-ms="891" started-at="2017-11-07T16:13:32Z" finished-at="2017-11-07T16:13:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseAfterClass -->
+      </class> <!-- tests.RegisterPageTest -->
+      <class name="tests.TalentsPageTest">
+        <test-method status="PASS" signature="baseBeforeClass(java.lang.String, java.lang.String)[pri:0, instance:tests.TalentsPageTest@1d251891]" name="baseBeforeClass" is-config="true" duration-ms="38151" started-at="2017-11-07T16:10:07Z" finished-at="2017-11-07T16:10:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseBeforeClass -->
+        <test-method status="PASS" signature="loginBeforeClass()[pri:0, instance:tests.TalentsPageTest@1d251891]" name="loginBeforeClass" is-config="true" duration-ms="2" started-at="2017-11-07T16:10:45Z" finished-at="2017-11-07T16:10:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginBeforeClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.TalentsPageTest@1d251891]" name="beforeClass" is-config="true" duration-ms="369" started-at="2017-11-07T16:10:45Z" finished-at="2017-11-07T16:10:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="checkLogo()[pri:0, instance:tests.TalentsPageTest@1d251891]" name="checkLogo" duration-ms="1585" started-at="2017-11-07T16:10:46Z" finished-at="2017-11-07T16:10:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLogo -->
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:tests.TalentsPageTest@1d251891]" name="validLogin" duration-ms="7347" started-at="2017-11-07T16:10:47Z" finished-at="2017-11-07T16:10:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="numberOfRows()[pri:1, instance:tests.TalentsPageTest@1d251891]" name="numberOfRows" duration-ms="704" started-at="2017-11-07T16:11:54Z" finished-at="2017-11-07T16:11:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- numberOfRows -->
+        <test-method status="PASS" signature="disableTalent()[pri:2, instance:tests.TalentsPageTest@1d251891]" name="disableTalent" duration-ms="1366" started-at="2017-11-07T16:12:41Z" finished-at="2017-11-07T16:12:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableTalent -->
+        <test-method status="PASS" signature="enableTalent()[pri:3, instance:tests.TalentsPageTest@1d251891]" name="enableTalent" duration-ms="894" started-at="2017-11-07T16:12:57Z" finished-at="2017-11-07T16:12:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enableTalent -->
+        <test-method status="PASS" signature="checkboxAll()[pri:4, instance:tests.TalentsPageTest@1d251891]" name="checkboxAll" duration-ms="4267" started-at="2017-11-07T16:13:25Z" finished-at="2017-11-07T16:13:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkboxAll -->
+        <test-method status="PASS" signature="search()[pri:5, instance:tests.TalentsPageTest@1d251891]" name="search" duration-ms="668" started-at="2017-11-07T16:13:33Z" finished-at="2017-11-07T16:13:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="getNew()[pri:6, instance:tests.TalentsPageTest@1d251891]" name="getNew" duration-ms="2051" started-at="2017-11-07T16:13:34Z" finished-at="2017-11-07T16:13:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getNew -->
+        <test-method status="PASS" signature="edit()[pri:7, instance:tests.TalentsPageTest@1d251891]" name="edit" duration-ms="2434" started-at="2017-11-07T16:13:36Z" finished-at="2017-11-07T16:13:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- edit -->
+        <test-method status="PASS" signature="baseAfterClass()[pri:0, instance:tests.TalentsPageTest@1d251891]" name="baseAfterClass" is-config="true" duration-ms="3959" started-at="2017-11-07T16:13:38Z" finished-at="2017-11-07T16:13:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseAfterClass -->
+      </class> <!-- tests.TalentsPageTest -->
+      <class name="tests.InvalidLoginTest">
+        <test-method status="PASS" signature="baseBeforeClass(java.lang.String, java.lang.String)[pri:0, instance:tests.InvalidLoginTest@27f674d]" name="baseBeforeClass" is-config="true" duration-ms="29273" started-at="2017-11-07T16:09:36Z" finished-at="2017-11-07T16:10:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseBeforeClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.InvalidLoginTest@27f674d]" name="beforeClass" is-config="true" duration-ms="2" started-at="2017-11-07T16:10:05Z" finished-at="2017-11-07T16:10:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="checkLogo()[pri:0, instance:tests.InvalidLoginTest@27f674d]" name="checkLogo" duration-ms="1873" started-at="2017-11-07T16:10:05Z" finished-at="2017-11-07T16:10:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLogo -->
+        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@27f674d]" name="getErrors" duration-ms="1001" started-at="2017-11-07T16:11:09Z" data-provider="userData" finished-at="2017-11-07T16:11:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getErrors -->
+        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@27f674d]" name="getErrors" duration-ms="455" started-at="2017-11-07T16:11:10Z" data-provider="userData" finished-at="2017-11-07T16:11:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getErrors -->
+        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@27f674d]" name="getErrors" duration-ms="11037" started-at="2017-11-07T16:11:11Z" data-provider="userData" finished-at="2017-11-07T16:11:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kusiwa@cmail]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getErrors -->
+        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@27f674d]" name="getErrors" duration-ms="10875" started-at="2017-11-07T16:11:22Z" data-provider="userData" finished-at="2017-11-07T16:11:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ku@cmail.club]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getErrors -->
+        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@27f674d]" name="getErrors" duration-ms="10888" started-at="2017-11-07T16:11:33Z" data-provider="userData" finished-at="2017-11-07T16:11:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kusiwa@]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getErrors -->
+        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@27f674d]" name="getErrors" duration-ms="10787" started-at="2017-11-07T16:11:44Z" data-provider="userData" finished-at="2017-11-07T16:11:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[kusiwa@cmail.club]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getErrors -->
+        <test-method status="PASS" signature="emptyPass()[pri:2, instance:tests.InvalidLoginTest@27f674d]" name="emptyPass" duration-ms="859" started-at="2017-11-07T16:12:40Z" finished-at="2017-11-07T16:12:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyPass -->
+        <test-method status="PASS" signature="validLogin()[pri:3, instance:tests.InvalidLoginTest@27f674d]" name="validLogin" duration-ms="1835" started-at="2017-11-07T16:12:55Z" finished-at="2017-11-07T16:12:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="logout()[pri:4, instance:tests.InvalidLoginTest@27f674d]" name="logout" duration-ms="11312" started-at="2017-11-07T16:13:03Z" finished-at="2017-11-07T16:13:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="PASS" signature="baseAfterClass()[pri:0, instance:tests.InvalidLoginTest@27f674d]" name="baseAfterClass" is-config="true" duration-ms="10159" started-at="2017-11-07T16:13:14Z" finished-at="2017-11-07T16:13:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseAfterClass -->
+      </class> <!-- tests.InvalidLoginTest -->
+    </test> <!-- login and talents -->
+    <test name="new user" duration-ms="79318" started-at="2017-11-08T00:13:43Z" finished-at="2017-11-08T00:15:03Z">
+      <class name="tests.CategoryPageTest">
+        <test-method status="PASS" signature="baseBeforeClass(java.lang.String, java.lang.String)[pri:0, instance:tests.CategoryPageTest@17f6480]" name="baseBeforeClass" is-config="true" duration-ms="55030" started-at="2017-11-07T16:13:43Z" finished-at="2017-11-07T16:14:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseBeforeClass -->
+        <test-method status="PASS" signature="loginBeforeClass()[pri:0, instance:tests.CategoryPageTest@17f6480]" name="loginBeforeClass" is-config="true" duration-ms="2" started-at="2017-11-07T16:14:38Z" finished-at="2017-11-07T16:14:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginBeforeClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.CategoryPageTest@17f6480]" name="beforeClass" is-config="true" duration-ms="37" started-at="2017-11-07T16:14:38Z" finished-at="2017-11-07T16:14:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="checkLogo()[pri:0, instance:tests.CategoryPageTest@17f6480]" name="checkLogo" duration-ms="1737" started-at="2017-11-07T16:14:38Z" finished-at="2017-11-07T16:14:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLogo -->
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:tests.CategoryPageTest@17f6480]" name="validLogin" duration-ms="6591" started-at="2017-11-07T16:14:40Z" finished-at="2017-11-07T16:14:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="selectCategory1(java.lang.String)[pri:1, instance:tests.CategoryPageTest@17f6480]" name="selectCategory1" duration-ms="4298" started-at="2017-11-07T16:14:47Z" data-provider="Category" finished-at="2017-11-07T16:14:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Architecture]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectCategory1 -->
+        <test-method status="PASS" signature="selectCategory1(java.lang.String)[pri:1, instance:tests.CategoryPageTest@17f6480]" name="selectCategory1" duration-ms="3848" started-at="2017-11-07T16:14:51Z" data-provider="Category" finished-at="2017-11-07T16:14:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Psychic/Intuitive/Predictive]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectCategory1 -->
+        <test-method status="PASS" signature="selectCategory1(java.lang.String)[pri:1, instance:tests.CategoryPageTest@17f6480]" name="selectCategory1" duration-ms="3296" started-at="2017-11-07T16:14:55Z" data-provider="Category" finished-at="2017-11-07T16:14:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Software Programming]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectCategory1 -->
+        <test-method status="PASS" signature="getError()[pri:2, instance:tests.CategoryPageTest@17f6480]" name="getError" duration-ms="1526" started-at="2017-11-07T16:14:58Z" finished-at="2017-11-07T16:15:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getError -->
+        <test-method status="PASS" signature="baseAfterClass()[pri:0, instance:tests.CategoryPageTest@17f6480]" name="baseAfterClass" is-config="true" duration-ms="2949" started-at="2017-11-07T16:15:00Z" finished-at="2017-11-07T16:15:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseAfterClass -->
+      </class> <!-- tests.CategoryPageTest -->
+    </test> <!-- new user -->
+    <test name="ru" duration-ms="159514" started-at="2017-11-08T00:15:03Z" finished-at="2017-11-08T00:17:42Z">
+      <class name="tests.TalentTraitsPageTest">
+        <test-method status="PASS" signature="baseBeforeClass(java.lang.String, java.lang.String)[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="baseBeforeClass" is-config="true" duration-ms="13467" started-at="2017-11-07T16:15:18Z" finished-at="2017-11-07T16:15:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseBeforeClass -->
+        <test-method status="PASS" signature="loginBeforeClass()[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="loginBeforeClass" is-config="true" duration-ms="1" started-at="2017-11-07T16:15:31Z" finished-at="2017-11-07T16:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginBeforeClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="beforeClass" is-config="true" duration-ms="204" started-at="2017-11-07T16:15:31Z" finished-at="2017-11-07T16:15:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="checkLogo()[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="checkLogo" duration-ms="2899" started-at="2017-11-07T16:15:32Z" finished-at="2017-11-07T16:15:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLogo -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="beforeClass" is-config="true" duration-ms="4" started-at="2017-11-07T16:15:34Z" finished-at="2017-11-07T16:15:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="validLogin" duration-ms="1977" started-at="2017-11-07T16:15:34Z" finished-at="2017-11-07T16:15:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="beforeClass" is-config="true" duration-ms="4" started-at="2017-11-07T16:15:39Z" finished-at="2017-11-07T16:15:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="FAIL" signature="goTalentTraits()[pri:1, instance:tests.TalentTraitsPageTest@7f690630]" name="goTalentTraits" duration-ms="12423" started-at="2017-11-07T16:15:39Z" finished-at="2017-11-07T16:15:52Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='body']//span[2]' (tried for 5 second(s) with 500 MILLISECONDS interval)]]>
+              <![CDATA[Expected condition failed: waiting for class to be "ng-scope active". Current class: "active ng-binding ng-scope" (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'SHUSHIK', ip: '192.168.1.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ALEXAN~1\AppData\Local\Temp\scoped_dir12132_7032}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.89, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: efcf49711699c91394d58f9008be3469]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='body']//span[2]' (tried for 5 second(s) with 500 MILLISECONDS interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for class to be "ng-scope active". Current class: "active ng-binding ng-scope" (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'SHUSHIK', ip: '192.168.1.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ALEXAN~1\AppData\Local\Temp\scoped_dir12132_7032}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.89, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: efcf49711699c91394d58f9008be3469
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at data.NadaPage.getWelcomeMessage(NadaPage.java:57)
-	at tests.RegisterPageTest.checkEmailWelcomeMessage(RegisterPageTest.java:126)
+	at menus.TalentMenu.getActiveTabTalentTraits(TalentMenu.java:154)
+	at tests.TalentTraitsPageTest.goTalentTraits(TalentTraitsPageTest.java:48)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -154,53 +855,364 @@ TalentsNew] but found [Talents]
 	at org.testng.TestNG.run(TestNG.java:1115)
 	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
 	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='body']//span[2]"}
-  (Session info: chrome=62.0.3202.75)
-  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'SHUSHIK', ip: '192.168.1.246', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ALEXAN~1\AppData\Local\Temp\scoped_dir2952_24300}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.75, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 0cf568ba2fd2af8f4d85c5eabaa63bf0
-*** Element info: {Using=xpath, value=//*[@id='body']//span[2]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:301)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:43)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:284)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 26 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkEmailWelcomeMessage -->
-        <test-method status="PASS" signature="assertMyProfile()[pri:4, instance:tests.RegisterPageTest@1b0375b3]" name="assertMyProfile" duration-ms="2872" started-at="2017-11-06T16:25:02Z" finished-at="2017-11-06T16:25:05Z">
+        </test-method> <!-- goTalentTraits -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="beforeClass" is-config="true" duration-ms="2" started-at="2017-11-07T16:15:52Z" finished-at="2017-11-07T16:15:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- assertMyProfile -->
-      </class> <!-- tests.RegisterPageTest -->
-    </test> <!-- login and talents -->
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="getEmptyErrors()[pri:2, instance:tests.TalentTraitsPageTest@7f690630]" name="getEmptyErrors" duration-ms="2081" started-at="2017-11-07T16:15:52Z" finished-at="2017-11-07T16:15:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getEmptyErrors -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="beforeClass" is-config="true" duration-ms="2" started-at="2017-11-07T16:15:54Z" finished-at="2017-11-07T16:15:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="insert11()[pri:3, instance:tests.TalentTraitsPageTest@7f690630]" name="insert11" duration-ms="10811" started-at="2017-11-07T16:15:54Z" finished-at="2017-11-07T16:16:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insert11 -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="beforeClass" is-config="true" duration-ms="3" started-at="2017-11-07T16:16:05Z" finished-at="2017-11-07T16:16:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="insert0()[pri:4, instance:tests.TalentTraitsPageTest@7f690630]" name="insert0" duration-ms="8121" started-at="2017-11-07T16:16:05Z" finished-at="2017-11-07T16:16:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insert0 -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="beforeClass" is-config="true" duration-ms="2" started-at="2017-11-07T16:16:13Z" finished-at="2017-11-07T16:16:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="insertScales()[pri:5, instance:tests.TalentTraitsPageTest@7f690630]" name="insertScales" duration-ms="20259" started-at="2017-11-07T16:16:13Z" finished-at="2017-11-07T16:16:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertScales -->
+        <test-method status="PASS" signature="baseAfterClass()[pri:0, instance:tests.TalentTraitsPageTest@7f690630]" name="baseAfterClass" is-config="true" duration-ms="48465" started-at="2017-11-07T16:16:33Z" finished-at="2017-11-07T16:17:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseAfterClass -->
+      </class> <!-- tests.TalentTraitsPageTest -->
+      <class name="tests.PersonalPageTest">
+        <test-method status="PASS" signature="baseBeforeClass(java.lang.String, java.lang.String)[pri:0, instance:tests.PersonalPageTest@35f983a6]" name="baseBeforeClass" is-config="true" duration-ms="10796" started-at="2017-11-07T16:15:03Z" finished-at="2017-11-07T16:15:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseBeforeClass -->
+        <test-method status="PASS" signature="loginBeforeClass()[pri:0, instance:tests.PersonalPageTest@35f983a6]" name="loginBeforeClass" is-config="true" duration-ms="1" started-at="2017-11-07T16:15:14Z" finished-at="2017-11-07T16:15:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginBeforeClass -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.PersonalPageTest@35f983a6]" name="beforeClass" is-config="true" duration-ms="255" started-at="2017-11-07T16:15:14Z" finished-at="2017-11-07T16:15:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="checkLogo()[pri:0, instance:tests.PersonalPageTest@35f983a6]" name="checkLogo" duration-ms="1889" started-at="2017-11-07T16:15:14Z" finished-at="2017-11-07T16:15:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLogo -->
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:tests.PersonalPageTest@35f983a6]" name="validLogin" duration-ms="2185" started-at="2017-11-07T16:15:16Z" finished-at="2017-11-07T16:15:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="goPersonal()[pri:1, instance:tests.PersonalPageTest@35f983a6]" name="goPersonal" duration-ms="2979" started-at="2017-11-07T16:15:36Z" finished-at="2017-11-07T16:15:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goPersonal -->
+        <test-method status="PASS" signature="assertInfo(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:10, instance:tests.PersonalPageTest@35f983a6]" name="assertInfo" duration-ms="6681" started-at="2017-11-07T16:17:23Z" data-provider="userData" finished-at="2017-11-07T16:17:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Bill]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Jn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Forward]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[12/12/2012]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Moscow]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Kazakhstan]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[111 Main St.]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Apr. 223]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[San Francisco]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[CA]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[92003]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[kusiwa@cmail.club]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[(123) 456-7891]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Linkedin]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[999]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertInfo -->
+        <test-method status="PASS" signature="assertInfo(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:10, instance:tests.PersonalPageTest@35f983a6]" name="assertInfo" duration-ms="5558" started-at="2017-11-07T16:17:30Z" data-provider="userData" finished-at="2017-11-07T16:17:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nancy]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Black]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[01/03/1999]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[San Francisco]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[United Kingdom]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[11234 Blossom Way.]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[New York]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[New York]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[01208]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[new@cmail.club]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[(444) 444-4444]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Google]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[999]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[999.99]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertInfo -->
+        <test-method status="PASS" signature="assertInfo(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:10, instance:tests.PersonalPageTest@35f983a6]" name="assertInfo" duration-ms="5372" started-at="2017-11-07T16:17:35Z" data-provider="userData" finished-at="2017-11-07T16:17:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Alexander]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ivanov]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[12/30/2012]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Vladivostok]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Russia]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[90905 El Camino Real]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Palo Alto]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[CA]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[940404]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[alexander@cmail.club]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[(999) 999-9999]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Facebook]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[77]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertInfo -->
+        <test-method status="PASS" signature="baseAfterClass()[pri:0, instance:tests.PersonalPageTest@35f983a6]" name="baseAfterClass" is-config="true" duration-ms="1819" started-at="2017-11-07T16:17:40Z" finished-at="2017-11-07T16:17:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseAfterClass -->
+      </class> <!-- tests.PersonalPageTest -->
+    </test> <!-- ru -->
   </suite> <!-- Promytheus -->
 </testng-results>

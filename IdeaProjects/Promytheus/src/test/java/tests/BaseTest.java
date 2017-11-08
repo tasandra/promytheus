@@ -10,10 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.LoginPage;
 
 import java.net.MalformedURLException;
@@ -112,11 +109,11 @@ public class BaseTest {
         }
     }
 
-//    @AfterClass
-//    public void baseAfterClass(){
-//        driver.close();
-//        driver.quit();
-//    }
+    @AfterClass
+    public void baseAfterClass(){
+        driver.close();
+        driver.quit();
+    }
 
     @Test
     public void checkLogo(){

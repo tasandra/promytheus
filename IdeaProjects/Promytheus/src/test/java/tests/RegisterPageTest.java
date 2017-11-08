@@ -1,12 +1,12 @@
 package tests;
 
+import data.ExcelReadApi;
 import data.ExcelWriteApi;
 import data.NadaPage;
 import menus.HomeMenu;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.LoginPage;
 import pages.MyProfilePage;
 import pages.RegisterPage;
@@ -90,8 +90,16 @@ public class RegisterPageTest extends BaseTest{
         assertEquals("SIGNUP TO GET INSTANT ACCESS", header, "user is not redirect to register page");
     }
 
+//assert invalid email error message
+    @Test(priority = 2,  dataProvider = "invalidEmails")
+    public void checkEmailError( String email){
+        registerPage.setEmailAddress(email);
+        String error = registerPage.getEmailError();
+        assertEquals("Please enter a valid email address.", error, "user can register with invalid email format");
+    }
+
 //  register new user
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void registerNewUser(){
         // insert data
         registerPage.setFirstName(firstName);
@@ -119,7 +127,7 @@ public class RegisterPageTest extends BaseTest{
     }
 
     // check email
-    @Test(priority = 3)
+    @Test(priority = 4)
     public void checkEmailWelcomeMessage(){
         // switch to email window
         driver.switchTo().window(window2);
@@ -128,7 +136,7 @@ public class RegisterPageTest extends BaseTest{
     }
 
     // assert my profile page
-    @Test(priority = 4)
+    @Test(priority = 5)
     public void assertMyProfile(){
         // switch window to applicaton
         driver.switchTo().window(window1);
@@ -158,9 +166,15 @@ public class RegisterPageTest extends BaseTest{
 
         // assert two arrays are equal
         for (int i = 0; i < myProfileInfo.length; i++) {
-//            System.out.println(personalInfo[i] + " = " + data[i]);
+//            System.out.println(myProfileInfo[i] + " = " + data[i]);
             assertTrue(myProfileInfo[i].equals(data[i]), myProfileInfo[i] + " not equals " + data[i]);
         }
+    }
 
+    @DataProvider(name="invalidEmails")
+    public Object[][] userFormData() throws Exception {
+        ExcelReadApi excel = new ExcelReadApi("promy.xlsx");
+        Object[][] data = excel.testData("emails");
+        return data;
     }
 }

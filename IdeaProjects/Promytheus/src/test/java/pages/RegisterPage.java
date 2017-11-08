@@ -48,60 +48,79 @@ public class RegisterPage extends BasePage{
     @FindBy(how = How.ID, using = "createAccount")
     private WebElement createAccount;
 
+    @FindBy(how = How.XPATH, using = "//*[@id='registerForm']/div[2]/div[1]/div[1]/div[4]/div/span[3]")
+    private WebElement emailError;
+// constructor
     public RegisterPage(WebDriver driver){
         super(driver);
     }
-
+// get header
     public String  getHeader() {
         return wait.until(ExpectedConditions.visibilityOf(header)).getText();
     }
-
+// set first name
     public void setFirstName(String fName) {
-        wait.until(ExpectedConditions.visibilityOf(firstName)).sendKeys(fName);
-    }
 
+        wait.until(ExpectedConditions.visibilityOf(firstName)).clear();
+        firstName.sendKeys(fName);
+    }
+// set last name
     public void setLastName(String  lName) {
-        wait.until(ExpectedConditions.visibilityOf(lastName)).sendKeys(lName);
-    }
 
+        wait.until(ExpectedConditions.visibilityOf(lastName)).clear();
+        lastName.sendKeys(lName);
+    }
+// set email address
     public void setEmailAddress(String email) {
-        wait.until(ExpectedConditions.visibilityOf(emailAddress)).sendKeys(email);
+        wait.until(ExpectedConditions.visibilityOf(emailAddress)).clear();
+        emailAddress.sendKeys(email);
     }
-
+// get invalid email format error message
+    public String getEmailError() {
+        return wait.until(ExpectedConditions.visibilityOf(emailError)).getText();
+    }
+// set phone number
     public void setPhone(String phoneNumber) {
-        wait.until(ExpectedConditions.visibilityOf(phone)).sendKeys(phoneNumber);
+        wait.until(ExpectedConditions.visibilityOf(phone)).clear();
+        phone.sendKeys(phoneNumber);
     }
-
+// set password
     public void setPassword(String pass) {
-        wait.until(ExpectedConditions.visibilityOf(password)).sendKeys(pass);
+        wait.until(ExpectedConditions.visibilityOf(password)).clear();
+        password.sendKeys(pass);
     }
-
+// set password confirmation
     public void setConfirmPassword(String confirmPass) {
-        wait.until(ExpectedConditions.visibilityOf(confirmPassword)).sendKeys(confirmPass);
+        wait.until(ExpectedConditions.visibilityOf(confirmPassword)).clear();
+        confirmPassword.sendKeys(confirmPass);
     }
-
+// select and click on country
     public void setCountry(String countryName) {
         wait.until(ExpectedConditions.elementToBeClickable(country)).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//span[contains(.,'" + countryName + "')]"))).click();
     }
-
+// set address
     public void setAddress(String address1) {
-        wait.until(ExpectedConditions.visibilityOf(address)).sendKeys(address1);
+        wait.until(ExpectedConditions.visibilityOf(address)).clear();
+        address.sendKeys(address1);
     }
-
+// set city
     public void setCity(String cityName) {
-        wait.until(ExpectedConditions.visibilityOf(city)).sendKeys(cityName);
+        wait.until(ExpectedConditions.visibilityOf(city)).clear();
+        city.sendKeys(cityName);
     }
-
+// set state
     public void setState(String stateName) {
-        wait.until(ExpectedConditions.visibilityOf(state)).sendKeys(stateName);
+        wait.until(ExpectedConditions.visibilityOf(state)).clear();
+        state.sendKeys(stateName);
     }
-
+// set zip code
     public void setZip(String postal) {
-        wait.until(ExpectedConditions.visibilityOf(zip)).sendKeys(postal);
+        wait.until(ExpectedConditions.visibilityOf(zip)).clear();
+        zip.sendKeys(postal);
     }
-
+// click on create account button
     public void clickCreateAccount() {
         wait.until(ExpectedConditions.elementToBeClickable(createAccount)).click();
     }

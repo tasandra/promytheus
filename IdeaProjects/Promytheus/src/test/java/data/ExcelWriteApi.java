@@ -9,8 +9,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 public class ExcelWriteApi {
-    public FileInputStream fis = null;
-    public FileOutputStream fos = null;
+    public FileInputStream inputStream = null;
+    public FileOutputStream outputStream = null;
     public XSSFWorkbook workbook = null;
     public XSSFSheet sheet = null;
     public XSSFRow row = null;
@@ -20,9 +20,9 @@ public class ExcelWriteApi {
     public ExcelWriteApi(String xlFilePath) throws Exception
     {
         this.xlFilePath = xlFilePath;
-        fis = new FileInputStream(xlFilePath);
-        workbook = new XSSFWorkbook(fis);
-        fis.close();
+        inputStream = new FileInputStream(xlFilePath);
+        workbook = new XSSFWorkbook(inputStream);
+        inputStream.close();
     }
 
     public boolean setCellData(String sheetName, int colNumber, int rowNum, String value)
@@ -40,9 +40,9 @@ public class ExcelWriteApi {
 
             cell.setCellValue(value);
 
-            fos = new FileOutputStream(xlFilePath);
-            workbook.write(fos);
-            fos.close();
+            outputStream = new FileOutputStream(xlFilePath);
+            workbook.write(outputStream);
+            outputStream.close();
         }
         catch (Exception ex)
         {

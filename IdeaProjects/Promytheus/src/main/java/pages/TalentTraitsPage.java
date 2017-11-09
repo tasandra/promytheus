@@ -27,7 +27,8 @@ public class TalentTraitsPage extends BasePage {
     }
 
     public void insetScales(String scale){
-        Iterator<WebElement> iterator = rows.iterator();
+//        Iterator<WebElement> iterator = rows.iterator();
+       Iterator<WebElement> iterator = wait.until(ExpectedConditions.visibilityOfAllElements(rows)).iterator();
         while(iterator.hasNext()){
             iterator.next().sendKeys(scale);
         }

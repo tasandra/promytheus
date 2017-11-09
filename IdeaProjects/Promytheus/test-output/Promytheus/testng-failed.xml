@@ -8,7 +8,7 @@
       <class name="tests.RegisterPageTest">
         <methods>
           <include name="registerNewUser"/>
-          <include name="gotoRegister"/>
+          <include name="takeScreenShotOnFailure"/>
           <include name="checkEmailError" invocation-numbers="9 12 13"/>
           <include name="baseBeforeClass"/>
           <include name="generateUser"/>
@@ -17,17 +17,4 @@
       </class> <!-- tests.RegisterPageTest -->
     </classes>
   </test> <!-- login and talents(failed) -->
-  <test name="ru(failed)">
-    <classes>
-      <class name="tests.TalentTraitsPageTest">
-        <methods>
-          <include name="goTalentTraits"/>
-          <include name="beforeClass"/>
-          <include name="loginBeforeClass"/>
-          <include name="baseBeforeClass"/>
-          <include name="baseAfterClass"/>
-        </methods>
-      </class> <!-- tests.TalentTraitsPageTest -->
-    </classes>
-  </test> <!-- ru(failed) -->
 </suite> <!-- Failed suite [Promytheus] -->

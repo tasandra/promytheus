@@ -79,6 +79,7 @@ public class RegisterPage extends BasePage{
     public String getEmailError() {
         return wait.until(ExpectedConditions.visibilityOf(emailError)).getText();
     }
+
 // set phone number
     public void setPhone(String phoneNumber) {
         wait.until(ExpectedConditions.visibilityOf(phone)).clear();

@@ -9,7 +9,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileInputStream;
 
 public class ExcelReadApi {
-    public FileInputStream fis = null;
+    public FileInputStream inputStream = null;
     public XSSFWorkbook workbook = null;
     public XSSFSheet sheet = null;
     public XSSFRow row = null;
@@ -19,9 +19,9 @@ public class ExcelReadApi {
     public ExcelReadApi(String xlFilePath) throws Exception
     {
         this.xlFilePath = xlFilePath;
-        fis = new FileInputStream(xlFilePath);
-        workbook = new XSSFWorkbook(fis);
-        fis.close();
+        inputStream = new FileInputStream(xlFilePath);
+        workbook = new XSSFWorkbook(inputStream);
+        inputStream.close();
     }
 
     public int getRowCount(String sheetName)
@@ -64,7 +64,7 @@ public class ExcelReadApi {
 
         for(int i=1; i<rows; i++)
         {
-            for(int j=0; j<columns; j++)
+            for(int j = 0; j<columns; j++)
             {
                 excelData[i-1][j] = getCellData(sheetName, j, i);
             }

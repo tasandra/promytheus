@@ -87,7 +87,7 @@ public class TalentsPage extends BasePage {
     }
 // get number of rows displayed per page
     public int getNumberOfRow(){
-       return rows.size();
+       return wait.until(ExpectedConditions.visibilityOfAllElements(rows)).size();
     }
 
 // get all names displayed on page
@@ -143,9 +143,9 @@ public class TalentsPage extends BasePage {
 
 // insert name to search field and click on it
     public void enterSearch(String name){
-        search.clear();
+        wait.until(ExpectedConditions.visibilityOf(search)).clear();
         search.sendKeys(name);
-        searchButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
     }
 
 // click new button
@@ -155,6 +155,7 @@ public class TalentsPage extends BasePage {
 
 // click edit button
     public List<WebElement> clickEdit(){
+        wait.until(ExpectedConditions.visibilityOfAllElements(edit));
         return edit;
     }
 

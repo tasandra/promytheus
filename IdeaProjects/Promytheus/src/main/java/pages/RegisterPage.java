@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class RegisterPage extends BasePage{
+public class RegisterPage extends BasePage {
 
     @FindBy(how = How.TAG_NAME, using = "strong")
     private WebElement header;

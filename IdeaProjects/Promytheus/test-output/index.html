@@ -24,21 +24,21 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Promytheus">
-              <span class="suite-name border-passed">Promytheus</span>
+            <a href="#" panel-name="suite-Promytheus" class="navigator-link">
+              <span class="suite-name border-failed">Promytheus</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Promytheus">
+                  <a href="#" panel-name="test-xml-Promytheus" class="navigator-link ">
                     <span>C:\Users\Alexandra\IdeaProjects\Promytheus\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Promytheus">
+                  <a href="#" panel-name="testlist-Promytheus" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Promytheus">
-                    <span>0 groups</span>
+                  <a href="#" panel-name="group-Promytheus" class="navigator-link ">
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Promytheus">
+                  <a href="#" panel-name="times-Promytheus" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Promytheus">
+                  <a href="#" panel-name="reporter-Promytheus" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Promytheus">
+                  <a href="#" panel-name="ignored-methods-Promytheus" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Promytheus">
+                  <a href="#" panel-name="chronological-Promytheus" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Promytheus" class="hide-methods failed suite-Promytheus"> (hide)</a> <!-- hide-methods failed suite-Promytheus -->
+                      <a href="#" panel-name="suite-Promytheus" class="show-methods failed suite-Promytheus"> (show)</a> <!-- show-methods failed suite-Promytheus -->
+                    </span>
+                    <div class="method-list-content failed suite-Promytheus">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Promytheus" title="tests.ValidLoginTest" class="method navigator-link" hash-for-method="validLogin">validLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Promytheus -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,53 +115,8 @@
                     </span>
                     <div class="method-list-content passed suite-Promytheus">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Promytheus" title="tests.InvalidLoginTest" hash-for-method="checkLogo">checkLogo</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Promytheus" title="tests.InvalidLoginTest" hash-for-method="emptyPass">emptyPass</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Promytheus" title="tests.InvalidLoginTest" hash-for-method="getErrors(kusiwa@, password)">getErrors(kusiwa@, password)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Promytheus" title="tests.InvalidLoginTest" hash-for-method="getErrors(kusiwa@cmail.club, pass)">getErrors(kusiwa@cmail.club, pass)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Promytheus" title="tests.InvalidLoginTest" hash-for-method="getErrors(ku@cmail.club, password)">getErrors(ku@cmail.club, password)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Promytheus" title="tests.InvalidLoginTest" hash-for-method="getErrors(, )">getErrors(, )</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Promytheus" title="tests.InvalidLoginTest" hash-for-method="getErrors(kusiwa@cmail, password)">getErrors(kusiwa@cmail, password)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Promytheus" title="tests.InvalidLoginTest" hash-for-method="getErrors(, password)">getErrors(, password)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Promytheus" title="tests.InvalidLoginTest" hash-for-method="logout">logout</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Promytheus" title="tests.InvalidLoginTest" hash-for-method="validLogin">validLogin</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Promytheus" title="tests.ValidLoginTest" class="method navigator-link" hash-for-method="checkLogo">checkLogo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Promytheus -->
@@ -162,10 +131,64 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Promytheus" class="panel Promytheus">
+          <div class="suite-Promytheus-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.ValidLoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLogin">
+                  </a> <!-- validLogin -->
+                  <span class="method-name">validLogin</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: .brand-logo &gt; img&apos; (tried for 10 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at menus.HomeMenu.getHomeMenuLogo(HomeMenu.java:31)
+	at tests.ValidLoginTest.validLogin(ValidLoginTest.java:21)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.brand-logo &gt; img&quot;}
+  (Session info: chrome=62.0.3202.89)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.7.1&apos;, revision: &apos;8a0099a&apos;, time: &apos;2017-11-06T21:01:39.354Z&apos;
+System info: host: &apos;SHUSHIK&apos;, ip: &apos;192.168.0.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;9.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.29.461591 (62ebf098771772..., userDataDir: C:\Users\ALEXAN~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 62.0.3202.89, webStorageEnabled: true}
+Session ID: 3d600e5aa8a8e433d65632af89058d29
+*** Element info: {Using=css selector, value=.brand-logo &gt; img}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:464)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:301)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:284)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 26 more
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Promytheus-class-failed -->
           <div class="suite-Promytheus-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.InvalidLoginTest</span>
+              <span class="class-name">tests.ValidLoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -173,75 +196,6 @@
                   <a name="checkLogo">
                   </a> <!-- checkLogo -->
                   <span class="method-name">checkLogo</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="emptyPass">
-                  </a> <!-- emptyPass -->
-                  <span class="method-name">emptyPass</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getErrors(kusiwa@, password)">
-                  </a> <!-- getErrors(kusiwa@, password) -->
-                  <span class="method-name">getErrors</span>
-                  <span class="parameters">(kusiwa@, password)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getErrors(kusiwa@cmail.club, pass)">
-                  </a> <!-- getErrors(kusiwa@cmail.club, pass) -->
-                  <span class="method-name">getErrors</span>
-                  <span class="parameters">(kusiwa@cmail.club, pass)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getErrors(ku@cmail.club, password)">
-                  </a> <!-- getErrors(ku@cmail.club, password) -->
-                  <span class="method-name">getErrors</span>
-                  <span class="parameters">(ku@cmail.club, password)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getErrors(, )">
-                  </a> <!-- getErrors(, ) -->
-                  <span class="method-name">getErrors</span>
-                  <span class="parameters">(, )</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getErrors(kusiwa@cmail, password)">
-                  </a> <!-- getErrors(kusiwa@cmail, password) -->
-                  <span class="method-name">getErrors</span>
-                  <span class="parameters">(kusiwa@cmail, password)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getErrors(, password)">
-                  </a> <!-- getErrors(, password) -->
-                  <span class="method-name">getErrors</span>
-                  <span class="parameters">(, password)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="logout">
-                  </a> <!-- logout -->
-                  <span class="method-name">logout</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validLogin">
-                  </a> <!-- validLogin -->
-                  <span class="method-name">validLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -255,14 +209,14 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Promytheus&quot;&gt;
+&lt;suite name=&quot;Promytheus&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html&quot;/&gt;
-  &lt;test name=&quot;login and talents&quot;&gt;
+  &lt;test name=&quot;login&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.InvalidLoginTest&quot;/&gt;
+      &lt;class name=&quot;tests.ValidLoginTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- login and talents --&gt;
+  &lt;/test&gt; &lt;!-- login --&gt;
 &lt;/suite&gt; &lt;!-- Promytheus --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -274,7 +228,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">login and talents (1 class)</span>
+                <span class="test-name">login (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -284,6 +238,18 @@
             <span class="header-content">Groups for Promytheus</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">p1</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkLogo</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">validLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Promytheus" class="panel">
@@ -300,47 +266,15 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getErrors')
-data.setCell(0, 2, 'tests.InvalidLoginTest')
-data.setCell(0, 3, 13464);
+data.setCell(0, 1, 'validLogin')
+data.setCell(0, 2, 'tests.ValidLoginTest')
+data.setCell(0, 3, 64897);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'getErrors')
-data.setCell(1, 2, 'tests.InvalidLoginTest')
-data.setCell(1, 3, 11520);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'logout')
-data.setCell(2, 2, 'tests.InvalidLoginTest')
-data.setCell(2, 3, 11497);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'getErrors')
-data.setCell(3, 2, 'tests.InvalidLoginTest')
-data.setCell(3, 3, 10845);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'getErrors')
-data.setCell(4, 2, 'tests.InvalidLoginTest')
-data.setCell(4, 3, 10819);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'validLogin')
-data.setCell(5, 2, 'tests.InvalidLoginTest')
-data.setCell(5, 3, 1996);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'checkLogo')
-data.setCell(6, 2, 'tests.InvalidLoginTest')
-data.setCell(6, 3, 973);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'getErrors')
-data.setCell(7, 2, 'tests.InvalidLoginTest')
-data.setCell(7, 3, 902);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'emptyPass')
-data.setCell(8, 2, 'tests.InvalidLoginTest')
-data.setCell(8, 3, 664);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'getErrors')
-data.setCell(9, 2, 'tests.InvalidLoginTest')
-data.setCell(9, 3, 507);
+data.setCell(1, 1, 'checkLogo')
+data.setCell(1, 2, 'tests.ValidLoginTest')
+data.setCell(1, 3, 352);
 window.suiteTableData['Promytheus']= { tableData: data, tableDiv: 'times-div-Promytheus'}
 return data;
 }
@@ -371,99 +305,29 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.InvalidLoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">baseBeforeClass(chrome, http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html)</span>
+              <div class="chronological-class-name">tests.ValidLoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest(chrome, http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">29091 ms</span>
+                <span class="method-start">17338 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">checkLogo</span>
-                <span class="method-start">29847 ms</span>
+                <span class="method-start">17861 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">takeScreenShotOnFailure([TestResult name=checkLogo status=SUCCESS method=BaseTest.checkLogo()[pri:0, instance:tests.InvalidL...)</span>
-                <span class="method-start">30820 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">getErrors(, )</span>
-                <span class="method-start">39396 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">takeScreenShotOnFailure([TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.l...)</span>
-                <span class="method-start">40298 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">getErrors(, password)</span>
-                <span class="method-start">40299 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">takeScreenShotOnFailure([TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.l...)</span>
-                <span class="method-start">40807 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">getErrors(kusiwa@cmail, password)</span>
-                <span class="method-start">40808 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">takeScreenShotOnFailure([TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.l...)</span>
-                <span class="method-start">52328 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">getErrors(ku@cmail.club, password)</span>
-                <span class="method-start">52329 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">takeScreenShotOnFailure([TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.l...)</span>
-                <span class="method-start">65793 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">getErrors(kusiwa@, password)</span>
-                <span class="method-start">65794 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">takeScreenShotOnFailure([TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.l...)</span>
-                <span class="method-start">76614 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">getErrors(kusiwa@cmail.club, pass)</span>
-                <span class="method-start">76614 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">takeScreenShotOnFailure([TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.l...)</span>
-                <span class="method-start">87459 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">emptyPass</span>
-                <span class="method-start">87460 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">takeScreenShotOnFailure([TestResult name=emptyPass status=SUCCESS method=InvalidLoginTest.emptyPass()[pri:2, instance:tests....)</span>
-                <span class="method-start">88125 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">validLogin</span>
-                <span class="method-start">88126 ms</span>
+                <span class="method-start">18214 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">takeScreenShotOnFailure([TestResult name=validLogin status=SUCCESS method=InvalidLoginTest.validLogin()[pri:3, instance:test...)</span>
-                <span class="method-start">90122 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">logout</span>
-                <span class="method-start">90123 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">takeScreenShotOnFailure([TestResult name=logout status=SUCCESS method=InvalidLoginTest.logout()[pri:4, instance:tests.Invali...)</span>
-                <span class="method-start">101621 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">baseAfterClass</span>
-                <span class="method-start">101622 ms</span>
-              </div> <!-- configuration-class after -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">83947 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

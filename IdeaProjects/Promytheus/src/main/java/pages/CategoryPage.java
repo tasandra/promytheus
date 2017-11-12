@@ -67,6 +67,7 @@ public class CategoryPage extends BasePage{
 
     // click and select category
     public void selectCategory(String select) {
+        wait.until(ExpectedConditions.elementToBeClickable(category));
         executor.executeScript("arguments[0].click()", category);
 
         wait.until(ExpectedConditions.presenceOfElementLocated(

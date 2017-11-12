@@ -1,0 +1,10 @@
+pages\BasePage.class
+pages\MyProfilePage.class
+pages\TalentsPage.class
+pages\LoginPage.class
+menus\HomeMenu.class
+pages\CategoryPage.class
+pages\PersonalPage.class
+pages\TalentTraitsPage.class
+menus\TalentMenu.class
+pages\RegisterPage.class

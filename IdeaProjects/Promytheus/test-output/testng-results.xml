@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Promytheus" duration-ms="103013" started-at="2017-11-09T22:28:37Z" finished-at="2017-11-09T22:30:20Z">
+  <suite started-at="2017-11-11T18:36:03Z" name="Promytheus" finished-at="2017-11-11T18:37:30Z" duration-ms="87384">
     <groups>
+      <group name="p1">
+        <method signature="BaseTest.checkLogo()[pri:0, instance:tests.ValidLoginTest@79e2c065]" name="checkLogo" class="tests.BaseTest"/>
+        <method signature="ValidLoginTest.validLogin()[pri:0, instance:tests.ValidLoginTest@79e2c065]" name="validLogin" class="tests.ValidLoginTest"/>
+      </group> <!-- p1 -->
     </groups>
-    <test name="login and talents" duration-ms="103013" started-at="2017-11-09T22:28:37Z" finished-at="2017-11-09T22:30:20Z">
-      <class name="tests.InvalidLoginTest">
-        <test-method status="PASS" signature="baseBeforeClass(java.lang.String, java.lang.String)[pri:0, instance:tests.InvalidLoginTest@e580929]" name="baseBeforeClass" is-config="true" duration-ms="29091" started-at="2017-11-09T14:28:37Z" finished-at="2017-11-09T14:29:06Z">
+    <test started-at="2017-11-11T18:36:03Z" name="login" finished-at="2017-11-11T18:37:30Z" duration-ms="87384">
+      <class name="tests.ValidLoginTest">
+        <test-method is-config="true" signature="beforeTest(java.lang.String, java.lang.String)[pri:0, instance:tests.ValidLoginTest@79e2c065]" started-at="2017-11-11T10:36:03Z" name="beforeTest" finished-at="2017-11-11T10:36:20Z" duration-ms="17328" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,238 +26,97 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- baseBeforeClass -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.InvalidLoginTest@e580929]" name="beforeClass" is-config="true" duration-ms="723" started-at="2017-11-09T14:29:06Z" finished-at="2017-11-09T14:29:06Z">
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.ValidLoginTest@79e2c065]" started-at="2017-11-11T10:36:20Z" name="beforeClass" finished-at="2017-11-11T10:36:21Z" duration-ms="507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="checkLogo()[pri:0, instance:tests.InvalidLoginTest@e580929]" name="checkLogo" duration-ms="973" started-at="2017-11-09T14:29:06Z" finished-at="2017-11-09T14:29:07Z">
+        <test-method signature="checkLogo()[pri:0, instance:tests.ValidLoginTest@79e2c065]" started-at="2017-11-11T10:36:21Z" name="checkLogo" finished-at="2017-11-11T10:36:21Z" duration-ms="352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLogo -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.InvalidLoginTest@e580929]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2017-11-09T14:29:07Z" finished-at="2017-11-09T14:29:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkLogo status=SUCCESS method=BaseTest.checkLogo()[pri:0, instance:tests.InvalidLoginTest@e580929] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929]" name="getErrors" duration-ms="902" started-at="2017-11-09T14:29:16Z" data-provider="userData" finished-at="2017-11-09T14:29:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getErrors -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.InvalidLoginTest@e580929]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2017-11-09T14:29:17Z" finished-at="2017-11-09T14:29:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929]" name="getErrors" duration-ms="507" started-at="2017-11-09T14:29:17Z" data-provider="userData" finished-at="2017-11-09T14:29:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getErrors -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.InvalidLoginTest@e580929]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2017-11-09T14:29:17Z" finished-at="2017-11-09T14:29:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929]" name="getErrors" duration-ms="11520" started-at="2017-11-09T14:29:17Z" data-provider="userData" finished-at="2017-11-09T14:29:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[kusiwa@cmail]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getErrors -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.InvalidLoginTest@e580929]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2017-11-09T14:29:29Z" finished-at="2017-11-09T14:29:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929]" name="getErrors" duration-ms="13464" started-at="2017-11-09T14:29:29Z" data-provider="userData" finished-at="2017-11-09T14:29:42Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ku@cmail.club]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getErrors -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.InvalidLoginTest@e580929]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2017-11-09T14:29:42Z" finished-at="2017-11-09T14:29:42Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929]" name="getErrors" duration-ms="10819" started-at="2017-11-09T14:29:42Z" data-provider="userData" finished-at="2017-11-09T14:29:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[kusiwa@]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getErrors -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.InvalidLoginTest@e580929]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2017-11-09T14:29:53Z" finished-at="2017-11-09T14:29:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929]" name="getErrors" duration-ms="10845" started-at="2017-11-09T14:29:53Z" data-provider="userData" finished-at="2017-11-09T14:30:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[kusiwa@cmail.club]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[pass]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getErrors -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.InvalidLoginTest@e580929]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2017-11-09T14:30:04Z" finished-at="2017-11-09T14:30:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=getErrors status=SUCCESS method=InvalidLoginTest.getErrors(java.lang.String, java.lang.String)[pri:1, instance:tests.InvalidLoginTest@e580929] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="emptyPass()[pri:2, instance:tests.InvalidLoginTest@e580929]" name="emptyPass" duration-ms="664" started-at="2017-11-09T14:30:04Z" finished-at="2017-11-09T14:30:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- emptyPass -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.InvalidLoginTest@e580929]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2017-11-09T14:30:05Z" finished-at="2017-11-09T14:30:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=emptyPass status=SUCCESS method=InvalidLoginTest.emptyPass()[pri:2, instance:tests.InvalidLoginTest@e580929] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="validLogin()[pri:3, instance:tests.InvalidLoginTest@e580929]" name="validLogin" duration-ms="1996" started-at="2017-11-09T14:30:05Z" finished-at="2017-11-09T14:30:07Z">
+        <test-method signature="validLogin()[pri:0, instance:tests.ValidLoginTest@79e2c065]" started-at="2017-11-11T10:36:21Z" name="validLogin" finished-at="2017-11-11T10:37:26Z" duration-ms="64897" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: .brand-logo > img' (tried for 10 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: .brand-logo > img' (tried for 10 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at menus.HomeMenu.getHomeMenuLogo(HomeMenu.java:31)
+	at tests.ValidLoginTest.validLogin(ValidLoginTest.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".brand-logo > img"}
+  (Session info: chrome=62.0.3202.89)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
+System info: host: 'SHUSHIK', ip: '192.168.0.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '9.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.29.461591 (62ebf098771772..., userDataDir: C:\Users\ALEXAN~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 62.0.3202.89, webStorageEnabled: true}
+Session ID: 3d600e5aa8a8e433d65632af89058d29
+*** Element info: {Using=css selector, value=.brand-logo > img}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:464)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:301)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:284)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.InvalidLoginTest@e580929]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2017-11-09T14:30:07Z" finished-at="2017-11-09T14:30:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validLogin status=SUCCESS method=InvalidLoginTest.validLogin()[pri:3, instance:tests.InvalidLoginTest@e580929] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.ValidLoginTest@79e2c065]" started-at="2017-11-11T10:37:27Z" name="afterTest" finished-at="2017-11-11T10:37:30Z" duration-ms="3424" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="logout()[pri:4, instance:tests.InvalidLoginTest@e580929]" name="logout" duration-ms="11497" started-at="2017-11-09T14:30:07Z" finished-at="2017-11-09T14:30:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:tests.InvalidLoginTest@e580929]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2017-11-09T14:30:18Z" finished-at="2017-11-09T14:30:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logout status=SUCCESS method=InvalidLoginTest.logout()[pri:4, instance:tests.InvalidLoginTest@e580929] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="baseAfterClass()[pri:0, instance:tests.InvalidLoginTest@e580929]" name="baseAfterClass" is-config="true" duration-ms="1387" started-at="2017-11-09T14:30:18Z" finished-at="2017-11-09T14:30:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- baseAfterClass -->
-      </class> <!-- tests.InvalidLoginTest -->
-    </test> <!-- login and talents -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- tests.ValidLoginTest -->
+    </test> <!-- login -->
   </suite> <!-- Promytheus -->
 </testng-results>

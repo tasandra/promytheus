@@ -140,29 +140,27 @@ public class PersonalPage extends BasePage{
     }
 
     public String getFirstName(){
-        return firstName.getAttribute("value");
+        return wait.until(ExpectedConditions.visibilityOf(firstName)).getAttribute("value");
     }
 
     // insert middle name
     private void insertMiddleName(String middle){
-
-        middleName.clear();
+        wait.until(ExpectedConditions.visibilityOf(middleName)).clear();
         middleName.sendKeys(middle);
     }
 
     public String getMiddleName(){
-        return middleName.getAttribute("value");
+        return wait.until(ExpectedConditions.visibilityOf(middleName)).getAttribute("value");
     }
 
     // insert last name
     private void insertLastName(String last){
-
-        lastName.clear();
+        wait.until(ExpectedConditions.visibilityOf(lastName)).clear();
         lastName.sendKeys(last);
     }
 
     public String getLastName(){
-        return lastName.getAttribute("value");
+        return wait.until(ExpectedConditions.visibilityOf(lastName)).getAttribute("value");
     }
 
     public void insertNames(String first, String middle, String last){
@@ -172,20 +170,20 @@ public class PersonalPage extends BasePage{
     }
     // get errors
     public String getFirstNameError(){
-        return firstNameError.getText();
+        return wait.until(ExpectedConditions.visibilityOf(firstNameError)).getText();
     }
 
     public String getMiddleNameError(){
-        return middleNameError.getText();
+        return wait.until(ExpectedConditions.visibilityOf(middleNameError)).getText();
     }
 
     public String getLastNameError(){
-        return lastNameError.getText();
+        return wait.until(ExpectedConditions.visibilityOf(lastNameError)).getText();
     }
 
     public void uploadImage(String imagePath) throws AWTException {
+        wait.until(ExpectedConditions.elementToBeClickable(image));
         executor.executeScript("arguments[0].click()", image);
-//        image.click();
 
         //put path to your image in a clipboard
         StringSelection ss = new StringSelection(imagePath);
@@ -213,34 +211,35 @@ public class PersonalPage extends BasePage{
     // handle incorrect image file type pup up
     public String getPopUpHeaderAndClick(){
 
-        String header = popupHeader.getText();
-        popupOK.click();
+        String header = wait.until(ExpectedConditions.visibilityOf(popupHeader)).getText();
+        wait.until(ExpectedConditions.elementToBeClickable(popupOK)).click();
 
         return header;
     }
 
     // insert date and place of birthday
     public void insertDatePlaceBirth(String dateB , String placeB){
-        dateBirth.clear();
+        wait.until(ExpectedConditions.visibilityOf(dateBirth)).clear();
         dateBirth.sendKeys(dateB);
-        placeBirth.clear();
+        wait.until(ExpectedConditions.visibilityOf(placeBirth)).clear();
         placeBirth.sendKeys(placeB);
     }
 
     public String getDateOfB(){
-        return dateBirth.getAttribute("value");
+        return wait.until(ExpectedConditions.visibilityOf(dateBirth)).getAttribute("value");
     }
 
     public String getPlaceOfB(){
-        return placeBirth.getAttribute("value");
+        return wait.until(ExpectedConditions.visibilityOf(placeBirth)).getAttribute("value");
     }
 
     public String getPlaceBirthError(){
-        return placeBirthError.getText();
+        return wait.until(ExpectedConditions.visibilityOf(placeBirthError)).getText();
     }
 
     // select country
     public void selectCountry(String country){
+        wait.until(ExpectedConditions.elementToBeClickable(clickCountry));
         executor.executeScript("arguments[0].click()", clickCountry);
 
         wait.until(ExpectedConditions.presenceOfElementLocated(
@@ -248,7 +247,7 @@ public class PersonalPage extends BasePage{
     }
 
     public String getCountryValue(){
-        return getCountry.getText();
+        return wait.until(ExpectedConditions.visibilityOf(getCountry)).getText();
     }
 
     // enter address
@@ -261,23 +260,28 @@ public class PersonalPage extends BasePage{
     }
 
     public String getAddress1(){
-        return address1.getAttribute("value");
+
+        return wait.until(ExpectedConditions.visibilityOf(address1)).getAttribute("value");
     }
 
     public String getAddress2(){
-        return address2.getAttribute("value");
+
+        return wait.until(ExpectedConditions.visibilityOf(address2)).getAttribute("value");
     }
 
     public String getCity(){
-        return city.getAttribute("value");
+
+        return wait.until(ExpectedConditions.visibilityOf(city)).getAttribute("value");
     }
 
     public String getState(){
-        return addressState.getAttribute("value");
+
+        return wait.until(ExpectedConditions.visibilityOf(addressState)).getAttribute("value");
     }
 
     public String getZip(){
-        return zip.getAttribute("value");
+
+        return wait.until(ExpectedConditions.visibilityOf(zip)).getAttribute("value");
     }
 
     // select radio button Rural and get class attribute
@@ -314,82 +318,87 @@ public class PersonalPage extends BasePage{
 
     // enter email
     public void enterEmail(String useEmail){
-        email.clear();
+        wait.until(ExpectedConditions.visibilityOf(email)).clear();
         email.sendKeys(useEmail);
     }
 
     public String getEmail(){
-        return email.getAttribute("value");
+
+        return wait.until(ExpectedConditions.visibilityOf(email)).getAttribute("value");
     }
 
     // get email error
     public String getEmailError(){
-        return emailError.getText();
+
+        return wait.until(ExpectedConditions.visibilityOf(emailError)).getAttribute("value");
     }
 
     // enter phone number
     public void enterPhone(String userPhone){
-        phone.clear();
+        wait.until(ExpectedConditions.visibilityOf(phone)).clear();
         phone.sendKeys(userPhone);
     }
 
     public String getPhone(){
-        return phone.getAttribute("value");
+
+        return wait.until(ExpectedConditions.visibilityOf(phone)).getAttribute("value");
     }
 
     // get phone error
     public String getError(){
-        return error.getText();
+       return wait.until(ExpectedConditions.visibilityOf(error)).getText();
     }
 
     // add social account
     public void clickAddSocial(){
-        addSocialAccount.click();
-        wait.until(ExpectedConditions.visibilityOf(selectSocialAccount));
+        wait.until(ExpectedConditions.elementToBeClickable(addSocialAccount)).click();
     }
 
     // select social account
     public void selectSocial(String social){
+        wait.until(ExpectedConditions.elementToBeClickable(selectSocialAccount)).click();
 //        executor.executeScript("arguments[0].click()", selectSocialAccount);
-        selectSocialAccount.click();
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//span[contains(.,'" + social + "')]"))).click();
     }
 
     public String getSocialValue(){
-        return getSocial.getText();
+
+        return wait.until(ExpectedConditions.visibilityOf(getSocial)).getText();
     }
 
     // insert height
     public void insertHeight(String userHeight){
-        height.clear();
-//        height.sendKeys(Keys.BACK_SPACE);
+        wait.until(ExpectedConditions.visibilityOf(height)).clear();
         height.sendKeys(userHeight);
     }
 
     public String getHeight(){
-        return height.getAttribute("value");
+
+        return wait.until(ExpectedConditions.visibilityOf(height)).getAttribute("value");
     }
 
     // insert weight
     public void insertWeight(String userWeight){
-        weight.clear();
+        wait.until(ExpectedConditions.visibilityOf(weight)).clear();
         weight.sendKeys(userWeight);
     }
 
     public String getWeight(){
-        return weight.getAttribute("value");
+
+        return wait.until(ExpectedConditions.visibilityOf(weight)).getAttribute("value");
     }
 
     // get height error
     public String getHeightError(){
-        return heightError.getText();
+        return wait.until(ExpectedConditions.visibilityOf(heightError)).getText();
     }
 
     // get weight error
     public String getWeightError(){
-        return weightError.getText();
+
+        return wait.until(ExpectedConditions.visibilityOf(weightError)).getText();
     }
 
 }

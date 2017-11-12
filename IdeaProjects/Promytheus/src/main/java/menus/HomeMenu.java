@@ -32,7 +32,7 @@ public class HomeMenu extends BasePage{
     }
 // click on home button
     public void clickHome(){
-        home.click();
+        wait.until(ExpectedConditions.elementToBeClickable(home)).click();
     }
 // click on user icon
     public void clickUserIcon(){

@@ -1,0 +1,13 @@
+tests\RegisterPageTest.class
+tests\TalentTraitsPageTest.class
+tests\CategoryPageTest.class
+tests\TalentsPageTest.class
+data\ExcelReadApi.class
+tests\PersonalPageTest.class
+data\ExcelWriteApi.class
+tests\BaseTest.class
+data\DataproviderClass.class
+tests\LoginPageTest.class
+data\ReadWriteExcel.class
+tests\ValidLoginTest.class
+data\NadaPage.class

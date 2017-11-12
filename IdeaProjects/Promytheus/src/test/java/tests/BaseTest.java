@@ -2,6 +2,8 @@ package tests;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import menus.HomeMenu;
+import menus.TalentMenu;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
@@ -14,7 +16,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import pages.LoginPage;
+import pages.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,10 +27,32 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     WebDriver driver;
+    protected LoginPage loginPage;
+    protected HomeMenu home;
+    protected TalentMenu menu;
+    protected TalentsPage talentsPage;
+    protected MyProfilePage profilePage;
+    protected CategoryPage categoryPage;
+    protected PersonalPage personalPage;
+    protected RegisterPage registerPage;
+    protected TalentTraitsPage talentTraitsPage;
 
+    @BeforeClass(groups = "p1")
+    public void beforeClass(){
+        loginPage = new LoginPage(driver);
+        home = new HomeMenu(driver);
+        menu = new TalentMenu(driver);
+        talentsPage = new TalentsPage(driver);
+        profilePage = new MyProfilePage(driver);
+        categoryPage = new CategoryPage(driver);
+        personalPage = new PersonalPage(driver);
+        registerPage = new RegisterPage(driver);
+        talentTraitsPage = new TalentTraitsPage(driver);
+    }
+
+    @BeforeTest(groups = "p1")
     @Parameters({"browser", "url"})
-    @BeforeClass
-    public void baseBeforeClass(String browser, String url)  throws MalformedURLException {
+    public void beforeTest(String browser, String url)  throws MalformedURLException {
 //  run firefox
         if(browser.equalsIgnoreCase("firefox")) {
 
@@ -115,25 +139,24 @@ public class BaseTest {
         }
     }
 
-    @AfterMethod
-    public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
-        if (testResult.getStatus() == ITestResult.FAILURE) {
-            System.out.println(testResult.getStatus());
-            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(scrFile, new File("errorScreenshots\\" + testResult.getName() + "-"
-                    + Arrays.toString(testResult.getParameters()) + ".jpg"));
-        }
-    }
-        @AfterClass
-    public void baseAfterClass(){
+//    @AfterMethod
+//    public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+//        if (testResult.getStatus() == ITestResult.FAILURE) {
+//            System.out.println(testResult.getStatus());
+//            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//            FileUtils.copyFile(scrFile, new File("errorScreenshots\\" + testResult.getName() + "-"
+//                    + Arrays.toString(testResult.getParameters()) + ".jpg"));
+//        }
+//    }
+    @AfterTest(groups = "p1")
+    public void afterTest(){
         driver.close();
         driver.quit();
     }
 
-    @Test
+    @Test(groups = "p1")
     public void checkLogo(){
-        LoginPage login = new LoginPage(driver);
-        login.getLogo();
+        loginPage.getLogo();
     }
 
 }

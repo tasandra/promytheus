@@ -3,14 +3,10 @@ package tests;
 import data.ExcelReadApi;
 import data.ExcelWriteApi;
 import data.NadaPage;
-import menus.HomeMenu;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.testng.annotations.*;
-import pages.LoginPage;
-import pages.MyProfilePage;
 import pages.RegisterPage;
-import pages.TalentsPage;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -19,10 +15,6 @@ import static org.testng.Assert.*;
 
 public class RegisterPageTest extends BaseTest{
     private RegisterPage registerPage;
-    private LoginPage loginPage;
-    private HomeMenu home;
-    private TalentsPage talentsPage;
-    private MyProfilePage profilePage;
     private String firstName;
     private String lastName;
     private String email;
@@ -37,14 +29,10 @@ public class RegisterPageTest extends BaseTest{
     private  String window1;
     private  String window2;
 
-    @BeforeClass
+    @BeforeMethod
     public void generateUser()  throws Exception{
         emailSite = new NadaPage(driver);
         registerPage = new RegisterPage(driver);
-        loginPage = new LoginPage(driver);
-        talentsPage = new TalentsPage(driver);
-        home = new HomeMenu(driver);
-        profilePage = new MyProfilePage(driver);
         firstName = RandomStringUtils.random(10, true, false);
         lastName = RandomStringUtils.random(10, true, false);
         String phone1 = RandomStringUtils.random(3, false, true);

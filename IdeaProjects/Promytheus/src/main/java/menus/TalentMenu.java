@@ -78,11 +78,10 @@ public class TalentMenu extends BasePage {
     }
 
     public void clickCategory(){
-        category.click();
+        wait.until(ExpectedConditions.elementToBeClickable(category)).click();
     }
 
     public void clickPersonal(){
-//        wait.until(ExpectedConditions.visibilityOf(personal));
         wait.until(ExpectedConditions.elementToBeClickable(personal));
         executor.executeScript("arguments[0].click()", personal);
     }
@@ -94,23 +93,26 @@ public class TalentMenu extends BasePage {
     }
 
     public void clickPersonalityTraits(){
-        personalityTraits.click();
+        wait.until(ExpectedConditions.elementToBeClickable(personalityTraits)).click();
     }
 
     public void clickStory() {
-        story.click();
+        wait.until(ExpectedConditions.elementToBeClickable(story)).click();
     }
 
     public void clickEvidence(){
-        evidence.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(evidence)).click();
     }
 
     public void clickTraining(){
-        training.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(training)).click();
     }
 
     public void clickRating(){
-        rating.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(rating)).click();
     }
 
     public void clickSocialBackground(){
@@ -121,17 +123,16 @@ public class TalentMenu extends BasePage {
     }
 
     public void clickPrevious(){
-        previous.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(previous)).click();
     }
 
     public void clickNext(){
-//        next.click();
         wait.until(ExpectedConditions.elementToBeClickable(next));
         executor.executeScript("arguments[0].click()", next);
     }
 
     public void clickFinish(){
-//        finish.click();
         wait.until(ExpectedConditions.elementToBeClickable(finish));
         executor.executeScript("arguments[0].click()", finish);
     }

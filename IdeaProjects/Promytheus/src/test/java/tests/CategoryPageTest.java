@@ -15,22 +15,12 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class CategoryPageTest extends ValidLoginTest {
-    private TalentsPage talents;
-    private TalentMenu menu;
-    private CategoryPage categoryPage;
-
-    @BeforeClass
-    public void beforeClass(){
-        talents = new TalentsPage(driver);
-        menu = new TalentMenu(driver);
-        categoryPage = new CategoryPage(driver);
-    }
 
     // create new talent and select category
     @Test (priority = 1, dataProvider="Category")
     public void selectCategory1(String category){
         // create new users
-        talents.clickNew();
+        talentsPage.clickNew();
 // get category page tap turns blue
         try {
             String className = categoryPage.getActiveTab();
@@ -54,7 +44,7 @@ public class CategoryPageTest extends ValidLoginTest {
 // save new user and back to the talents page
         menu.clickNext();
         categoryPage.clickTalents();
-        String header = talents.getHeader();
+        String header = talentsPage.getHeader();
         assertEquals("Talents", header, " user is not back to talents page ");
     }
 
@@ -62,7 +52,7 @@ public class CategoryPageTest extends ValidLoginTest {
     @Test (priority = 2)
     public void getError(){
   // leave category field empty, click next and assert error message
-        talents.clickNew();
+        talentsPage.clickNew();
         menu.clickNext();
         String error = categoryPage.getError();
         assertEquals("Please select a talent category first.", error, "Error message not displayed");

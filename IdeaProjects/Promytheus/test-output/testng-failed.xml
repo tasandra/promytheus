@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Promytheus]">
+<suite name="Failed suite [Promytheus]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
   <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html"/>
-  <test name="login and talents(failed)">
+  <test name="login(failed)">
     <classes>
-      <class name="tests.RegisterPageTest">
+      <class name="tests.ValidLoginTest">
         <methods>
-          <include name="registerNewUser"/>
-          <include name="takeScreenShotOnFailure"/>
-          <include name="checkEmailError" invocation-numbers="9 12 13"/>
-          <include name="baseBeforeClass"/>
-          <include name="generateUser"/>
-          <include name="baseAfterClass"/>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="validLogin"/>
         </methods>
-      </class> <!-- tests.RegisterPageTest -->
+      </class> <!-- tests.ValidLoginTest -->
     </classes>
-  </test> <!-- login and talents(failed) -->
+  </test> <!-- login(failed) -->
 </suite> <!-- Failed suite [Promytheus] -->

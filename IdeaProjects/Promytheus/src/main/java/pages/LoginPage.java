@@ -44,12 +44,12 @@ public class LoginPage extends BasePage{
     }
 
     private void enterUsername(String user){
-        email.clear();
+        wait.until(ExpectedConditions.visibilityOf(email)).clear();
         email.sendKeys(user);
     }
 
     private void enterPassword(String pass){
-        password.clear();
+        wait.until(ExpectedConditions.visibilityOf(password)).clear();
         password.sendKeys(pass);
     }
 

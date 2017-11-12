@@ -3,6 +3,7 @@ package tests;
 import menus.HomeMenu;
 import menus.TalentMenu;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.CategoryPage;
@@ -16,31 +17,17 @@ import java.util.List;
 import static org.testng.Assert.*;
 
 public class TalentTraitsPageTest extends ValidLoginTest {
-    private TalentsPage talents;
-    private TalentMenu menu;
-    private CategoryPage category;
-    private HomeMenu home;
-    private TalentTraitsPage talentTraits;
 
-    @BeforeMethod
-    public void beforeClass() throws Exception {
-        talents = new TalentsPage(driver);
-        menu = new TalentMenu(driver);
-        home = new HomeMenu(driver);
-        category = new CategoryPage(driver);
-        talentTraits = new TalentTraitsPage(driver);
-
-    }
 // go to talent traits page
     @Test (priority = 1)
     public void goTalentTraits(){
         // click edit and assert user redirect to the category page
-        List<WebElement> edit = talents.clickEdit();
+        List<WebElement> edit = talentsPage.clickEdit();
         edit.get(0).click();
         String active1 = menu.getActiveTabCategory();
         assertEquals("ng-scope active", active1);
 
-        String header = category.getHeader();
+        String header = categoryPage.getHeader();
         assertTrue(header.contains("Talent Strength"));
 
         // click on talent traits and assert user redirect to the talents traits page
@@ -55,7 +42,7 @@ public class TalentTraitsPageTest extends ValidLoginTest {
         // all fields empty and click next
         menu.clickNext();
         // get all error messages
-        List<WebElement> errors = talentTraits.getTraitsErrors();
+        List<WebElement> errors = talentTraitsPage.getTraitsErrors();
         Iterator<WebElement> iterator = errors.iterator();
         while(iterator.hasNext()) {
             String error = iterator.next().getText();
@@ -68,9 +55,9 @@ public class TalentTraitsPageTest extends ValidLoginTest {
     public void insert11(){
         // refresh browser and insert scales more than 10 in each fields
         driver.navigate().refresh();
-        talentTraits.insetScales("11");
+        talentTraitsPage.insetScales("11");
         // assert error messages
-        List<WebElement> errors = talentTraits.getTraitsErrors();
+        List<WebElement> errors = talentTraitsPage.getTraitsErrors();
         Iterator<WebElement> itr = errors.iterator();
         while(itr.hasNext()) {
             String error = itr.next().getText();
@@ -83,9 +70,9 @@ public class TalentTraitsPageTest extends ValidLoginTest {
     public void insert0(){
         // refresh browser and insert scales less than 1 in each fields
         driver.navigate().refresh();
-        talentTraits.insetScales("0");
+        talentTraitsPage.insetScales("0");
         // assert error messages
-        List<WebElement> errors = talentTraits.getTraitsErrors();
+        List<WebElement> errors = talentTraitsPage.getTraitsErrors();
         Iterator<WebElement> itr = errors.iterator();
         while(itr.hasNext()) {
             String error = itr.next().getText();
@@ -107,7 +94,7 @@ public class TalentTraitsPageTest extends ValidLoginTest {
 //        System.out.print(Arrays.toString(numbers));
 
         // insert random numbers to scales
-        List<WebElement> rows = talentTraits.getTraitsRowsInput();
+        List<WebElement> rows = talentTraitsPage.getTraitsRowsInput();
         Iterator<WebElement> itr = rows.iterator();
         int i = 0;
         while(itr.hasNext()) {

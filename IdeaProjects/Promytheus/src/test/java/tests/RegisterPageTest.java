@@ -33,6 +33,7 @@ public class RegisterPageTest extends BaseTest{
     public void generateUser()  throws Exception{
         emailSite = new NadaPage(driver);
         registerPage = new RegisterPage(driver);
+        // create random information
         firstName = RandomStringUtils.random(10, true, false);
         lastName = RandomStringUtils.random(10, true, false);
         String phone1 = RandomStringUtils.random(3, false, true);
@@ -46,9 +47,11 @@ public class RegisterPageTest extends BaseTest{
         state = RandomStringUtils.random(10, true, false);
         zip = RandomStringUtils.random(5,false, true);
 
+        // go to email website to generate email
        String emailUrl = "https://getnada.com/";
        ((JavascriptExecutor) driver).executeScript("window.open(arguments[0])", emailUrl);
 
+       // set window handles
         Set<String> windows = driver.getWindowHandles();
         Iterator<String> itr = windows.iterator();
 
@@ -57,17 +60,20 @@ public class RegisterPageTest extends BaseTest{
 //window2 will provide you child window
         window2 = itr.next();
 
+        // switch to email website
         driver.switchTo().window(window2);
         emailSite.clickGetEmail();
         email = emailSite.getEmail();
 //        System.out.print(email);
 
+        // write email and password to excel file
         ExcelWriteApi write = new ExcelWriteApi("promy.xlsx");
         int rows = write.getRowCount("users");
         //System.out.print(rows);
         write.setCellData("users",0,rows,email);
         write.setCellData("users",1,rows,password);
 
+        // switch to application window
         driver.switchTo().window(window1);
     }
 // go to register page
@@ -78,7 +84,7 @@ public class RegisterPageTest extends BaseTest{
         assertEquals("SIGNUP TO GET INSTANT ACCESS", header, "user is not redirect to register page");
     }
 
-//assert invalid email error message
+//assert invalid emails error message
     @Test(priority = 2,  dataProvider = "invalidEmails")
     public void checkEmailError( String email){
         registerPage.setEmailAddress(email);
@@ -108,6 +114,7 @@ public class RegisterPageTest extends BaseTest{
         // assert pop up message
         String popupHeader = talentsPage.getPopupHeader();
         assertEquals("Who would you like to report?", popupHeader);
+        // click report to yourself radio button
         talentsPage.clickPopupRadioYourSelf();
         talentsPage.clickPopupOK();
         String talentsHeader = talentsPage.getHeader();
@@ -126,18 +133,19 @@ public class RegisterPageTest extends BaseTest{
     // assert my profile page
     @Test(priority = 5)
     public void assertMyProfile(){
-        // switch window to applicaton
+        // switch window to application
         driver.switchTo().window(window1);
 
         // click on my profile
         try {
-            home.clickUserIcon();
             home.myProfileClick();
         }
-        catch(Exception e){
-            home.clickUserIcon();
+        catch(WebDriverException e){
             home.myProfileJs();
             System.out.println(" click on my profile with javascript execution");
+        }
+        catch(Exception e){
+            System.out.print("WebDriver did not click on My Profile");
         }
         // create two array with input data and data from my profile page
         String[] data = { firstName,lastName,email,phone,country,address,city,state,zip};

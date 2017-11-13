@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
 import data.ExcelReadApi;
@@ -43,14 +44,17 @@ public class LoginPageTest extends BaseTest {
     }
 
     @Test(priority = 4,  groups = "p1")
+    // log out
     public void logout(){
-        home.clickUserIcon();
         try {
             home.logoutClick();
         }
-        catch(Exception e){
+        catch(WebDriverException e){
             home.logoutJs();
-            System.out.println(" log out with javascript execution");
+            System.out.println(" click on log out with javascript execution");
+        }
+        catch(Exception e){
+            System.out.print("WebDriver did not click on log out");
         }
 
         assertTrue(loginPage.getLogo().isDisplayed(),"User wasn't able to logout and logo not displayed");

@@ -42,10 +42,12 @@ public class HomeMenu extends BasePage{
     }
     // click on my profile
     public void myProfileClick(){
+        clickUserIcon();
         wait.until(ExpectedConditions.elementToBeClickable(profile)).click();
     }
     // click on my profile button with javascript
     public void myProfileJs(){
+        clickUserIcon();
         wait.until(ExpectedConditions.elementToBeClickable(profile));
         executor.executeScript("arguments[0].click()", profile);
     }

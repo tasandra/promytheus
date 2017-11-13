@@ -6,8 +6,7 @@
     <parameter name="browser" value="chrome"/>
     <test name = "login">
         <classes>
-            <!--class name="tests.LoginPageTest"/-->
-            <class name="tests.ValidLoginTest"/>
+            <class name="tests.LoginPageTest"/>
         </classes>
     </test>
     <!--test name = "register" >

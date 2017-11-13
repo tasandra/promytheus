@@ -105,18 +105,6 @@ public class TalentTraitsPageTest extends ValidLoginTest {
         menu.clickNext();
         String active3 = menu.getActiveTabPersonalityTraits();
         assertEquals("ng-scope active", active3);
-
-        // log out and log in
-        home.clickUserIcon();
-        try {
-            home.logoutClick();
-        }
-        catch(Exception e){
-            home.logoutJs();
-            System.out.println(" log out with javascript execution");
-        }
-
-        validLogin();
     }
 
 }

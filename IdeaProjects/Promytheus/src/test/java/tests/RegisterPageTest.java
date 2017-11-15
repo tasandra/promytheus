@@ -29,7 +29,7 @@ public class RegisterPageTest extends BaseTest{
     private  String window1;
     private  String window2;
 
-    @BeforeMethod
+    @BeforeClass
     public void generateUser()  throws Exception{
         emailSite = new NadaPage(driver);
         registerPage = new RegisterPage(driver);
@@ -80,8 +80,21 @@ public class RegisterPageTest extends BaseTest{
     @Test(priority = 1)
     public void gotoRegister(){
         loginPage.clickRegister();
-        String header = registerPage.getHeader();
-        assertEquals("SIGNUP TO GET INSTANT ACCESS", header, "user is not redirect to register page");
+        boolean breakIt = true;
+        while (true) {
+            breakIt = true;
+            try {
+                String header = registerPage.getHeader();
+                assertEquals("SIGNUP TO GET INSTANT ACCESS", header, "user is not redirect to register page");
+            } catch (Exception e) {
+                if (e.getMessage().contains("element is not attached")) {
+                    breakIt = false;
+                }
+            }
+            if (breakIt) {
+                break;
+            }
+        }
     }
 
 //assert invalid emails error message

@@ -1,14 +1,8 @@
 package tests;
 
-import menus.HomeMenu;
-import menus.TalentMenu;
+
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.CategoryPage;
-import pages.TalentTraitsPage;
-import pages.TalentsPage;
 
 import java.util.Iterator;
 
@@ -33,7 +27,7 @@ public class TalentTraitsPageTest extends ValidLoginTest {
         // click on talent traits and assert user redirect to the talents traits page
         menu.clickTalentTraits();
         String active2 = menu.getActiveTabTalentTraits();
-        assertEquals("ng-scope active", active2);
+        assertTrue((active2.contains("active")));
     }
 
 // assert errors - all fields empty
@@ -85,7 +79,7 @@ public class TalentTraitsPageTest extends ValidLoginTest {
     public void insertScales(){
         // refresh browser and insert scales in range  1 - 10 for each fields
         driver.navigate().refresh();
-        int[] numbers = new int[20];
+        int[] numbers = new int[22];
 
         //Generates 10 Random Numbers in the range 1 - 10
         for(int i = 0; i < numbers.length; i++) {

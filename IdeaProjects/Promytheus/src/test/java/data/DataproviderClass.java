@@ -2,9 +2,16 @@ package data;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.DataProvider;
+
 public class DataproviderClass {
     @DataProvider(name = "PersonalInfo")
     public static Object[][] getDataFromDataProvider() {
+        // date of birth
+        int yearBegin = 1950;
+        int yearEnd = 2017 - yearBegin;
+        String dOfB = "" + (1 + (int) (Math.random() * 12) + "/" + (1 + (int) (Math.random() * 31) + "/"
+                + (yearBegin + (int) (Math.random() * yearEnd))));
+
         return new Object[][]{
                 {"0",
                         // first name
@@ -14,8 +21,7 @@ public class DataproviderClass {
                         // last name
                         RandomStringUtils.random(6,true,false),
                         // date of birth
-                        RandomStringUtils.random(2,1,12,false,true) + "/" +
-                                RandomStringUtils.random(2,1,31,false,true) + "/" +
+                       dOfB,
                         // place of birth
                         RandomStringUtils.random(10,true, false),
                         // country
@@ -35,7 +41,7 @@ public class DataproviderClass {
                         // zip
                         RandomStringUtils.randomNumeric(5),
                         // email
-                        RandomStringUtils.randomAlphabetic(6) + "@cmail.club",
+                        RandomStringUtils.randomAlphabetic(6).toLowerCase() + "@cmail.club",
                         // phone
                         "(" + RandomStringUtils.randomNumeric(3) + ") " +
                                 RandomStringUtils.randomNumeric(3) + "-" +
@@ -55,10 +61,9 @@ public class DataproviderClass {
                         // last name
                         RandomStringUtils.random(3,true,false),
                         // date of birth
-                        RandomStringUtils.random(2,1,12,false,true) + "/" +
-                                RandomStringUtils.random(2,1,31,false,true) + "/" +
-                                // place of birth
-                                RandomStringUtils.random(4,true, false),
+                        dOfB,
+                        // place of birth
+                        RandomStringUtils.random(4,true, false),
                         // country
                         "United Kingdom",
                         // address 1
@@ -75,7 +80,7 @@ public class DataproviderClass {
                         // zip
                         RandomStringUtils.randomNumeric(5),
                         // email
-                        RandomStringUtils.randomAlphabetic(9) + "@cmail.club",
+                        RandomStringUtils.randomAlphabetic(9).toLowerCase() + "@cmail.club",
                         // phone
                         "(" + RandomStringUtils.randomNumeric(3) + ") " +
                                 RandomStringUtils.randomNumeric(3) + "-" +
@@ -87,42 +92,42 @@ public class DataproviderClass {
                         RandomStringUtils.randomNumeric(3) + "." + RandomStringUtils.randomNumeric(2)},
                 {"2",
                         // first name
-                        RandomStringUtils.random(2,true,false),
+                        RandomStringUtils.random(2, true, false),
                         // middle name
-                        RandomStringUtils.random(5,true,false),
+                        RandomStringUtils.random(5, true, false),
                         // last name
-                        RandomStringUtils.random(10,true,false),
+                        RandomStringUtils.random(10, true, false),
                         // date of birth
-                        RandomStringUtils.random(2,1,12,false,true) + "/" +
-                                RandomStringUtils.random(2,1,31,false,true) + "/" +
-                                // plece of birth
-                                RandomStringUtils.random(4,true, false),
+                        dOfB,
+                        // plece of birth
+                        RandomStringUtils.random(4, true, false),
                         // country
                         "Russia",
-                        RandomStringUtils.randomNumeric(5) + " " +
-                                RandomStringUtils.randomAlphabetic(3) + " " +
-                                RandomStringUtils.randomAlphabetic(3) + ".",
+                        // address 1
+                        RandomStringUtils.random(4, false, true) + " " +
+                                RandomStringUtils.random(4, true, false) + " " +
+                                RandomStringUtils.random(2, true, false) + ".",
                         // address 2
                         "",
                         // city
-                        RandomStringUtils.randomAlphabetic(7),
+                        RandomStringUtils.random(7, true, false),
                         // state
-                        RandomStringUtils.randomAlphabetic(2).toUpperCase(),
+                        RandomStringUtils.random(2, true, false).toUpperCase(),
                         // zip
-                        RandomStringUtils.randomNumeric(5),
+                        RandomStringUtils.random(5, false, true),
                         // email
-                        RandomStringUtils.random(8, true, true) + "@cmail.club",
+                        RandomStringUtils.random(8, true, true).toLowerCase() + "@cmail.club",
                         // phone
-                        "(" + RandomStringUtils.randomNumeric(3) + ") " +
-                                RandomStringUtils.randomNumeric(3) + "-" +
-                                RandomStringUtils.randomNumeric(4),
+                        "(" + RandomStringUtils.random(3, false, true) + ") " +
+                                RandomStringUtils.random(3, false, true) + "-" +
+                                RandomStringUtils.random(4, false, true),
                         // social network
                         "Facebook",
                         // height
-                        RandomStringUtils.randomNumeric(2),
+                        RandomStringUtils.random(2, false, true),
                         // weight
-                        RandomStringUtils.randomNumeric(1)}
-        };
+                        RandomStringUtils.random(1, false, true)}
+                };
     }
-}
+    }
 

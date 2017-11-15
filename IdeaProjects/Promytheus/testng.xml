@@ -1,28 +1,37 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Promytheus">
-    <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html"/>
+<suite name="Promytheus" verbose="1" >
+    <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com"/>
     <parameter name="browser" value="chrome"/>
     <test name = "login">
         <classes>
             <class name="tests.LoginPageTest"/>
         </classes>
     </test>
-    <!--test name = "register" >
+    <test name = "register" >
         <classes>
             <class name="tests.RegisterPageTest"/>
         </classes>
-    </test-->
-    <!--test name = "new user">
+    </test>
+    <test name = "new user">
         <classes>
             <class name="tests.CategoryPageTest"/>
         </classes>
     </test>
-    <test name="ru">
+    <test name="personal">
         <classes>
             <class name="tests.PersonalPageTest"/>
+        </classes>
+    </test>
+    <test name="talentTraits">
+        <classes>
             <class name="tests.TalentTraitsPageTest"/>
         </classes>
-    </test-->
+    </test>
+    <test name="talents">
+        <classes>
+            <class name="tests.TalentsPageTest"/>
+        </classes>
+    </test>
 </suite>

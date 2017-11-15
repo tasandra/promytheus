@@ -119,7 +119,7 @@ public class PersonalPage extends BasePage{
     @FindBy(how = How.XPATH, using = "//span[@class='ui-select-placeholder text-muted ng-binding']")
     private WebElement selectSocialAccount;
 
-    @FindBy(how = How.XPATH, using = "//span[@class='ng-binding ng-scope']")
+    @FindBy(how = How.XPATH, using = "//*[@id='talentForm']//span/span[2]/span")
     private WebElement getSocial;
 
     @FindBy(how = How.NAME, using = "height")
@@ -182,8 +182,8 @@ public class PersonalPage extends BasePage{
     }
 
     public void uploadImage(String imagePath) throws AWTException {
-        wait.until(ExpectedConditions.elementToBeClickable(image));
-        executor.executeScript("arguments[0].click()", image);
+        wait.until(ExpectedConditions.elementToBeClickable(image)).click();
+//        executor.executeScript("arguments[0].click()", image);
 
         //put path to your image in a clipboard
         StringSelection ss = new StringSelection(imagePath);
@@ -330,7 +330,7 @@ public class PersonalPage extends BasePage{
     // get email error
     public String getEmailError(){
 
-        return wait.until(ExpectedConditions.visibilityOf(emailError)).getAttribute("value");
+        return wait.until(ExpectedConditions.visibilityOf(emailError)).getText();
     }
 
     // enter phone number

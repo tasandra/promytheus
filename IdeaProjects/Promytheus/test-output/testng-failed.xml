@@ -2,17 +2,133 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Promytheus]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
-  <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com/sign-in.html"/>
-  <test name="login(failed)">
+  <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com"/>
+  <test name="register(failed)">
     <classes>
-      <class name="tests.ValidLoginTest">
+      <class name="tests.PersonalPageTest">
         <methods>
           <include name="beforeClass"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
-          <include name="validLogin"/>
         </methods>
-      </class> <!-- tests.ValidLoginTest -->
+      </class> <!-- tests.PersonalPageTest -->
+      <class name="tests.CategoryPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.CategoryPageTest -->
+      <class name="tests.RegisterPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="registerNewUser"/>
+          <include name="assertMyProfile"/>
+          <include name="afterTest"/>
+          <include name="checkEmailWelcomeMessage"/>
+          <include name="checkEmailError" invocation-numbers="9 12 13"/>
+          <include name="beforeTest"/>
+          <include name="generateUser"/>
+        </methods>
+      </class> <!-- tests.RegisterPageTest -->
+      <class name="tests.TalentTraitsPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.TalentTraitsPageTest -->
+      <class name="tests.LoginPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.LoginPageTest -->
     </classes>
-  </test> <!-- login(failed) -->
+  </test> <!-- register(failed) -->
+  <test name="personal(failed)">
+    <classes>
+      <class name="tests.PersonalPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="enterInvalidEmail"/>
+          <include name="insertInformation" invocation-numbers="1 2"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.PersonalPageTest -->
+      <class name="tests.CategoryPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.CategoryPageTest -->
+      <class name="tests.RegisterPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="generateUser"/>
+        </methods>
+      </class> <!-- tests.RegisterPageTest -->
+      <class name="tests.TalentTraitsPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.TalentTraitsPageTest -->
+      <class name="tests.LoginPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.LoginPageTest -->
+    </classes>
+  </test> <!-- personal(failed) -->
+  <test name="talentTraits(failed)">
+    <classes>
+      <class name="tests.PersonalPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.PersonalPageTest -->
+      <class name="tests.CategoryPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.CategoryPageTest -->
+      <class name="tests.RegisterPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="generateUser"/>
+        </methods>
+      </class> <!-- tests.RegisterPageTest -->
+      <class name="tests.TalentTraitsPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="goTalentTraits"/>
+          <include name="afterTest"/>
+          <include name="insertScales"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.TalentTraitsPageTest -->
+      <class name="tests.LoginPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.LoginPageTest -->
+    </classes>
+  </test> <!-- talentTraits(failed) -->
 </suite> <!-- Failed suite [Promytheus] -->

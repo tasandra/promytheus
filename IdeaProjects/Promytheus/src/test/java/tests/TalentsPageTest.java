@@ -21,12 +21,13 @@ public class TalentsPageTest extends ValidLoginTest{
     @Test  (priority = 10)
     public void numberOfRows(){
         talentsPage.selectRowsOnPage("25");
-        //TODO select 25 and assert
+        int numberOfRows25 = talentsPage.getNumberOfRow();
+        assertEquals(25, numberOfRows25, "wrong number of rows per page");
 
         // select 10 rows per page
         talentsPage.selectRowsOnPage("10");
-        int numberOfRows = talentsPage.getNumberOfRow();
-        assertEquals(10, numberOfRows, "wrong number of rows per page");
+        int numberOfRows10 = talentsPage.getNumberOfRow();
+        assertEquals(10, numberOfRows10, "wrong number of rows per page");
     }
     // click disable button
     @Test (priority = 11)

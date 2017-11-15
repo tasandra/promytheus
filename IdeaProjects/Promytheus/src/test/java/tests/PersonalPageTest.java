@@ -1,65 +1,56 @@
 package tests;
 
 import data.DataproviderClass;
-import data.ExcelReadApi;
-import menus.HomeMenu;
-import menus.TalentMenu;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pages.*;
 
 import java.awt.*;
 import java.util.List;
-import java.util.NoSuchElementException;
-import org.testng.asserts.SoftAssert;
+
 
 import static org.testng.Assert.*;
 
 public class PersonalPageTest extends ValidLoginTest {
 
         // go to personal page
-        @Test (priority = 1)
+        @Test (priority = 1 ,dependsOnMethods = "validLogin")
         public void goPersonal(){
         // click edit first row
             List<WebElement> edit = talentsPage.clickEdit();
             edit.get(0).click();
             // assert user redirect to category page - category page tap turns blue
-            try {
-                String active1 = menu.getActiveTabCategory();
-                assertEquals("ng-scope active", active1, "user not redirect to category page");
+            boolean breakIt;
+            while (true) {
+                breakIt = true;
+                try {
+                    String active1 = menu.getActiveTabCategory();
+                    assertTrue(active1.contains("ng-scope active"), "user not redirect to category page");
+                } catch (Exception e) {
+                    if (e.getMessage().contains("element is not attached")) {
+                        breakIt = false;
+                    }
+                }
+                if (breakIt) {
+                    break;
+                }
             }
-            catch (AssertionError  e){
-                System.out.println(e);
-            }
-            catch (StaleElementReferenceException e){
-                System.out.println(e);
-            }
-            catch (NoSuchElementException e){
-                System.out.println(e);
-            }
-
-            String header = categoryPage.getHeader();
-            assertTrue(header.contains("Talent Strength"));
 
             // click next and assert user redirect ro personal page - personal page tap turns blue
             menu.clickNext();
-            try {
-                String active2 = menu.getActiveTabPersonal();
-                assertEquals("ng-scope active", active2, "user not redirect to personal page");
-            }
-            catch (AssertionError  e){
-                System.out.println(e);
-            }
-            catch (StaleElementReferenceException e){
-                System.out.println(e);
-            }
-            catch (NoSuchElementException e){
-                System.out.println(e);
+            boolean breakIt2;
+            while (true) {
+                breakIt2 = true;
+                try {
+                    String active2 = menu.getActiveTabPersonal();
+                    assertTrue(active2.contains("ng-scope active"), "user not redirect to personal page - class: " + active2);
+                } catch (Exception e) {
+                    if (e.getMessage().contains("element is not attached")) {
+                        breakIt2 = false;
+                    }
+                }
+                if (breakIt2) {
+                    break;
+                }
             }
         }
 
@@ -85,7 +76,7 @@ public class PersonalPageTest extends ValidLoginTest {
                     "last name error message not displayed");
         }
 
-        // upload file with incorrect file type and close popup window
+//        // upload file with incorrect file type and close popup window
         @Test (priority = 3)
         public void getIncorrectFileType() throws InterruptedException, AWTException {
             // upload file
@@ -115,7 +106,7 @@ public class PersonalPageTest extends ValidLoginTest {
                     "place of birth error message is not displayed");
         }
 
-        // enter invalid email and assert error
+//        // enter invalid email and assert error
         @Test (priority = 5)
         public void enterInvalidEmail(){
             // insert invalid email
@@ -128,7 +119,7 @@ public class PersonalPageTest extends ValidLoginTest {
                     "invalid email error message is not displayed");
         }
 
-        // enter invalid phone number and assert error
+//        // enter invalid phone number and assert error
         @Test (priority = 6)
         public void enterInvalidPhone(){
             // insert invalid phone
@@ -141,7 +132,7 @@ public class PersonalPageTest extends ValidLoginTest {
                     " invalid phone error message is not displayed");
         }
 
-        // insert invalid height and assert error
+//        // insert invalid height and assert error
         @Test (priority = 7)
         public void insertInvalidHeight(){
             // insert invalid height
@@ -154,7 +145,7 @@ public class PersonalPageTest extends ValidLoginTest {
                     "invalid height error message is not displayed");
         }
 
-        // insert invalid weight and assert error
+//        // insert invalid weight and assert error
         @Test (priority = 8)
         public void insertInvalidWeight() {
             // insert invalid weight
@@ -179,18 +170,12 @@ public class PersonalPageTest extends ValidLoginTest {
                 throws InterruptedException, AWTException{
 
             // array takes data from data provider class
-            String[] data = {firstName, middleName, lastName, dOfB, placeOfB, country, address1, address2, city, state,
-                    zip, email, phone, social, height, weight};
+          String[] data = {firstName, middleName, lastName, dOfB, placeOfB, country, address1, address2, city, state,
+                   zip, email, phone, social, height, weight};
 
             // click edit depends on id from data provider class
             List<WebElement> edit = talentsPage.clickEdit();
             edit.get(Integer.parseInt(id)).click();
-            // assert user redirect to category page
-            String active1 = menu.getActiveTabCategory();
-            assertEquals("ng-scope active", active1);
-
-            String header = categoryPage.getHeader();
-            assertTrue(header.contains("Talent Strength"));
 
             // click on personal
             menu.clickPersonal();
@@ -230,9 +215,7 @@ public class PersonalPageTest extends ValidLoginTest {
 
             // click next to save information
             menu.clickNext();
-            // assert user redirect to talent traits page
-            String active = menu.getActiveTabTalentTraits();
-            assertEquals("active ng-binding ng-scope", active, "user not redirect to talents traits page");
+
             // back to talents page
             categoryPage.clickTalents();
 
@@ -253,19 +236,19 @@ public class PersonalPageTest extends ValidLoginTest {
         assertEquals("ng-scope active", active3, "personal page tap not active");
 
 // get all information
-        personalInfo[0] = profilePage.getFirstName();
+        personalInfo[0] = personalPage.getFirstName();
         personalInfo[1] = personalPage.getMiddleName();
-        personalInfo[2] = profilePage.getLastName();
+        personalInfo[2] = personalPage.getLastName();
         personalInfo[3] = personalPage.getDateOfB();
         personalInfo[4] = personalPage.getPlaceOfB();
         personalInfo[5] = personalPage.getCountryValue();
         personalInfo[6] = personalPage.getAddress1();
         personalInfo[7] = personalPage.getAddress2();
-        personalInfo[8] = profilePage.getCity();
+        personalInfo[8] = personalPage.getCity();
         personalInfo[9] = personalPage.getState();
-        personalInfo[10] = profilePage.getZip();
+        personalInfo[10] = personalPage.getZip();
         personalInfo[11] = personalPage.getEmail();
-        personalInfo[12] = profilePage.getPhone();
+        personalInfo[12] = personalPage.getPhone();
         personalInfo[13] = personalPage.getSocialValue();
         personalInfo[14] = personalPage.getHeight();
         personalInfo[15] = personalPage.getWeight();
@@ -278,5 +261,8 @@ public class PersonalPageTest extends ValidLoginTest {
 // assert image was uploaded
         WebElement image = personalPage.getUploaderImage();
         assertTrue(image.isDisplayed(), "Image not displayed");
+
+        // back to talents page
+            categoryPage.clickTalents();
     }
 }

@@ -17,11 +17,11 @@ public class LoginPageTest extends BaseTest {
         try {
             String error = loginPage.getError();
             // assert correct error is displayed
-            assertEquals("This value is required.", error,"c");
+            assertEquals("This value is required.", error,"required error message not displayed");
         } catch (Exception e) {
             String error = loginPage.getInvalidError();
             // assert correct error is displayed
-            assertEquals("Invalid Email or Password.", error, "Incorrect error message");
+            assertEquals("Invalid Email or Password.", error, "Incorrect error message not displayed");
         }
     }
 
@@ -30,7 +30,7 @@ public class LoginPageTest extends BaseTest {
     public void emptyPass(){
         loginPage.submitLogin("kusiwa@cmail.club", "");
         String error = loginPage.getEmptyPassError();
-        assertEquals("This value is required.", error, "This value is required.");
+        assertEquals("This value is required.", error, "required error message not displayed");
     }
 
     @Test(priority = 3, groups = "p1")

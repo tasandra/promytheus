@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Command_line_suite" class="navigator-link">
+              <span class="suite-name border-skipped">Command line suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Command_line_suite" class="navigator-link ">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Command_line_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Command_line_suite" class="navigator-link ">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Command_line_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Command_line_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Command_line_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Command_line_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">35 methods,  35 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods skipped suite-Command_line_suite"> (hide)</a> <!-- hide-methods skipped suite-Command_line_suite -->
+                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods skipped suite-Command_line_suite"> (show)</a> <!-- show-methods skipped suite-Command_line_suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Command_line_suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="assertMyProfile">assertMyProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(email@-domain.com)">checkEmailError(email@-domain.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(email..email@domain.com)">checkEmailError(email..email@domain.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(plainaddress)">checkEmailError(plainaddress)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(email.domain.com)">checkEmailError(email.domain.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(email@domain.web)">checkEmailError(email@domain.web)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(email.@domain.com)">checkEmailError(email.@domain.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(email@domain)">checkEmailError(email@domain)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(.email@domain.com)">checkEmailError(.email@domain.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(@domain.com)">checkEmailError(@domain.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(email@domain..com)">checkEmailError(email@domain..com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(Joe Smith &lt;email@domain.com&gt;)">checkEmailError(Joe Smith <email@domain.com>)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(#@%^%#$@#$@#.com)">checkEmailError(#@%^%#$@#$@#.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(email@domain.com (Joe Smith))">checkEmailError(email@domain.com (Joe Smith))</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(email@111.222.333.44444)">checkEmailError(email@111.222.333.44444)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(email@domain@domain.com)">checkEmailError(email@domain@domain.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailError(あいうえお@domain.com)">checkEmailError(あいうえお@domain.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkEmailWelcomeMessage">checkEmailWelcomeMessage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.TalentsPageTest" class="method navigator-link" hash-for-method="checkLogo">checkLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.LoginPageTest" class="method navigator-link" hash-for-method="checkLogo">checkLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.ValidLoginTest" class="method navigator-link" hash-for-method="checkLogo">checkLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="checkLogo">checkLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.BaseTest" class="method navigator-link" hash-for-method="checkLogo">checkLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.CategoryPageTest" class="method navigator-link" hash-for-method="checkLogo">checkLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.PersonalPageTest" class="method navigator-link" hash-for-method="checkLogo">checkLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.TalentTraitsPageTest" class="method navigator-link" hash-for-method="checkLogo">checkLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="gotoRegister">gotoRegister</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.LoginPageTest" class="method navigator-link" hash-for-method="logout">logout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.RegisterPageTest" class="method navigator-link" hash-for-method="registerNewUser">registerNewUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.CategoryPageTest" class="method navigator-link" hash-for-method="selectCategory1">selectCategory1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.CategoryPageTest" class="method navigator-link" hash-for-method="validLogin">validLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.TalentTraitsPageTest" class="method navigator-link" hash-for-method="validLogin">validLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.TalentsPageTest" class="method navigator-link" hash-for-method="validLogin">validLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.LoginPageTest" class="method navigator-link" hash-for-method="validLogin">validLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.ValidLoginTest" class="method navigator-link" hash-for-method="validLogin">validLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Command_line_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.TalentsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLogo">
+                  </a> <!-- checkLogo -->
+                  <span class="method-name">checkLogo</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLogin">
+                  </a> <!-- validLogin -->
+                  <span class="method-name">validLogin</span>
+                  <div class="stack-trace">java.lang.Throwable: Method ValidLoginTest.validLogin()[pri:0, instance:tests.TalentsPageTest@694abbdc] depends on not successfully finished methods
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.BaseTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLogo">
+                  </a> <!-- checkLogo -->
+                  <span class="method-name">checkLogo</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.PersonalPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLogo">
+                  </a> <!-- checkLogo -->
+                  <span class="method-name">checkLogo</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.LoginPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLogo">
+                  </a> <!-- checkLogo -->
+                  <span class="method-name">checkLogo</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="logout">
+                  </a> <!-- logout -->
+                  <span class="method-name">logout</span>
+                  <div class="stack-trace">java.lang.Throwable: Method LoginPageTest.logout()[pri:0, instance:tests.LoginPageTest@5af3afd9] depends on not successfully finished methods
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLogin">
+                  </a> <!-- validLogin -->
+                  <span class="method-name">validLogin</span>
+                  <div class="stack-trace">java.lang.Throwable: Method LoginPageTest.validLogin()[pri:0, instance:tests.LoginPageTest@5af3afd9] depends on not successfully finished methods
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.TalentTraitsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLogo">
+                  </a> <!-- checkLogo -->
+                  <span class="method-name">checkLogo</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLogin">
+                  </a> <!-- validLogin -->
+                  <span class="method-name">validLogin</span>
+                  <div class="stack-trace">java.lang.Throwable: Method ValidLoginTest.validLogin()[pri:0, instance:tests.TalentTraitsPageTest@2e005c4b] depends on not successfully finished methods
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.CategoryPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLogo">
+                  </a> <!-- checkLogo -->
+                  <span class="method-name">checkLogo</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectCategory1">
+                  </a> <!-- selectCategory1 -->
+                  <span class="method-name">selectCategory1</span>
+                  <div class="stack-trace">java.lang.Throwable: Method CategoryPageTest.selectCategory1(java.lang.String)[pri:0, instance:tests.CategoryPageTest@3bb9a3ff] depends on not successfully finished methods
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLogin">
+                  </a> <!-- validLogin -->
+                  <span class="method-name">validLogin</span>
+                  <div class="stack-trace">java.lang.Throwable: Method ValidLoginTest.validLogin()[pri:0, instance:tests.CategoryPageTest@3bb9a3ff] depends on not successfully finished methods
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.ValidLoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLogo">
+                  </a> <!-- checkLogo -->
+                  <span class="method-name">checkLogo</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLogin">
+                  </a> <!-- validLogin -->
+                  <span class="method-name">validLogin</span>
+                  <div class="stack-trace">java.lang.Throwable: Method ValidLoginTest.validLogin()[pri:0, instance:tests.ValidLoginTest@4567f35d] depends on not successfully finished methods
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
+          <div class="suite-Command_line_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.RegisterPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="assertMyProfile">
+                  </a> <!-- assertMyProfile -->
+                  <span class="method-name">assertMyProfile</span>
+                  <div class="stack-trace">java.lang.Throwable: Method RegisterPageTest.assertMyProfile()[pri:0, instance:tests.RegisterPageTest@44ebcd03] depends on not successfully finished methods
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(email@-domain.com)">
+                  </a> <!-- checkEmailError(email@-domain.com) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(email@-domain.com)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(email..email@domain.com)">
+                  </a> <!-- checkEmailError(email..email@domain.com) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(email..email@domain.com)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(plainaddress)">
+                  </a> <!-- checkEmailError(plainaddress) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(plainaddress)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(email.domain.com)">
+                  </a> <!-- checkEmailError(email.domain.com) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(email.domain.com)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(email@domain.web)">
+                  </a> <!-- checkEmailError(email@domain.web) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(email@domain.web)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(email.@domain.com)">
+                  </a> <!-- checkEmailError(email.@domain.com) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(email.@domain.com)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(email@domain)">
+                  </a> <!-- checkEmailError(email@domain) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(email@domain)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(.email@domain.com)">
+                  </a> <!-- checkEmailError(.email@domain.com) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(.email@domain.com)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(@domain.com)">
+                  </a> <!-- checkEmailError(@domain.com) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(@domain.com)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(email@domain..com)">
+                  </a> <!-- checkEmailError(email@domain..com) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(email@domain..com)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(Joe Smith &lt;email@domain.com&gt;)">
+                  </a> <!-- checkEmailError(Joe Smith <email@domain.com>) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(Joe Smith <email@domain.com>)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(#@%^%#$@#$@#.com)">
+                  </a> <!-- checkEmailError(#@%^%#$@#$@#.com) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(#@%^%#$@#$@#.com)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(email@domain.com (Joe Smith))">
+                  </a> <!-- checkEmailError(email@domain.com (Joe Smith)) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(email@domain.com (Joe Smith))</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(email@111.222.333.44444)">
+                  </a> <!-- checkEmailError(email@111.222.333.44444) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(email@111.222.333.44444)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(email@domain@domain.com)">
+                  </a> <!-- checkEmailError(email@domain@domain.com) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(email@domain@domain.com)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailError(あいうえお@domain.com)">
+                  </a> <!-- checkEmailError(あいうえお@domain.com) -->
+                  <span class="method-name">checkEmailError</span>
+                  <span class="parameters">(あいうえお@domain.com)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkEmailWelcomeMessage">
+                  </a> <!-- checkEmailWelcomeMessage -->
+                  <span class="method-name">checkEmailWelcomeMessage</span>
+                  <div class="stack-trace">java.lang.Throwable: Method RegisterPageTest.checkEmailWelcomeMessage()[pri:0, instance:tests.RegisterPageTest@44ebcd03] depends on not successfully finished methods
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkLogo">
+                  </a> <!-- checkLogo -->
+                  <span class="method-name">checkLogo</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:96)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at pages.BasePage.&lt;init&gt;(BasePage.java:18)
+	at pages.LoginPage.&lt;init&gt;(LoginPage.java:37)
+	at tests.BaseTest.beforeClass(BaseTest.java:35)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="gotoRegister">
+                  </a> <!-- gotoRegister -->
+                  <span class="method-name">gotoRegister</span>
+                  <div class="stack-trace">java.lang.Throwable: Method RegisterPageTest.gotoRegister()[pri:0, instance:tests.RegisterPageTest@44ebcd03] depends on not successfully finished methods
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerNewUser">
+                  </a> <!-- registerNewUser -->
+                  <span class="method-name">registerNewUser</span>
+                  <div class="stack-trace">java.lang.Throwable: Method RegisterPageTest.registerNewUser()[pri:0, instance:tests.RegisterPageTest@44ebcd03] depends on not successfully finished methods
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
+        </div> <!-- panel Command_line_suite -->
+        <div panel-name="test-xml-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Command line suite&quot; verbose=&quot;0&quot;&gt;
+  &lt;test name=&quot;Command line test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tests.BaseTest&quot;/&gt;
+      &lt;class name=&quot;tests.CategoryPageTest&quot;/&gt;
+      &lt;class name=&quot;tests.LoginPageTest&quot;/&gt;
+      &lt;class name=&quot;tests.PersonalPageTest&quot;/&gt;
+      &lt;class name=&quot;tests.RegisterPageTest&quot;/&gt;
+      &lt;class name=&quot;tests.TalentsPageTest&quot;/&gt;
+      &lt;class name=&quot;tests.TalentTraitsPageTest&quot;/&gt;
+      &lt;class name=&quot;tests.ValidLoginTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Command line test --&gt;
+&lt;/suite&gt; &lt;!-- Command line suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Command line suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Command line test (8 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Command line suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">p1</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">assertMyProfile</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">checkEmailWelcomeMessage</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">gotoRegister</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">logout</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">registerNewUser</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">selectCategory1</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">validLogin</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Command line suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Command_line_suite');
+function tableData_Command_line_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(35);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'checkEmailError')
+data.setCell(0, 2, 'tests.RegisterPageTest')
+data.setCell(0, 3, 1);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'checkEmailError')
+data.setCell(1, 2, 'tests.RegisterPageTest')
+data.setCell(1, 3, 1);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'checkEmailError')
+data.setCell(2, 2, 'tests.RegisterPageTest')
+data.setCell(2, 3, 1);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'checkEmailError')
+data.setCell(3, 2, 'tests.RegisterPageTest')
+data.setCell(3, 3, 1);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'checkLogo')
+data.setCell(4, 2, 'tests.TalentsPageTest')
+data.setCell(4, 3, 0);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'checkEmailError')
+data.setCell(5, 2, 'tests.RegisterPageTest')
+data.setCell(5, 3, 0);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'checkEmailError')
+data.setCell(6, 2, 'tests.RegisterPageTest')
+data.setCell(6, 3, 0);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'validLogin')
+data.setCell(7, 2, 'tests.CategoryPageTest')
+data.setCell(7, 3, 0);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'checkLogo')
+data.setCell(8, 2, 'tests.LoginPageTest')
+data.setCell(8, 3, 0);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'checkEmailError')
+data.setCell(9, 2, 'tests.RegisterPageTest')
+data.setCell(9, 3, 0);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'validLogin')
+data.setCell(10, 2, 'tests.TalentTraitsPageTest')
+data.setCell(10, 3, 0);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'registerNewUser')
+data.setCell(11, 2, 'tests.RegisterPageTest')
+data.setCell(11, 3, 0);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'checkLogo')
+data.setCell(12, 2, 'tests.ValidLoginTest')
+data.setCell(12, 3, 0);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'checkEmailError')
+data.setCell(13, 2, 'tests.RegisterPageTest')
+data.setCell(13, 3, 0);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'checkEmailError')
+data.setCell(14, 2, 'tests.RegisterPageTest')
+data.setCell(14, 3, 0);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'assertMyProfile')
+data.setCell(15, 2, 'tests.RegisterPageTest')
+data.setCell(15, 3, 0);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'gotoRegister')
+data.setCell(16, 2, 'tests.RegisterPageTest')
+data.setCell(16, 3, 0);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'validLogin')
+data.setCell(17, 2, 'tests.TalentsPageTest')
+data.setCell(17, 3, 0);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'validLogin')
+data.setCell(18, 2, 'tests.LoginPageTest')
+data.setCell(18, 3, 0);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'checkEmailError')
+data.setCell(19, 2, 'tests.RegisterPageTest')
+data.setCell(19, 3, 0);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'checkEmailError')
+data.setCell(20, 2, 'tests.RegisterPageTest')
+data.setCell(20, 3, 0);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'checkLogo')
+data.setCell(21, 2, 'tests.RegisterPageTest')
+data.setCell(21, 3, 0);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'checkEmailError')
+data.setCell(22, 2, 'tests.RegisterPageTest')
+data.setCell(22, 3, 0);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'validLogin')
+data.setCell(23, 2, 'tests.ValidLoginTest')
+data.setCell(23, 3, 0);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'checkEmailError')
+data.setCell(24, 2, 'tests.RegisterPageTest')
+data.setCell(24, 3, 0);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'checkEmailError')
+data.setCell(25, 2, 'tests.RegisterPageTest')
+data.setCell(25, 3, 0);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'checkEmailError')
+data.setCell(26, 2, 'tests.RegisterPageTest')
+data.setCell(26, 3, 0);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'checkLogo')
+data.setCell(27, 2, 'tests.BaseTest')
+data.setCell(27, 3, 0);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'checkEmailWelcomeMessage')
+data.setCell(28, 2, 'tests.RegisterPageTest')
+data.setCell(28, 3, 0);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'checkLogo')
+data.setCell(29, 2, 'tests.CategoryPageTest')
+data.setCell(29, 3, 0);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'checkEmailError')
+data.setCell(30, 2, 'tests.RegisterPageTest')
+data.setCell(30, 3, 0);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'checkLogo')
+data.setCell(31, 2, 'tests.PersonalPageTest')
+data.setCell(31, 3, 0);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'checkLogo')
+data.setCell(32, 2, 'tests.TalentTraitsPageTest')
+data.setCell(32, 3, 0);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'logout')
+data.setCell(33, 2, 'tests.LoginPageTest')
+data.setCell(33, 3, 0);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'selectCategory1')
+data.setCell(34, 2, 'tests.CategoryPageTest')
+data.setCell(34, 3, 0);
+window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 4 ms</span>
+              <div id="times-div-Command_line_suite">
+              </div> <!-- times-div-Command_line_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Command line suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">15 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.TalentsPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">clickArchive</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.PersonalPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.LoginPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.TalentTraitsPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.CategoryPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.ValidLoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.RegisterPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Command_line_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.BaseTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">checkLogo</span>
+                <span class="method-start">584 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.CategoryPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">584 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">checkLogo</span>
+                <span class="method-start">600 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">600 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">checkLogo</span>
+                <span class="method-start">600 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.PersonalPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">600 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">checkLogo</span>
+                <span class="method-start">600 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.RegisterPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">600 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">generateUser</span>
+                <span class="method-start">615 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">checkLogo</span>
+                <span class="method-start">715 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.TalentTraitsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">715 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">checkLogo</span>
+                <span class="method-start">715 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.TalentsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">715 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">checkLogo</span>
+                <span class="method-start">731 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.ValidLoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">731 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">checkLogo</span>
+                <span class="method-start">731 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.RegisterPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(plainaddress)</span>
+                <span class="method-start">14844 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(#@%^%#$@#$@#.com)</span>
+                <span class="method-start">14844 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(@domain.com)</span>
+                <span class="method-start">14844 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(Joe Smith <email@domain.com>)</span>
+                <span class="method-start">14844 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(email.domain.com)</span>
+                <span class="method-start">14844 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(email@domain@domain.com)</span>
+                <span class="method-start">14844 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(.email@domain.com)</span>
+                <span class="method-start">14844 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(email.@domain.com)</span>
+                <span class="method-start">14844 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(email..email@domain.com)</span>
+                <span class="method-start">14860 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(あいうえお@domain.com)</span>
+                <span class="method-start">14860 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(email@domain.com (Joe Smith))</span>
+                <span class="method-start">14861 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(email@domain)</span>
+                <span class="method-start">14862 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(email@-domain.com)</span>
+                <span class="method-start">14863 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(email@domain.web)</span>
+                <span class="method-start">14864 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(email@111.222.333.44444)</span>
+                <span class="method-start">14865 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkEmailError(email@domain..com)</span>
+                <span class="method-start">14865 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.BaseTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterTest</span>
+                <span class="method-start">14866 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

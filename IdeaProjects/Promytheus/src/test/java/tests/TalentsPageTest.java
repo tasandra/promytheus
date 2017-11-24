@@ -129,7 +129,7 @@ public class TalentsPageTest extends ValidLoginTest{
     public void edit(){
         // copy first row name and click on first row edit icon
         String name1 = talentsPage.getFirstName();
-        List<WebElement> edit = talentsPage.clickEdit();
+        List<WebElement> edit = talentsPage.allEdit();
         edit.get(0).click();
 
         // assert copied name displayed on category page header

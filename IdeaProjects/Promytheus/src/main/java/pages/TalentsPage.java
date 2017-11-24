@@ -154,7 +154,7 @@ public class TalentsPage extends BasePage {
     }
 
 // click edit button
-    public List<WebElement> clickEdit(){
+    public List<WebElement> allEdit(){
         wait.until(ExpectedConditions.visibilityOfAllElements(edit));
         return edit;
     }

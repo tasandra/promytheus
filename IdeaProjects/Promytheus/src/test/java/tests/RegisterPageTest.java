@@ -29,7 +29,7 @@ public class RegisterPageTest extends BaseTest{
     private  String window1;
     private  String window2;
 
-    @BeforeClass
+    @BeforeClass (alwaysRun = true)
     public void generateUser()  throws Exception{
         emailSite = new NadaPage(driver);
         registerPage = new RegisterPage(driver);
@@ -77,7 +77,7 @@ public class RegisterPageTest extends BaseTest{
         driver.switchTo().window(window1);
     }
 // go to register page
-    @Test(priority = 1)
+    @Test(groups = "p1",dependsOnMethods = "checkLogo")
     public void gotoRegister(){
         loginPage.clickRegister();
         boolean breakIt = true;
@@ -98,7 +98,7 @@ public class RegisterPageTest extends BaseTest{
     }
 
 //assert invalid emails error message
-    @Test(priority = 2,  dataProvider = "invalidEmails")
+    @Test(dataProvider = "invalidEmails")
     public void checkEmailError( String email){
         registerPage.setEmailAddress(email);
         String error = registerPage.getEmailError();
@@ -106,7 +106,7 @@ public class RegisterPageTest extends BaseTest{
     }
 
 //  register new user
-    @Test(priority = 3)
+    @Test(groups = "p1", dependsOnMethods = "gotoRegister")
     public void registerNewUser(){
         // insert data
         registerPage.setFirstName(firstName);
@@ -135,7 +135,7 @@ public class RegisterPageTest extends BaseTest{
     }
 
     // check email
-    @Test(priority = 4)
+    @Test(groups = "p1", dependsOnMethods = "registerNewUser")
     public void checkEmailWelcomeMessage(){
         // switch to email window
         driver.switchTo().window(window2);
@@ -144,7 +144,7 @@ public class RegisterPageTest extends BaseTest{
     }
 
     // assert my profile page
-    @Test(priority = 5)
+    @Test (groups = "p1", dependsOnMethods = "checkEmailWelcomeMessage")
     public void assertMyProfile(){
         // switch window to application
         driver.switchTo().window(window1);

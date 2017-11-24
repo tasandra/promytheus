@@ -4,7 +4,19 @@
 <suite name="Promytheus" verbose="1" >
     <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com"/>
     <parameter name="browser" value="chrome"/>
-    <test name = "login">
+    <test name="p1 test">
+        <groups>
+            <run>
+                <include name="p1"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.LoginPageTest"/>
+            <!--class name="tests.CategoryPageTest"/>
+            <class name="tests.PersonalPageTest"/-->
+        </classes>
+    </test>
+    <!--test name = "login">
         <classes>
             <class name="tests.LoginPageTest"/>
         </classes>
@@ -33,5 +45,5 @@
         <classes>
             <class name="tests.TalentsPageTest"/>
         </classes>
-    </test>
+    </test-->
 </suite>

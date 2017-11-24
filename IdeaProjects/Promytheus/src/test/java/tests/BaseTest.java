@@ -4,29 +4,22 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import menus.HomeMenu;
 import menus.TalentMenu;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.ITestResult;
+import static org.testng.Assert.*;
 import org.testng.annotations.*;
 import pages.*;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-    WebDriver driver;
+    public static WebDriver driver;
     protected LoginPage loginPage;
     protected HomeMenu home;
     protected TalentMenu menu;
@@ -37,7 +30,7 @@ public class BaseTest {
     protected RegisterPage registerPage;
     protected TalentTraitsPage talentTraitsPage;
 
-    @BeforeClass(groups = "p1")
+    @BeforeClass(alwaysRun = true)
     public void beforeClass(){
         loginPage = new LoginPage(driver);
         home = new HomeMenu(driver);
@@ -50,7 +43,7 @@ public class BaseTest {
         talentTraitsPage = new TalentTraitsPage(driver);
     }
 
-    @BeforeTest(groups = "p1")
+    @BeforeTest(alwaysRun = true)
     @Parameters({"browser", "url"})
     public void beforeTest(String browser, String url)  throws MalformedURLException {
 //  run firefox
@@ -148,15 +141,21 @@ public class BaseTest {
 //                    + Arrays.toString(testResult.getParameters()) + ".jpg"));
 //        }
 //    }
-    @AfterTest(groups = "p1")
+    @AfterTest(alwaysRun = true)
     public void afterTest(){
         driver.close();
         driver.quit();
     }
 
-    @Test(groups = "p1")
+    @Test
     public void checkLogo(){
-        loginPage.getLogo();
+        try {
+            WebElement logo1 = loginPage.getLogo();
+            assertTrue(logo1.isDisplayed());
+        }catch (Exception e){
+            WebElement logo2 = home.getHomeMenuLogo();
+            assertTrue(logo2.isDisplayed());
+        }
     }
 
 }

@@ -17,7 +17,7 @@ import static org.testng.Assert.assertTrue;
 public class CategoryPageTest extends ValidLoginTest {
 
     // create new talent and select category
-    @Test (priority = 1, dataProvider="Category")
+    @Test (groups = "p1", dependsOnMethods = "validLogin", dataProvider="Category")
     public void selectCategory1(String category){
         // create new users
         talentsPage.clickNew();

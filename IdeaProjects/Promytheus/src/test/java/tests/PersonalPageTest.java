@@ -10,13 +10,19 @@ import java.util.List;
 
 import static org.testng.Assert.*;
 
-public class PersonalPageTest extends ValidLoginTest {
+public class PersonalPageTest extends BaseTest {
+
+
+    @Test(priority = 1)
+    public void login(){
+        loginPage.submitLogin("kusiwa@cmail.club", "password");
+    }
 
         // go to personal page
-        @Test (priority = 1 ,dependsOnMethods = "validLogin")
+        @Test (dependsOnMethods = "login")
         public void goPersonal(){
         // click edit first row
-            List<WebElement> edit = talentsPage.clickEdit();
+            List<WebElement> edit = talentsPage.allEdit();
             edit.get(0).click();
             // assert user redirect to category page - category page tap turns blue
             boolean breakIt;
@@ -55,7 +61,7 @@ public class PersonalPageTest extends ValidLoginTest {
         }
 
         // enter more then 50 char first name and assert errors
-        @Test (priority = 2 )
+        @Test (dependsOnMethods = "goPersonal")
         public void enterLongFirstName(){
             // insert first, last and middle names more then 50 char
             personalPage.insertNames("Lorem ipsum dolor sit amet, consectetuer adipiscin + 1",
@@ -77,7 +83,7 @@ public class PersonalPageTest extends ValidLoginTest {
         }
 
 //        // upload file with incorrect file type and close popup window
-        @Test (priority = 3)
+        @Test (dependsOnMethods = "enterLongFirstName")
         public void getIncorrectFileType() throws InterruptedException, AWTException {
             // upload file
             personalPage.uploadImage("C:\\Users\\Alexandra\\Downloads\\SampleVideo_1280x720_10mb.mp4");
@@ -90,7 +96,7 @@ public class PersonalPageTest extends ValidLoginTest {
         }
 
         // enter more then 255 char place of birth and assert error
-        @Test (priority = 4)
+        @Test (dependsOnMethods = "getIncorrectFileType")
         public void getPlaceBirthError(){
             // insert more then 255 chat in place of birth field
             personalPage.insertDatePlaceBirth("12122222", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. " +
@@ -107,7 +113,7 @@ public class PersonalPageTest extends ValidLoginTest {
         }
 
 //        // enter invalid email and assert error
-        @Test (priority = 5)
+        @Test (dependsOnMethods = "getPlaceBirthError")
         public void enterInvalidEmail(){
             // insert invalid email
             personalPage.enterEmail("abs@df");
@@ -120,7 +126,7 @@ public class PersonalPageTest extends ValidLoginTest {
         }
 
 //        // enter invalid phone number and assert error
-        @Test (priority = 6)
+        @Test ( dependsOnMethods = "enterInvalidEmail")
         public void enterInvalidPhone(){
             // insert invalid phone
             personalPage.enterPhone("111");
@@ -133,7 +139,7 @@ public class PersonalPageTest extends ValidLoginTest {
         }
 
 //        // insert invalid height and assert error
-        @Test (priority = 7)
+        @Test (dependsOnMethods = "enterInvalidPhone")
         public void insertInvalidHeight(){
             // insert invalid height
             personalPage.insertHeight("1234");
@@ -146,7 +152,7 @@ public class PersonalPageTest extends ValidLoginTest {
         }
 
 //        // insert invalid weight and assert error
-        @Test (priority = 8)
+        @Test (dependsOnMethods = "insertInvalidHeight")
         public void insertInvalidWeight() {
             // insert invalid weight
             personalPage.insertWeight("1234");
@@ -162,7 +168,8 @@ public class PersonalPageTest extends ValidLoginTest {
         }
 
         // insert and assert personal information with data provider class
-        @Test (priority = 9,dataProvider="PersonalInfo",dataProviderClass= DataproviderClass.class)
+        @Test (groups = "p1", dependsOnMethods = {"goPersonal","insertInvalidWeight"},
+                dataProvider="PersonalInfo",dataProviderClass= DataproviderClass.class)
         public void insertInformation(String id,String firstName, String middleName, String lastName, String dOfB, String placeOfB,
                                 String country, String address1, String  address2, String city, String state, String zip,
                                 String email, String phone, String social, String height, String weight
@@ -174,7 +181,7 @@ public class PersonalPageTest extends ValidLoginTest {
                    zip, email, phone, social, height, weight};
 
             // click edit depends on id from data provider class
-            List<WebElement> edit = talentsPage.clickEdit();
+            List<WebElement> edit = talentsPage.allEdit();
             edit.get(Integer.parseInt(id)).click();
 
             // click on personal
@@ -216,6 +223,23 @@ public class PersonalPageTest extends ValidLoginTest {
             // click next to save information
             menu.clickNext();
 
+            // assert user redirect
+            boolean breakIt;
+            while (true) {
+                breakIt = true;
+                try {
+                    String active = menu.getActiveTabTalentTraits();
+                    assertTrue(active.contains("active"), "user not redirect to personal page - class: " + active);
+                } catch (Exception e) {
+                    if (e.getMessage().contains("element is not attached")) {
+                        breakIt = false;
+                    }
+                }
+                if (breakIt) {
+                    break;
+                }
+            }
+
             // back to talents page
             categoryPage.clickTalents();
 
@@ -225,7 +249,7 @@ public class PersonalPageTest extends ValidLoginTest {
         String[] personalInfo = new String[16];
 
 // click edit and assert user redirect to the category page
-        List<WebElement> edit2 = talentsPage.clickEdit();
+        List<WebElement> edit2 = talentsPage.allEdit();
         edit2.get(Integer.parseInt(id)).click();
         String active2 = menu.getActiveTabCategory();
         assertEquals("ng-scope active", active2, "category page tap not active");

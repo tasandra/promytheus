@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]" verbose="0">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="tests.TalentsPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="checkLogo"/>
+          <include name="validLogin"/>
+        </methods>
+      </class> <!-- tests.TalentsPageTest -->
+      <class name="tests.BaseTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterTest"/>
+          <include name="checkLogo"/>
+        </methods>
+      </class> <!-- tests.BaseTest -->
+      <class name="tests.PersonalPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="checkLogo"/>
+        </methods>
+      </class> <!-- tests.PersonalPageTest -->
+      <class name="tests.LoginPageTest">
+        <methods>
+          <include name="logout"/>
+          <include name="beforeClass"/>
+          <include name="checkLogo"/>
+          <include name="validLogin"/>
+        </methods>
+      </class> <!-- tests.LoginPageTest -->
+      <class name="tests.TalentTraitsPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="checkLogo"/>
+          <include name="validLogin"/>
+        </methods>
+      </class> <!-- tests.TalentTraitsPageTest -->
+      <class name="tests.CategoryPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="selectCategory1"/>
+          <include name="checkLogo"/>
+          <include name="validLogin"/>
+        </methods>
+      </class> <!-- tests.CategoryPageTest -->
+      <class name="tests.ValidLoginTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="checkLogo"/>
+          <include name="validLogin"/>
+        </methods>
+      </class> <!-- tests.ValidLoginTest -->
+      <class name="tests.RegisterPageTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="registerNewUser"/>
+          <include name="gotoRegister"/>
+          <include name="assertMyProfile"/>
+          <include name="checkEmailWelcomeMessage"/>
+          <include name="checkEmailError" invocation-numbers="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15"/>
+          <include name="checkLogo"/>
+          <include name="generateUser"/>
+        </methods>
+      </class> <!-- tests.RegisterPageTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

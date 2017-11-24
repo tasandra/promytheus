@@ -10,7 +10,7 @@ import static org.testng.Assert.assertTrue;
 
 public class LoginPageTest extends BaseTest {
 
-    @Test(priority = 1, dataProvider = "userData", groups = "p1")
+    @Test(priority = 1, dataProvider = "userData")
     // check error massages
     public void getErrors(String email, String pass) {
         loginPage.submitLogin(email, pass);
@@ -26,14 +26,14 @@ public class LoginPageTest extends BaseTest {
     }
 
     // check empty password error
-    @Test(priority = 2, groups = "p1")
+    @Test(priority = 2)
     public void emptyPass(){
         loginPage.submitLogin("kusiwa@cmail.club", "");
         String error = loginPage.getEmptyPassError();
         assertEquals("This value is required.", error, "required error message not displayed");
     }
 
-    @Test(priority = 3, groups = "p1")
+    @Test( groups = "p1", dependsOnMethods = "checkLogo")
     // log in with valid credentials
     public void validLogin() {
 
@@ -43,7 +43,7 @@ public class LoginPageTest extends BaseTest {
         assertTrue(logo.isDisplayed(), "Logo on Talents page not displayed");
     }
 
-    @Test(priority = 4,  groups = "p1")
+    @Test(groups = "p1", dependsOnMethods = "validLogin")
     // log out
     public void logout(){
         try {

@@ -16,7 +16,7 @@ public class TalentTraitsPageTest extends ValidLoginTest {
     @Test (priority = 1)
     public void goTalentTraits(){
         // click edit and assert user redirect to the category page
-        List<WebElement> edit = talentsPage.clickEdit();
+        List<WebElement> edit = talentsPage.allEdit();
         edit.get(0).click();
         String active1 = menu.getActiveTabCategory();
         assertEquals("ng-scope active", active1);
@@ -99,6 +99,8 @@ public class TalentTraitsPageTest extends ValidLoginTest {
         menu.clickNext();
         String active3 = menu.getActiveTabPersonalityTraits();
         assertEquals("ng-scope active", active3);
+
+        //TODO assertion
     }
 
 }

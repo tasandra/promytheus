@@ -11,9 +11,12 @@
             </run>
         </groups>
         <classes>
+            <class name="tests.RegisterPageTest"/>
             <class name="tests.LoginPageTest"/>
-            <!--class name="tests.CategoryPageTest"/>
-            <class name="tests.PersonalPageTest"/-->
+            <class name="tests.TalentsPageTest"/>
+            <class name="tests.CategoryPageTest"/>
+            <class name="tests.PersonalPageTest"/>
+            <class name="tests.TalentTraitsPageTest"/>
         </classes>
     </test>
     <!--test name = "login">

@@ -53,7 +53,7 @@ public class ExcelReadApi {
             return "row " + rowNum + " or column " + colNum + " does not exist  in Excel";
         }
     }
-
+// get all data
     public Object[][] testData(String sheetName) throws Exception
     {
         Object[][] excelData = null;
@@ -67,6 +67,25 @@ public class ExcelReadApi {
             for(int j = 0; j<columns; j++)
             {
                 excelData[i-1][j] = getCellData(sheetName, j, i);
+            }
+        }
+        return excelData;
+    }
+// get only one random row
+    public Object[][] rowData(String sheetName) throws Exception
+    {
+        Object[][] excelData = null;
+        int rows = getRowCount(sheetName) - 1 ;
+        int columns = getColumnCount(sheetName);
+
+        int row = (int )(Math.random() * rows + 1);
+
+        excelData = new Object[1][columns];
+        for(int i = 0 ; i < 1; i++)
+        {
+            for(int j = 0; j<columns; j++)
+            {
+                excelData[i][j] = getCellData(sheetName, j, row );
             }
         }
         return excelData;

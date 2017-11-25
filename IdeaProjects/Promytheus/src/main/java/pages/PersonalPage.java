@@ -106,8 +106,8 @@ public class PersonalPage extends BasePage{
 
     @FindBy(how = How.XPATH, using = "//span[@class='text-danger']")
     private WebElement error;
-
     @FindBy(how = How.CSS, using = "div.form-group:nth-child(13) > div:nth-child(2) > span:nth-child(2)")
+
     private WebElement heightError;
 
     @FindBy(how = How.CSS, using = "div.form-group:nth-child(14) > div:nth-child(2) > span:nth-child(2)")
@@ -119,7 +119,7 @@ public class PersonalPage extends BasePage{
     @FindBy(how = How.XPATH, using = "//span[@class='ui-select-placeholder text-muted ng-binding']")
     private WebElement selectSocialAccount;
 
-    @FindBy(how = How.XPATH, using = "//*[@id='talentForm']//span/span[2]/span")
+    @FindBy(how = How.XPATH, using = "//span[@class='ng-binding ng-scope']")
     private WebElement getSocial;
 
     @FindBy(how = How.NAME, using = "height")
@@ -365,7 +365,8 @@ public class PersonalPage extends BasePage{
 
     public String getSocialValue(){
 
-        return wait.until(ExpectedConditions.visibilityOf(getSocial)).getText();
+        wait.until(ExpectedConditions.visibilityOf(getSocial));
+    return getSocial.getText();
     }
 
     // insert height

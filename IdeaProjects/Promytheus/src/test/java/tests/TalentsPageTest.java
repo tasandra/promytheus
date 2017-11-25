@@ -17,8 +17,9 @@ import static org.testng.Assert.assertTrue;
 
 public class TalentsPageTest extends ValidLoginTest{
 
+
 // select number of rows per page and checked list size
-    @Test  (priority = 10)
+    @Test  (groups = "p1", dependsOnMethods = "validLogin")
     public void numberOfRows(){
         talentsPage.selectRowsOnPage("25");
         int numberOfRows25 = talentsPage.getNumberOfRow();
@@ -30,7 +31,7 @@ public class TalentsPageTest extends ValidLoginTest{
         assertEquals(10, numberOfRows10, "wrong number of rows per page");
     }
     // click disable button
-    @Test (priority = 11)
+    @Test (groups = "p1", dependsOnMethods = "numberOfRows")
     public void disableTalent(){
         // click checkbox and click disable
         talentsPage.clickCheckbox();
@@ -43,7 +44,7 @@ public class TalentsPageTest extends ValidLoginTest{
     }
 
     // click enable button
-    @Test (priority = 12)
+    @Test (groups = "p1", dependsOnMethods = "disableTalent")
     public void enableTalent(){
         // click checkbox and click enable
         talentsPage.clickCheckbox();
@@ -65,7 +66,7 @@ public class TalentsPageTest extends ValidLoginTest{
     // TODO check all checkboxes
 
 // check all checkboxes through the list one by one
-    @Test (priority = 13)
+    @Test (groups = "p1", dependsOnMethods = "enableTalent")
     public void checkboxAll(){
 // check all boxes
           List<WebElement> boxes = talentsPage.clickCheckboxes();
@@ -99,7 +100,7 @@ public class TalentsPageTest extends ValidLoginTest{
     }
 
 // insert name for search and check list contains searching name
-    @Test (priority = 14)
+    @Test (groups = "p1", dependsOnMethods = "checkboxAll")
     public void search(){
         // insert name to search
         talentsPage.enterSearch("smith");
@@ -112,7 +113,7 @@ public class TalentsPageTest extends ValidLoginTest{
     }
 
 // click on new button and assert new tap opened
-    @Test  (priority = 15)
+    @Test  ( dependsOnMethods = "search")
     public void getNew(){
         talentsPage.clickNew();
 
@@ -125,7 +126,7 @@ public class TalentsPageTest extends ValidLoginTest{
         assertEquals("Talents", header, "user is not back to talents page");
     }
 // click on edit button and assert editing tap opened
-    @Test (priority = 16)
+    @Test ( dependsOnMethods = "getNew")
     public void edit(){
         // copy first row name and click on first row edit icon
         String name1 = talentsPage.getFirstName();

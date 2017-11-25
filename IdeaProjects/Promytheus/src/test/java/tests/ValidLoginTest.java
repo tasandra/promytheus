@@ -12,7 +12,7 @@ import static org.testng.Assert.assertTrue;
 public class ValidLoginTest extends BaseTest {
 
 
-    @Test(groups = "p1", dependsOnMethods = "checkLogo")
+    @Test(groups = "p1", dependsOnMethods = "checkTitle")
     // log in with valid credentials
     public void validLogin() {
 

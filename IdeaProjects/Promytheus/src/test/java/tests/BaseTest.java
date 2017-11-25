@@ -148,14 +148,9 @@ public class BaseTest {
     }
 
     @Test
-    public void checkLogo(){
-        try {
-            WebElement logo1 = loginPage.getLogo();
-            assertTrue(logo1.isDisplayed());
-        }catch (Exception e){
-            WebElement logo2 = home.getHomeMenuLogo();
-            assertTrue(logo2.isDisplayed());
-        }
+    public void checkTitle(){
+       String title = driver.getTitle().toString();
+       assertTrue(title.contains("ProMytheUs"));
     }
 
 }

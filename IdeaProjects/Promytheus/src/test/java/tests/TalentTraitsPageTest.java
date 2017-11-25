@@ -10,10 +10,15 @@ import java.util.List;
 
 import static org.testng.Assert.*;
 
-public class TalentTraitsPageTest extends ValidLoginTest {
+public class TalentTraitsPageTest extends BaseTest {
+
+    @Test
+    public void login(){
+        loginPage.submitLogin("kusiwa@cmail.club", "password");
+    }
 
 // go to talent traits page
-    @Test (priority = 1)
+    @Test (groups = "p1")
     public void goTalentTraits(){
         // click edit and assert user redirect to the category page
         List<WebElement> edit = talentsPage.allEdit();
@@ -31,7 +36,7 @@ public class TalentTraitsPageTest extends ValidLoginTest {
     }
 
 // assert errors - all fields empty
-    @Test (priority = 2)
+    @Test (dependsOnMethods = "goTalentTraits")
     public void getEmptyErrors(){
         // all fields empty and click next
         menu.clickNext();
@@ -45,7 +50,7 @@ public class TalentTraitsPageTest extends ValidLoginTest {
     }
 
     // assert errors - scale more than 10
-    @Test (priority = 3)
+    @Test (dependsOnMethods = "getEmptyErrors")
     public void insert11(){
         // refresh browser and insert scales more than 10 in each fields
         driver.navigate().refresh();
@@ -60,7 +65,7 @@ public class TalentTraitsPageTest extends ValidLoginTest {
     }
 
     // assert errors - scale more less than 1
-    @Test (priority = 4)
+    @Test (dependsOnMethods = "insert11")
     public void insert0(){
         // refresh browser and insert scales less than 1 in each fields
         driver.navigate().refresh();
@@ -75,7 +80,7 @@ public class TalentTraitsPageTest extends ValidLoginTest {
     }
 
     // insert valid scales
-    @Test (priority = 5)
+    @Test (groups = "p1")
     public void insertScales(){
         // refresh browser and insert scales in range  1 - 10 for each fields
         driver.navigate().refresh();

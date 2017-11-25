@@ -9,8 +9,28 @@ public class DataproviderClass {
         // date of birth
         int yearBegin = 1950;
         int yearEnd = 2017 - yearBegin;
-        String dOfB = "" + (1 + (int) (Math.random() * 12) + "/" + (1 + (int) (Math.random() * 31) + "/"
-                + (yearBegin + (int) (Math.random() * yearEnd))));
+        String dOfB;
+        int month = (1 + (int) (Math.random() * 12));
+        int day = (1 + (int) (Math.random() * 30));
+        if ( month >= 10 && day >= 10){
+            dOfB = "" + month + "/" + day + "/"
+                    + (yearBegin + (int) (Math.random() * yearEnd));
+        }
+        else if (month < 10 && day >= 10){
+            dOfB = "0" + month + "/" + day + "/"
+                    + (yearBegin + (int) (Math.random() * yearEnd));
+        }
+        else if (day < 10 && month >= 10){
+            dOfB = ""+ month + "/0" + day + "/"
+                    + (yearBegin + (int) (Math.random() * yearEnd));
+        }
+        else if (month < 10 && day < 10){
+            dOfB = "0" + month + "/0" + day + "/"
+                    + (yearBegin + (int) (Math.random() * yearEnd));
+        }else {
+            dOfB = "" +  month + "/" + day + "/"
+                    + (yearBegin + (int) (Math.random() * yearEnd));
+        }
 
         return new Object[][]{
                 {"0",

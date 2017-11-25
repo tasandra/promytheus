@@ -18,7 +18,7 @@ public class RegisterPage extends BasePage {
     @FindBy(how = How.NAME, using = "lastName")
     private WebElement lastName;
 
-    @FindBy(how = How.NAME, using = "emailAddress")
+    @FindBy(how = How.NAME, using = "email")
     private WebElement emailAddress;
 
     @FindBy(how = How.NAME, using = "phone")
@@ -56,7 +56,8 @@ public class RegisterPage extends BasePage {
     }
 // get header
     public String  getHeader() {
-        return wait.until(ExpectedConditions.visibilityOf(header)).getText();
+        wait.until(ExpectedConditions.titleIs("ProMytheUs - Sign Up"));
+        return header.getText();
     }
 // set first name
     public void setFirstName(String fName) {

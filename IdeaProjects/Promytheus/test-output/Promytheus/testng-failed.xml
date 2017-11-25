@@ -3,23 +3,21 @@
 <suite name="Failed suite [Promytheus]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
   <parameter name="url" value="http://ec2-52-53-181-39.us-west-1.compute.amazonaws.com"/>
-  <test name="p1 test(failed)">
-    <groups>
-      <run>
-        <include name="p1"/>
-      </run>
-    </groups>
+  <test name="register(failed)">
     <classes>
-      <class name="tests.LoginPageTest">
+      <class name="tests.RegisterPageTest">
         <methods>
-          <include name="logout"/>
           <include name="beforeClass"/>
+          <include name="registerNewUser"/>
+          <include name="gotoRegister"/>
+          <include name="assertMyProfile"/>
           <include name="afterTest"/>
-          <include name="checkLogo"/>
-          <include name="validLogin"/>
+          <include name="checkEmailWelcomeMessage"/>
+          <include name="checkTitle"/>
           <include name="beforeTest"/>
+          <include name="generateUser"/>
         </methods>
-      </class> <!-- tests.LoginPageTest -->
+      </class> <!-- tests.RegisterPageTest -->
     </classes>
-  </test> <!-- p1 test(failed) -->
+  </test> <!-- register(failed) -->
 </suite> <!-- Failed suite [Promytheus] -->

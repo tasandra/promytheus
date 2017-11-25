@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
+<testng-results ignored="1" total="6" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2017-11-24T03:13:43Z" name="Promytheus" finished-at="2017-11-24T03:14:18Z" duration-ms="35464">
+  <suite started-at="2017-11-24T22:28:24Z" name="Promytheus" finished-at="2017-11-24T22:29:08Z" duration-ms="43972">
     <groups>
-      <group name="p1">
-        <method signature="LoginPageTest.validLogin()[pri:0, instance:tests.LoginPageTest@6379eb]" name="validLogin" class="tests.LoginPageTest"/>
-        <method signature="LoginPageTest.logout()[pri:0, instance:tests.LoginPageTest@6379eb]" name="logout" class="tests.LoginPageTest"/>
-      </group> <!-- p1 -->
     </groups>
-    <test started-at="2017-11-24T03:13:43Z" name="p1 test" finished-at="2017-11-24T03:14:18Z" duration-ms="35464">
-      <class name="tests.LoginPageTest">
-        <test-method is-config="true" signature="beforeTest(java.lang.String, java.lang.String)[pri:0, instance:tests.LoginPageTest@6379eb]" started-at="2017-11-23T19:13:43Z" name="beforeTest" finished-at="2017-11-23T19:14:04Z" duration-ms="20987" status="PASS">
+    <test started-at="2017-11-24T22:28:24Z" name="register" finished-at="2017-11-24T22:29:08Z" duration-ms="43972">
+      <class name="tests.RegisterPageTest">
+        <test-method is-config="true" signature="beforeTest(java.lang.String, java.lang.String)[pri:0, instance:tests.RegisterPageTest@1ea9f6af]" started-at="2017-11-24T14:28:24Z" name="beforeTest" finished-at="2017-11-24T14:28:37Z" duration-ms="13539" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,27 +23,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.LoginPageTest@6379eb]" started-at="2017-11-23T19:14:04Z" name="beforeClass" finished-at="2017-11-23T19:14:04Z" duration-ms="165" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.RegisterPageTest@1ea9f6af]" started-at="2017-11-24T14:28:37Z" name="beforeClass" finished-at="2017-11-24T14:28:37Z" duration-ms="172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="checkLogo()[pri:0, instance:tests.LoginPageTest@6379eb]" started-at="2017-11-23T19:14:04Z" name="checkLogo" finished-at="2017-11-23T19:14:06Z" duration-ms="2207" status="PASS">
+        <test-method is-config="true" signature="generateUser()[pri:0, instance:tests.RegisterPageTest@1ea9f6af]" started-at="2017-11-24T14:28:37Z" name="generateUser" finished-at="2017-11-24T14:28:51Z" duration-ms="13966" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkLogo -->
-        <test-method signature="validLogin()[pri:0, instance:tests.LoginPageTest@6379eb]" started-at="2017-11-23T19:14:07Z" name="validLogin" finished-at="2017-11-23T19:14:16Z" depends-on-methods="tests.BaseTest.checkLogo" duration-ms="9252" status="PASS">
+        </test-method> <!-- generateUser -->
+        <test-method signature="checkTitle()[pri:0, instance:tests.RegisterPageTest@1ea9f6af]" started-at="2017-11-24T14:28:51Z" name="checkTitle" finished-at="2017-11-24T14:28:51Z" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLogin -->
-        <test-method signature="logout()[pri:0, instance:tests.LoginPageTest@6379eb]" started-at="2017-11-23T19:14:16Z" name="logout" finished-at="2017-11-23T19:14:17Z" depends-on-methods="tests.LoginPageTest.validLogin" duration-ms="1226" status="PASS">
+        </test-method> <!-- checkTitle -->
+        <test-method signature="gotoRegister()[pri:0, instance:tests.RegisterPageTest@1ea9f6af]" started-at="2017-11-24T14:28:51Z" name="gotoRegister" finished-at="2017-11-24T14:28:52Z" depends-on-methods="tests.BaseTest.checkTitle" duration-ms="491" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.LoginPageTest@6379eb]" started-at="2017-11-23T19:14:17Z" name="afterTest" finished-at="2017-11-23T19:14:18Z" duration-ms="1167" status="PASS">
+        </test-method> <!-- gotoRegister -->
+        <test-method signature="registerNewUser()[pri:0, instance:tests.RegisterPageTest@1ea9f6af]" started-at="2017-11-24T14:28:52Z" name="registerNewUser" finished-at="2017-11-24T14:29:02Z" depends-on-methods="tests.RegisterPageTest.gotoRegister" duration-ms="9930" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerNewUser -->
+        <test-method signature="checkEmailWelcomeMessage()[pri:0, instance:tests.RegisterPageTest@1ea9f6af]" started-at="2017-11-24T14:29:02Z" name="checkEmailWelcomeMessage" finished-at="2017-11-24T14:29:04Z" depends-on-methods="tests.RegisterPageTest.registerNewUser" duration-ms="2376" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkEmailWelcomeMessage -->
+        <test-method signature="assertMyProfile()[pri:0, instance:tests.RegisterPageTest@1ea9f6af]" started-at="2017-11-24T14:29:04Z" name="assertMyProfile" finished-at="2017-11-24T14:29:07Z" depends-on-methods="tests.RegisterPageTest.checkEmailWelcomeMessage" duration-ms="2731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertMyProfile -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.RegisterPageTest@1ea9f6af]" started-at="2017-11-24T14:29:07Z" name="afterTest" finished-at="2017-11-24T14:29:08Z" duration-ms="706" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- tests.LoginPageTest -->
-    </test> <!-- p1 test -->
+      </class> <!-- tests.RegisterPageTest -->
+    </test> <!-- register -->
   </suite> <!-- Promytheus -->
 </testng-results>

@@ -29,7 +29,7 @@ public class RegisterPageTest extends BaseTest{
     private  String window1;
     private  String window2;
 
-    @BeforeClass (alwaysRun = true)
+    @BeforeClass(alwaysRun = true)
     public void generateUser()  throws Exception{
         emailSite = new NadaPage(driver);
         registerPage = new RegisterPage(driver);
@@ -77,7 +77,7 @@ public class RegisterPageTest extends BaseTest{
         driver.switchTo().window(window1);
     }
 // go to register page
-    @Test(groups = "p1",dependsOnMethods = "checkLogo")
+    @Test(groups = "p1", dependsOnMethods = "checkTitle")
     public void gotoRegister(){
         loginPage.clickRegister();
         boolean breakIt = true;
@@ -86,7 +86,7 @@ public class RegisterPageTest extends BaseTest{
             try {
                 String header = registerPage.getHeader();
                 assertEquals("SIGNUP TO GET INSTANT ACCESS", header, "user is not redirect to register page");
-            } catch (Exception e) {
+            } catch (AssertionError e) {
                 if (e.getMessage().contains("element is not attached")) {
                     breakIt = false;
                 }
@@ -98,7 +98,7 @@ public class RegisterPageTest extends BaseTest{
     }
 
 //assert invalid emails error message
-    @Test(dataProvider = "invalidEmails")
+    @Test(dataProvider = "invalidEmails", enabled = false)
     public void checkEmailError( String email){
         registerPage.setEmailAddress(email);
         String error = registerPage.getEmailError();
@@ -130,8 +130,8 @@ public class RegisterPageTest extends BaseTest{
         // click report to yourself radio button
         talentsPage.clickPopupRadioYourSelf();
         talentsPage.clickPopupOK();
-        String talentsHeader = talentsPage.getHeader();
-        assertEquals("Talents", talentsHeader, "user is not redirect to talents page");
+//        String talentsHeader = talentsPage.getHeader();
+//        assertEquals("Talents", talentsHeader, "user is not redirect to talents page");
     }
 
     // check email
@@ -178,6 +178,23 @@ public class RegisterPageTest extends BaseTest{
 //            System.out.println(myProfileInfo[i] + " = " + data[i]);
             assertTrue(myProfileInfo[i].equals(data[i]), myProfileInfo[i] + " not equals " + data[i]);
         }
+    }
+
+    @Test(groups = "p1", dependsOnMethods = "assertMyProfile")
+    // log out
+    public void logout(){
+        try {
+            home.logoutClick();
+        }
+        catch(WebDriverException e){
+            home.logoutJs();
+            System.out.println(" click on log out with javascript execution");
+        }
+        catch(Exception e){
+            System.out.print("WebDriver did not click on log out");
+        }
+
+        assertTrue(loginPage.getLogo().isDisplayed(),"User wasn't able to logout and logo not displayed");
     }
 
     @DataProvider(name="invalidEmails")

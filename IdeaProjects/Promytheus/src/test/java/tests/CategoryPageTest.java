@@ -1,5 +1,6 @@
 package tests;
 
+import data.ExcelReadApi;
 import menus.TalentMenu;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.testng.annotations.BeforeClass;
@@ -14,10 +15,15 @@ import java.util.NoSuchElementException;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class CategoryPageTest extends ValidLoginTest {
+public class CategoryPageTest extends BaseTest {
+
+    @Test
+    public void login(){
+        loginPage.submitLogin("kusiwa@cmail.club", "password");
+    }
 
     // create new talent and select category
-    @Test (groups = "p1", dependsOnMethods = "validLogin", dataProvider="Category")
+    @Test (groups = "p1", dataProvider="category",invocationCount = 3)
     public void selectCategory1(String category){
         // create new users
         talentsPage.clickNew();
@@ -58,14 +64,12 @@ public class CategoryPageTest extends ValidLoginTest {
         assertEquals("Please select a talent category first.", error, "Error message not displayed");
     }
 
-    @DataProvider(name="Category")
-    public Object[][] getDataFromDataprovider(){
-        return new Object[][]
-                {
-                        { "Architecture" },
-                        { "Psychic/Intuitive/Predictive" },
-                        { "Software Programming" }
-                };
-
+    @DataProvider(name="category")
+    public Object[][] getCategory() throws Exception
+    {
+        ExcelReadApi excel = new ExcelReadApi("promy.xlsx");
+        Object[][] data = excel.rowData("category");
+        return data;
     }
+
 }
